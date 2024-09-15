@@ -7,7 +7,7 @@ S {}
 E {}
 T {1.8V supply} -680 -870 0 0 0.5 0.5 {}
 T {1.8V supply} -680 -220 0 0 0.5 0.5 {}
-T {1.8V supply} 440 -880 0 0 0.5 0.5 {}
+T {1.8V supply} 440 -710 0 0 0.5 0.5 {}
 T {Chipalooza test chip #2} -4820 -2050 0 0 0.6 0.6 {}
 N 270 -1150 330 -1150 {
 lab=vccd1}
@@ -19,9 +19,9 @@ N 270 -360 330 -360 {
 lab=vccd1}
 N 270 -520 330 -520 {
 lab=vccd1}
-N 270 -680 330 -680 {
+N 270 -830 330 -830 {
 lab=vccd1}
-N 270 -840 330 -840 {
+N 270 -670 330 -670 {
 lab=vccd1}
 N 270 -1000 330 -1000 {
 lab=vccd1}
@@ -39,9 +39,9 @@ N 270 -380 360 -380 {
 lab=vssd1}
 N 270 -540 360 -540 {
 lab=vssd1}
-N 270 -700 360 -700 {
+N 270 -850 360 -850 {
 lab=vssd1}
-N 270 -860 360 -860 {
+N 270 -690 360 -690 {
 lab=vssd1}
 N 270 -1020 360 -1020 {
 lab=vssd1}
@@ -107,10 +107,10 @@ N 270 -1230 390 -1230 {
 lab=la_data_out[48]}
 N 270 -1080 390 -1080 {
 lab=la_data_out[49]}
-N 270 -920 390 -920 {
-lab=la_data_out[50]}
-N 270 -760 390 -760 {
+N 270 -750 390 -750 {
 lab=la_data_out[51]}
+N 270 -910 390 -910 {
+lab=la_data_out[50]}
 N 270 -600 390 -600 {
 lab=la_data_out[52]}
 N 270 -440 390 -440 {
@@ -123,10 +123,10 @@ N 270 -340 430 -340 {
 lab=io_analog[1]}
 N 270 -500 430 -500 {
 lab=io_analog[2]}
-N 270 -660 430 -660 {
-lab=vdd_spare_1}
-N 270 -820 430 -820 {
+N 270 -810 430 -810 {
 lab=io_analog[3]}
+N 270 -650 430 -650 {
+lab=vdd_spare_1}
 N 270 -980 430 -980 {
 lab=vdd_spare_2}
 N 270 -1130 430 -1130 {
@@ -195,7 +195,7 @@ N 270 -420 300 -420 {
 lab=vdda1}
 N 270 -580 300 -580 {
 lab=vdda1}
-N 270 -740 300 -740 {
+N 270 -890 300 -890 {
 lab=vdda1}
 N 270 -1060 300 -1060 {
 lab=vdda1}
@@ -255,7 +255,7 @@ N 270 -400 350 -400 {
 lab=vssa1}
 N 270 -560 350 -560 {
 lab=vssa1}
-N 270 -720 350 -720 {
+N 270 -870 350 -870 {
 lab=vssa1}
 N 270 -1040 350 -1040 {
 lab=vssa1}
@@ -269,14 +269,14 @@ N 430 -980 450 -980 {
 lab=vdd_spare_2}
 N 390 -1080 410 -1080 {
 lab=la_data_out[49]}
-N 390 -920 410 -920 {
-lab=la_data_out[50]}
-N 430 -820 450 -820 {
-lab=io_analog[3]}
-N 390 -760 410 -760 {
+N 390 -750 410 -750 {
 lab=la_data_out[51]}
-N 430 -660 450 -660 {
+N 430 -650 450 -650 {
 lab=vdd_spare_1}
+N 390 -910 410 -910 {
+lab=la_data_out[50]}
+N 430 -810 450 -810 {
+lab=io_analog[3]}
 N 390 -600 410 -600 {
 lab=la_data_out[52]}
 N 430 -500 450 -500 {
@@ -295,17 +295,17 @@ N 360 -380 380 -380 {
 lab=vssd1}
 N 360 -540 380 -540 {
 lab=vssd1}
-N 360 -700 380 -700 {
+N 360 -850 380 -850 {
 lab=vssd1}
-N 360 -860 380 -860 {
+N 360 -690 380 -690 {
 lab=vssd1}
 N 360 -1020 380 -1020 {
 lab=vssd1}
 N 360 -1170 380 -1170 {
 lab=vssd1}
-N 270 -900 330 -900 {
+N 270 -730 330 -730 {
 lab=vccd1}
-N 270 -880 380 -880 {
+N 270 -710 380 -710 {
 lab=vssd1}
 N -3920 -1030 -3830 -1030 {
 lab=vccd2}
@@ -938,13 +938,13 @@ lab=ulpcomp_vinn}
 N -1570 -1590 -1470 -1590 {
 lab=sample_out}
 N -1570 -1630 -1470 -1630 {
-lab=vssa2}
+lab=vssa1}
 N -1570 -1650 -1470 -1650 {
-lab=vssd2}
+lab=vssd1}
 N -1570 -1670 -1470 -1670 {
-lab=vccd2}
+lab=vccd1}
 N -1570 -1690 -1470 -1690 {
-lab=vdda2}
+lab=vdda1}
 N -1910 -1580 -1870 -1580 {
 lab=la_oenb[117],la_data_out[117]}
 N -1910 -1540 -1870 -1540 {
@@ -956,13 +956,13 @@ lab=por_outh[1]}
 N -1570 -1350 -1470 -1350 {
 lab=sample_in}
 N -1570 -1390 -1470 -1390 {
-lab=vssa2}
+lab=vssa1}
 N -1570 -1410 -1470 -1410 {
-lab=vssd2}
+lab=vssd1}
 N -1570 -1430 -1470 -1430 {
-lab=vccd2}
+lab=vccd1}
 N -1570 -1450 -1470 -1450 {
-lab=vdda2}
+lab=vdda1}
 N -1910 -1340 -1870 -1340 {
 lab=la_oenb[119],la_data_out[119]}
 N -1910 -1300 -1870 -1300 {
@@ -974,13 +974,13 @@ lab=pll_lf}
 N -1560 -1110 -1460 -1110 {
 lab=ulpcomp_vinp}
 N -1560 -1150 -1460 -1150 {
-lab=vssa2}
+lab=vssa1}
 N -1560 -1170 -1460 -1170 {
-lab=vssd2}
+lab=vssd1}
 N -1560 -1190 -1460 -1190 {
-lab=vccd2}
+lab=vccd1}
 N -1560 -1210 -1460 -1210 {
-lab=vdda2}
+lab=vdda1}
 N -1900 -1100 -1860 -1100 {
 lab=la_oenb[121],la_data_out[121]}
 N -1900 -1060 -1860 -1060 {
@@ -992,13 +992,13 @@ lab=rheostat_vh}
 N -1560 -870 -1460 -870 {
 lab=rdac_vh}
 N -1560 -910 -1460 -910 {
-lab=vssa2}
+lab=vssa1}
 N -1560 -930 -1460 -930 {
-lab=vssd2}
+lab=vssd1}
 N -1560 -950 -1460 -950 {
-lab=vccd2}
+lab=vccd1}
 N -1560 -970 -1460 -970 {
-lab=vdda2}
+lab=vdda1}
 N -1900 -860 -1860 -860 {
 lab=la_oenb[123],la_data_out[123]}
 N -1900 -820 -1860 -820 {
@@ -1010,13 +1010,13 @@ lab=rheostat_vl}
 N -1560 -380 -1460 -380 {
 lab=rdac_vl}
 N -1560 -420 -1460 -420 {
-lab=vssa2}
+lab=vssa1}
 N -1560 -440 -1460 -440 {
-lab=vssd2}
+lab=vssd1}
 N -1560 -460 -1460 -460 {
-lab=vccd2}
+lab=vccd1}
 N -1560 -480 -1460 -480 {
-lab=vdda2}
+lab=vdda1}
 N -1900 -370 -1860 -370 {
 lab=la_oenb[125],la_data_out[125]}
 N -1900 -330 -1860 -330 {
@@ -1026,13 +1026,13 @@ lab=gpio_noesd[0]}
 N -1560 -150 -1460 -150 {
 lab=rheostat_out}
 N -1560 -190 -1460 -190 {
-lab=vssa2}
+lab=vssa1}
 N -1560 -210 -1460 -210 {
-lab=vssd2}
+lab=vssd1}
 N -1560 -230 -1460 -230 {
-lab=vccd2}
+lab=vccd1}
 N -1560 -250 -1460 -250 {
-lab=vdda2}
+lab=vdda1}
 N -1900 -140 -1860 -140 {
 lab=la_oenb[127],la_data_out[127]}
 N -1900 -100 -1860 -100 {
@@ -1096,8 +1096,8 @@ C {power_stage.sym} -250 -390 0 0 {name=x7}
 C {power_stage.sym} -250 -200 0 0 {name=x8}
 C {power_stage.sym} 120 -1180 0 1 {name=x9}
 C {power_stage.sym} 120 -1030 0 1 {name=x10}
-C {power_stage.sym} 120 -870 0 1 {name=x11}
-C {power_stage.sym} 120 -710 0 1 {name=x12}
+C {power_stage.sym} 120 -700 0 1 {name=x11}
+C {power_stage.sym} 120 -860 0 1 {name=x12}
 C {power_stage.sym} 120 -550 0 1 {name=x13}
 C {power_stage.sym} 120 -390 0 1 {name=x14}
 C {power_stage.sym} 120 -210 0 1 {name=x15}
@@ -1107,7 +1107,7 @@ C {devices/ipin.sym} -500 -1280 0 0 {name=p3 lab=vccd2}
 C {devices/ipin.sym} -500 -1330 0 0 {name=p4 lab=vdda2}
 C {devices/ipin.sym} -520 -1370 0 0 {name=p6 lab=vssa2}
 C {devices/lab_pin.sym} -580 -1120 0 0 {name=p35 sig_type=std_logic lab=vdd_spare_3}
-C {devices/lab_pin.sym} 450 -660 0 1 {name=p46 sig_type=std_logic lab=vdd_spare_1}
+C {devices/lab_pin.sym} 450 -650 0 1 {name=p46 sig_type=std_logic lab=vdd_spare_1}
 C {devices/lab_pin.sym} 450 -980 0 1 {name=p47 sig_type=std_logic lab=vdd_spare_2}
 C {devices/iopin.sym} -3680 940 0 1 {name=p214 lab=gpio_noesd[17:0]}
 C {devices/iopin.sym} -3680 960 0 1 {name=p228 lab=gpio_analog[17:0]}
@@ -1131,8 +1131,8 @@ C {devices/lab_pin.sym} -520 -910 0 0 {name=p428 sig_type=std_logic lab=la_data_
 C {devices/lab_pin.sym} -520 -1220 0 0 {name=p430 sig_type=std_logic lab=la_data_out[47]}
 C {devices/lab_pin.sym} 410 -1230 0 1 {name=p431 sig_type=std_logic lab=la_data_out[48]}
 C {devices/lab_pin.sym} 410 -1080 0 1 {name=p435 sig_type=std_logic lab=la_data_out[49]}
-C {devices/lab_pin.sym} 410 -920 0 1 {name=p437 sig_type=std_logic lab=la_data_out[50]}
-C {devices/lab_pin.sym} 410 -760 0 1 {name=p439 sig_type=std_logic lab=la_data_out[51]}
+C {devices/lab_pin.sym} 410 -910 0 1 {name=p437 sig_type=std_logic lab=la_data_out[50]}
+C {devices/lab_pin.sym} 410 -750 0 1 {name=p439 sig_type=std_logic lab=la_data_out[51]}
 C {devices/lab_pin.sym} 410 -600 0 1 {name=p441 sig_type=std_logic lab=la_data_out[52]}
 C {devices/lab_pin.sym} 410 -440 0 1 {name=p443 sig_type=std_logic lab=la_data_out[53]}
 C {devices/lab_pin.sym} -580 -980 0 0 {name=p445 sig_type=std_logic lab=io_analog[10]}
@@ -1156,8 +1156,8 @@ C {devices/lab_pin.sym} -280 260 0 1 {name=p13 sig_type=std_logic lab=io_oeb[8]}
 C {devices/lab_pin.sym} -280 330 0 1 {name=p14 sig_type=std_logic lab=io_oeb[10]}
 C {devices/lab_pin.sym} -280 400 0 1 {name=p15 sig_type=std_logic lab=io_oeb[11]}
 C {devices/lab_pin.sym} -280 470 0 1 {name=p16 sig_type=std_logic lab=io_oeb[12]}
-C {devices/lab_pin.sym} -280 530 0 1 {name=p17 sig_type=std_logic lab=io_oeb[13]}
-C {devices/lab_pin.sym} 450 -820 0 1 {name=p18 sig_type=std_logic lab=io_analog[3]}
+C {devices/lab_pin.sym} -280 540 0 1 {name=p17 sig_type=std_logic lab=io_oeb[13]}
+C {devices/lab_pin.sym} 450 -810 0 1 {name=p18 sig_type=std_logic lab=io_analog[3]}
 C {devices/lab_pin.sym} -440 190 0 0 {name=p19 sig_type=std_logic lab=vssd1}
 C {devices/lab_pin.sym} 370 180 0 0 {name=p21 sig_type=std_logic lab=vssd2}
 C {sky130_fd_pr/res_generic_m3.sym} -340 190 1 0 {name=R1
@@ -1269,9 +1269,9 @@ C {devices/lab_pin.sym} -2850 -1470 0 0 {name=p53 sig_type=std_logic lab=vdd_spa
 C {devices/lab_pin.sym} -2850 -1490 0 0 {name=p54 sig_type=std_logic lab=vccd1}
 C {devices/lab_pin.sym} -2850 -1390 0 0 {name=p55 sig_type=std_logic lab=vssa1}
 C {devices/lab_pin.sym} -2850 -1370 0 0 {name=p56 sig_type=std_logic lab=vssd1}
-C {devices/lab_pin.sym} -2450 -680 0 1 {name=p57 sig_type=std_logic lab=io_analog[3]}
+C {devices/lab_pin.sym} -2720 -1210 0 0 {name=p57 sig_type=std_logic lab=io_analog[3]}
 C {devices/lab_pin.sym} -2450 -660 0 1 {name=p58 sig_type=std_logic lab=vssd1}
-C {devices/lab_pin.sym} -2720 -1210 0 0 {name=p59 sig_type=std_logic lab=vdd_spare_1}
+C {devices/lab_pin.sym} -2450 -680 0 1 {name=p59 sig_type=std_logic lab=vdd_spare_1}
 C {devices/lab_pin.sym} -2570 -1210 0 1 {name=p60 sig_type=std_logic lab=vccd1}
 C {devices/lab_pin.sym} -2550 -900 0 1 {name=p61 sig_type=std_logic lab=vssd1}
 C {devices/lab_pin.sym} -2720 -900 0 0 {name=p62 sig_type=std_logic lab=vssa1}
@@ -1354,42 +1354,42 @@ C {devices/lab_pin.sym} -4850 480 0 0 {name=p126 sig_type=std_logic lab=vdda2}
 C {devices/lab_pin.sym} -4850 500 0 0 {name=p127 sig_type=std_logic lab=vccd2}
 C {devices/lab_pin.sym} -4850 520 0 0 {name=p128 sig_type=std_logic lab=vssd2}
 C {devices/lab_pin.sym} -4850 540 0 0 {name=p129 sig_type=std_logic lab=vssa2}
-C {devices/lab_pin.sym} -4880 880 0 0 {name=p130 sig_type=std_logic lab=gpio_noesd[17]}
+C {devices/lab_pin.sym} -4880 880 0 0 {name=p130 sig_type=std_logic lab=gpio_analog[17]}
 C {switch_array_2.sym} -1720 -1580 0 0 {name=x40}
 C {devices/lab_pin.sym} -1470 -1570 0 1 {name=p135 sig_type=std_logic lab=gpio_noesd[6]}
-C {devices/lab_pin.sym} -1470 -1690 0 1 {name=p136 sig_type=std_logic lab=vdda2}
-C {devices/lab_pin.sym} -1470 -1670 0 1 {name=p137 sig_type=std_logic lab=vccd2}
-C {devices/lab_pin.sym} -1470 -1650 0 1 {name=p138 sig_type=std_logic lab=vssd2}
-C {devices/lab_pin.sym} -1470 -1630 0 1 {name=p139 sig_type=std_logic lab=vssa2}
+C {devices/lab_pin.sym} -1470 -1690 0 1 {name=p136 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} -1470 -1670 0 1 {name=p137 sig_type=std_logic lab=vccd1}
+C {devices/lab_pin.sym} -1470 -1650 0 1 {name=p138 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} -1470 -1630 0 1 {name=p139 sig_type=std_logic lab=vssa1}
 C {switch_array_2.sym} -1720 -1340 0 0 {name=x41}
 C {devices/lab_pin.sym} -1470 -1330 0 1 {name=p140 sig_type=std_logic lab=gpio_noesd[5]}
-C {devices/lab_pin.sym} -1470 -1450 0 1 {name=p141 sig_type=std_logic lab=vdda2}
-C {devices/lab_pin.sym} -1470 -1430 0 1 {name=p142 sig_type=std_logic lab=vccd2}
-C {devices/lab_pin.sym} -1470 -1410 0 1 {name=p143 sig_type=std_logic lab=vssd2}
-C {devices/lab_pin.sym} -1470 -1390 0 1 {name=p144 sig_type=std_logic lab=vssa2}
+C {devices/lab_pin.sym} -1470 -1450 0 1 {name=p141 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} -1470 -1430 0 1 {name=p142 sig_type=std_logic lab=vccd1}
+C {devices/lab_pin.sym} -1470 -1410 0 1 {name=p143 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} -1470 -1390 0 1 {name=p144 sig_type=std_logic lab=vssa1}
 C {switch_array_2.sym} -1710 -1100 0 0 {name=x42}
 C {devices/lab_pin.sym} -1460 -1090 0 1 {name=p145 sig_type=std_logic lab=gpio_noesd[4]}
-C {devices/lab_pin.sym} -1460 -1210 0 1 {name=p146 sig_type=std_logic lab=vdda2}
-C {devices/lab_pin.sym} -1460 -1190 0 1 {name=p147 sig_type=std_logic lab=vccd2}
-C {devices/lab_pin.sym} -1460 -1170 0 1 {name=p148 sig_type=std_logic lab=vssd2}
-C {devices/lab_pin.sym} -1460 -1150 0 1 {name=p149 sig_type=std_logic lab=vssa2}
+C {devices/lab_pin.sym} -1460 -1210 0 1 {name=p146 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} -1460 -1190 0 1 {name=p147 sig_type=std_logic lab=vccd1}
+C {devices/lab_pin.sym} -1460 -1170 0 1 {name=p148 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} -1460 -1150 0 1 {name=p149 sig_type=std_logic lab=vssa1}
 C {switch_array_2.sym} -1710 -860 0 0 {name=x43}
 C {devices/lab_pin.sym} -1460 -850 0 1 {name=p150 sig_type=std_logic lab=gpio_noesd[3]}
-C {devices/lab_pin.sym} -1460 -970 0 1 {name=p151 sig_type=std_logic lab=vdda2}
-C {devices/lab_pin.sym} -1460 -950 0 1 {name=p152 sig_type=std_logic lab=vccd2}
-C {devices/lab_pin.sym} -1460 -930 0 1 {name=p153 sig_type=std_logic lab=vssd2}
-C {devices/lab_pin.sym} -1460 -910 0 1 {name=p154 sig_type=std_logic lab=vssa2}
+C {devices/lab_pin.sym} -1460 -970 0 1 {name=p151 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} -1460 -950 0 1 {name=p152 sig_type=std_logic lab=vccd1}
+C {devices/lab_pin.sym} -1460 -930 0 1 {name=p153 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} -1460 -910 0 1 {name=p154 sig_type=std_logic lab=vssa1}
 C {switch_array_2.sym} -1710 -370 0 0 {name=x45}
-C {devices/lab_pin.sym} -1460 -480 0 1 {name=p161 sig_type=std_logic lab=vdda2}
-C {devices/lab_pin.sym} -1460 -460 0 1 {name=p162 sig_type=std_logic lab=vccd2}
-C {devices/lab_pin.sym} -1460 -440 0 1 {name=p163 sig_type=std_logic lab=vssd2}
-C {devices/lab_pin.sym} -1460 -420 0 1 {name=p164 sig_type=std_logic lab=vssa2}
+C {devices/lab_pin.sym} -1460 -480 0 1 {name=p161 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} -1460 -460 0 1 {name=p162 sig_type=std_logic lab=vccd1}
+C {devices/lab_pin.sym} -1460 -440 0 1 {name=p163 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} -1460 -420 0 1 {name=p164 sig_type=std_logic lab=vssa1}
 C {switch_array_2.sym} -1710 -140 0 0 {name=x46}
 C {devices/lab_pin.sym} -1460 -130 0 1 {name=p165 sig_type=std_logic lab=gpio_noesd[0]}
-C {devices/lab_pin.sym} -1460 -250 0 1 {name=p166 sig_type=std_logic lab=vdda2}
-C {devices/lab_pin.sym} -1460 -230 0 1 {name=p167 sig_type=std_logic lab=vccd2}
-C {devices/lab_pin.sym} -1460 -210 0 1 {name=p168 sig_type=std_logic lab=vssd2}
-C {devices/lab_pin.sym} -1460 -190 0 1 {name=p169 sig_type=std_logic lab=vssa2}
+C {devices/lab_pin.sym} -1460 -250 0 1 {name=p166 sig_type=std_logic lab=vdda1}
+C {devices/lab_pin.sym} -1460 -230 0 1 {name=p167 sig_type=std_logic lab=vccd1}
+C {devices/lab_pin.sym} -1460 -210 0 1 {name=p168 sig_type=std_logic lab=vssd1}
+C {devices/lab_pin.sym} -1460 -190 0 1 {name=p169 sig_type=std_logic lab=vssa1}
 C {devices/lab_pin.sym} -1460 -360 0 1 {name=p160 sig_type=std_logic lab=gpio_noesd[1]}
 C {sky130_ef_ip__ccomp3v_cl.sym} -3700 -580 0 0 {name=x39}
 C {devices/lab_pin.sym} -3940 -510 0 0 {name=p131 sig_type=std_logic lab=vssa2}
@@ -1609,7 +1609,7 @@ C {devices/lab_pin.sym} -1900 -1060 0 0 {name=p360 sig_type=std_logic lab=la_oen
 C {devices/lab_pin.sym} -1900 -1100 0 0 {name=p361 sig_type=std_logic lab=la_oenb[121],la_data_out[121]}
 C {devices/lab_pin.sym} -1910 -1300 0 0 {name=p362 sig_type=std_logic lab=la_oenb[118],la_data_out[118]}
 C {devices/lab_pin.sym} -1910 -1340 0 0 {name=p363 sig_type=std_logic lab=la_oenb[119],la_data_out[119]}
-C {devices/lab_pin.sym} -1470 -1300 0 0 {name=p364 sig_type=std_logic lab=la_oenb[116],la_data_out[116]}
+C {devices/lab_pin.sym} -1910 -1540 0 0 {name=p364 sig_type=std_logic lab=la_oenb[116],la_data_out[116]}
 C {devices/lab_pin.sym} -1910 -1580 0 0 {name=p365 sig_type=std_logic lab=la_oenb[117],la_data_out[117]}
 C {sky130_aa_ip__programmable_pll.sym} -2650 -290 0 0 {name=x17}
 C {devices/lab_pin.sym} 510 390 0 1 {name=p366 sig_type=std_logic lab=io_oeb[21]

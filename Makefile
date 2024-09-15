@@ -18,6 +18,7 @@ CARAVEL_ROOT?=$(PWD)/caravel
 PRECHECK_ROOT?=${HOME}/mpw_precheck
 SIM ?= RTL
 CUP_ROOT?=$(PWD)
+IP_ROOT?=$(PWD)/dependencies
 
 SKYWATER_COMMIT=f70d8ca46961ff92719d8870a18a076370b85f6c
 export OPEN_PDKS_COMMIT?=6d4d11780c40b20ee63cc98e645307a9bf2b2ab8
@@ -38,6 +39,174 @@ else
 	CARAVEL_REPO := https://github.com/efabless/caravel
 	CARAVEL_TAG := $(MPW_TAG)
 endif
+
+# Get IP blocks used in this test chip
+
+# EFABLESS_URL=git@github.com:efabless
+# OPENCIRCUITDESIGN_URL=git@github.com:RTimothyEdwards
+EFABLESS_URL=https://github.com/efabless
+OPENCIRCUITDESIGN_URL=https://github.com/RTimothyEdwards
+# HSXO_IP=sky130_ht_ip__hsxo_cpz1
+# COMPARATOR_IP=sky130_ak_ip__comparator
+# LSXO_IP=sky130_be_ip__lsxo
+# TEMPSENSOR_IP=sky130_od_ip__tempsensor
+# HPOPAMP_IP=sky130_td_ip__opamp_hp
+# OVERVOLTAGE_IP=sky130_vbl_ip__overvoltage
+# BANDGAP_IP=sky130_cw_ip
+# BROWNOUT_IP=sky130_ajc_ip__brownout
+RCOSC16M_IP=sky130_ef_ip__rc_osc_16M
+RCOSC500K_IP=sky130_ef_ip__rc_osc_500k
+RHEOSTAT_IP=sky130_ef_ip__rheostat_8bit
+BIASGEN_IP=sky130_ef_ip__biasgen
+SWITCH_IP=sky130_ef_ip__analog_switches
+POR_IP=sky130_sw_ip__bgrref_por
+ULPCOMP_IP=sky130_icrg_ip__ulpcomp
+MOSREF_IP=sky130_ak_ip__cmos_vref
+LDO_IP=sky130_am_ip__ldo_01v8
+SIGMADELTA_IP=sky130_iic_ip__audiodac_v1
+RDAC_IP=sky130_ef_ip__rdac3v_8bit
+CCOMP_IP=sky130_ef_ip__ccomp3v
+SAMPLEHOLD_IP=sky130_ef_ip__samplehold
+CDAC_IP=sky130_ef_ip__cdac3v_12bit
+PLL_IP=sky130_aa_ip__programmable_pll
+
+.PHONY: get_ip_blocks
+get_ip_blocks: check_dependencies
+	@if [ ! -d "$(IP_ROOT)/$(RCOSC500K_IP)" ]; then \
+		echo "Creating $(RCOSC500K_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(RCOSC500K_IP) \
+			$(IP_ROOT)/$(RCOSC500K_IP) ; \
+	else \
+		echo "Updating $(RCOSC500K_IP) repository" ; \
+		( cd $(IP_ROOT)/$(RCOSC500K_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(RCOSC16M_IP)" ]; then \
+		echo "Creating $(RCOSC16M_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(RCOSC16M_IP) \
+			$(IP_ROOT)/$(RCOSC16M_IP) ; \
+	else \
+		echo "Updat $(RCOSC16M_IP) repository" ; \
+		( cd $(IP_ROOT)/$(RCOSC16M_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(RHEOSTAT_IP)" ]; then \
+		echo "Creating $(RHEOSTAT_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(RHEOSTAT_IP) \
+			$(IP_ROOT)/$(RHEOSTAT_IP) ; \
+	else \
+		echo "Updating $(RHEOSTAT_IP) repository" ; \
+		( cd $(IP_ROOT)/$(RHEOSTAT_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(BIASGEN_IP)" ]; then \
+		echo "Creating $(BIASGEN_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(BIASGEN_IP) \
+			$(IP_ROOT)/$(BIASGEN_IP) ; \
+	else \
+		echo "Updating $(BIASGEN_IP) repository" ; \
+		( cd $(IP_ROOT)/$(BIASGEN_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(SWITCH_IP)" ]; then \
+		echo "Creating $(SWITCH_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(SWITCH_IP) \
+			$(IP_ROOT)/$(SWITCH_IP) ; \
+	else \
+		echo "Updating $(SWITCH_IP) repository" ; \
+		( cd $(IP_ROOT)/$(SWITCH_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(ULPCOMP_IP)" ]; then \
+		echo "Creating $(ULPCOMP_IP) repository" ; \
+		git clone --depth=1 --branch=tapeout_ci2406 \
+			$(EFABLESS_URL)/$(ULPCOMP_IP) \
+			$(IP_ROOT)/$(ULPCOMP_IP) ; \
+	else \
+		echo "Updating $(ULPCOMP_IP) repository" ; \
+		( cd $(IP_ROOT)/$(ULPCOMP_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(LDO_IP)" ]; then \
+		echo "Creating $(LDO_IP) repository" ; \
+		git clone --depth=1 --branch=tapeout_ci2406 \
+			$(EFABLESS_URL)/$(LDO_IP) \
+			$(IP_ROOT)/$(LDO_IP) ; \
+	else \
+		echo "Updating $(LDO_IP) repository" ; \
+		( cd $(IP_ROOT)/$(LDO_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(MOSREF_IP)" ]; then \
+		echo "Creating $(MOSREF_IP) repository" ; \
+		git clone --depth=1 --branch=tapeout_ci2406 \
+			$(EFABLESS_URL)/$(MOSREF_IP) \
+			$(IP_ROOT)/$(MOSREF_IP) ; \
+	else \
+		echo "Updating $(MOSREF_IP) repository" ; \
+		( cd $(IP_ROOT)/$(MOSREF_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(POR_IP)" ]; then \
+		echo "Creating $(POR_IP) repository" ; \
+		git clone --depth=1 --branch=tapeout_ci2406 \
+			$(EFABLESS_URL)/$(POR_IP) \
+			$(IP_ROOT)/$(POR_IP) ; \
+	else \
+		echo "Updating $(POR_IP) repository" ; \
+		( cd $(IP_ROOT)/$(POR_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(SIGMADELTA_IP)" ]; then \
+		echo "Creating $(SIGMADELTA_IP) repository" ; \
+		git clone --depth=1 --branch=tapeout_ci2406 \
+			$(EFABLESS_URL)/$(SIGMADELTA_IP) \
+			$(IP_ROOT)/$(SIGMADELTA_IP) ; \
+	else \
+		echo "Updating $(SIGMADELTA_IP) repository" ; \
+		( cd $(IP_ROOT)/$(SIGMADELTA_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(RDAC_IP)" ]; then \
+		echo "Creating $(RDAC_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(RDAC_IP) \
+			$(IP_ROOT)/$(RDAC_IP) ; \
+	else \
+		echo "Updating $(RDAC_IP) repository" ; \
+		( cd $(IP_ROOT)/$(RDAC_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(CCOMP_IP)" ]; then \
+		echo "Creating $(CCOMP_IP) repository" ; \
+		git clone --depth=1 --branch=tapeout_ci2406 \
+			$(OPENCIRCUITDESIGN_URL)/$(CCOMP_IP) \
+			$(IP_ROOT)/$(CCOMP_IP) ; \
+	else \
+		echo "Updating $(CCOMP_IP) repository" ; \
+		( cd $(IP_ROOT)/$(CCOMP_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(SAMPLEHOLD_IP)" ]; then \
+		echo "Creating $(SAMPLEHOLD_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(SAMPLEHOLD_IP) \
+			$(IP_ROOT)/$(SAMPLEHOLD_IP) ; \
+	else \
+		echo "Updating $(SAMPLEHOLD_IP) repository" ; \
+		( cd $(IP_ROOT)/$(SAMPLEHOLD_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(CDAC_IP)" ]; then \
+		echo "Creating $(CDAC_IP) repository" ; \
+		git clone --depth=1 \
+			$(OPENCIRCUITDESIGN_URL)/$(CDAC_IP) \
+			$(IP_ROOT)/$(CDAC_IP) ; \
+	else \
+		echo "Updating $(CDAC_IP) repository" ; \
+		( cd $(IP_ROOT)/$(CDAC_IP) ; git pull ) ; \
+	fi
+	@if [ ! -d "$(IP_ROOT)/$(PLL_IP)" ]; then \
+		echo "Creating $(PLL_IP) repository" ; \
+		git clone --depth=1 \
+			$(EFABLESS_URL)/$(PLL_IP) \
+			$(IP_ROOT)/$(PLL_IP) ; \
+	else \
+		echo "Updating $(PLL_IP) repository" ; \
+		( cd $(IP_ROOT)/$(PLL_IP) ; git pull ) ; \
+	fi
 
 # Include Caravel Makefile Targets
 .PHONY: % : check-caravel

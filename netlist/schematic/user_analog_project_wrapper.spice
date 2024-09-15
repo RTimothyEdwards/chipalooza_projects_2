@@ -164,8 +164,8 @@ x7 la_data_out[42] vdda2 vssa2 vssd2 vccd2 io_analog[6] power_stage
 x8 la_data_out[41] vccd2 vssd2 vssd2 vccd2 io_analog[5] power_stage
 x9 la_data_out[48] vdda1 vssa1 vssd1 vccd1 io_analog[4] power_stage
 x10 la_data_out[49] vdda1 vssa1 vssd1 vccd1 vdd_spare_2 power_stage
-x11 la_data_out[50] vccd1 vssd1 vssd1 vccd1 io_analog[3] power_stage
-x12 la_data_out[51] vdda1 vssa1 vssd1 vccd1 vdd_spare_1 power_stage
+x11 la_data_out[51] vccd1 vssd1 vssd1 vccd1 vdd_spare_1 power_stage
+x12 la_data_out[50] vdda1 vssa1 vssd1 vccd1 io_analog[3] power_stage
 x13 la_data_out[52] vdda1 vssa1 vssd1 vccd1 io_analog[2] power_stage
 x14 la_data_out[53] vdda1 vssa1 vssd1 vccd1 io_analog[1] power_stage
 x15 la_data_out[54] vdda1 vssa1 vssd1 vccd1 io_analog[0] power_stage
@@ -174,7 +174,7 @@ R2 vssd1 io_oeb[8] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R3 vssd1 io_oeb[10] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R4 vssd1 io_oeb[11] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R5 vssd1 io_oeb[12] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
-R6 vssd1 net1 sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R6 vssd1 io_oeb[13] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R7 vssd2 io_oeb[14] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R8 vssd2 io_oeb[15] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R9 vssd2 io_oeb[16] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
@@ -186,9 +186,9 @@ x16 vccd1 vssa1 vssd1 io_analog[1] la_oenb[107] rheostat_vh la_data_out[108] la_
 + la_oenb[109] la_data_out[110] la_oenb[110] la_data_out[111] rheostat_vl sky130_ef_ip__rheostat_8bit
 x18 vccd1 vssd1 la_oenb[91] vdd_spare_2 sample_out sample_in la_data_out[91] vssa1 sky130_ef_ip__samplehold
 x19 la_data_out[26] la_oenb[25] la_data_out[25] la_oenb[24] la_data_out[24] la_oenb[23] la_data_out[23] la_oenb[22]
-+ la_data_out[22] la_oenb[21] io_analog[7] vccd2 vssd2 vssa2 cdac_vh cdac_vl cdac_out la_oenb[26] net2 la_data_out[21] la_oenb[20]
++ la_data_out[22] la_oenb[21] io_analog[7] vccd2 vssd2 vssa2 cdac_vh cdac_vl cdac_out la_oenb[26] net1 la_data_out[21] la_oenb[20]
 + sky130_ef_ip__cdac3v_12bit
-x20 vccd1 vdd_spare_1 la_data_out[107] io_out[10] ulpcomp_vinn ulpcomp_vinp la_oenb[106] vssd1 vssa1 sky130_icrg_ip__ulpcomp2
+x20 vccd1 io_analog[3] la_data_out[107] io_out[10] ulpcomp_vinn ulpcomp_vinp la_oenb[106] vssd1 vssa1 sky130_icrg_ip__ulpcomp2
 X21 io_analog[9] vssd2 la_oenb[29] vref_vbg vref_vptat la_data_out[29] la_oenb[28] la_data_out[28] vccd2 vssd2 la_oenb[27]
 + vref_vbgsc vref_vbgtg sky130_ak_ip__cmos_vref
 x22 la_data_out[20] vccd2 io_analog[6] vssd2 vssa2 io_out[21] sky130_ef_ip__rc_osc_16M
@@ -200,7 +200,7 @@ x27 vccd1 vssa1 vssd1 io_analog[0] la_oenb[111] rdac_vh la_data_out[112] la_oenb
 + la_data_out[114] la_oenb[115] la_oenb[114] la_data_out[115] rdac_vl sky130_ef_ip__rdac3v_8bit
 x29 la_oenb[35] idac_ref_in vbg la_data_out[35] vccd2 vssd2 vdd_spare_3 la_data_out[31] la_oenb[31] la_data_out[32] la_oenb[32]
 + la_data_out[33] la_oenb[33] la_data_out[34] la_oenb[34] vssa2 idac_src_out idac_snk_out sky130_ef_ip__idac3v_8bit
-* noconn #net2
+* noconn #net1
 x1 vdda2 vccd2 vssd2 vssa2 gpio_noesd[7] la_data_out[18] la_oenb[18] idac_src_out la_data_out[19] la_oenb[19] gpio_noesd[7]
 + vref_vptat switch_array_2
 x30 vdda2 vccd2 vssd2 vssa2 gpio_noesd[8] la_data_out[16] la_oenb[16] idac_snk_out la_data_out[17] la_oenb[17] gpio_noesd[8]
@@ -215,31 +215,31 @@ x34 vdda2 vccd2 vssd2 vssa2 gpio_noesd[12] la_data_out[8] la_oenb[8] ccomp_vinm 
 + switch_array_2
 x35 vdda2 vccd2 vssd2 vssa2 gpio_noesd[13] la_data_out[6] la_oenb[6] pll_fin la_data_out[7] la_oenb[7] gpio_noesd[13] cdac_out
 + switch_array_2
-x36 vdda2 vccd2 vssd2 vssa2 gpio_noesd[14] la_data_out[4] la_oenb[4] pll_ibias la_data_out[5] la_oenb[5] gpio_noesd[14] net3
+x36 vdda2 vccd2 vssd2 vssa2 gpio_noesd[14] la_data_out[4] la_oenb[4] pll_ibias la_data_out[5] la_oenb[5] gpio_noesd[14] net2
 + switch_array_2
 x37 vdda2 vccd2 vssd2 vssa2 gpio_noesd[15] la_data_out[2] la_oenb[2] pll_vctrl_in la_data_out[3] la_oenb[3] gpio_noesd[15]
 + audio_out_n switch_array_2
-x38 vdda2 vccd2 vssd2 vssa2 gpio_noesd[16] la_data_out[0] la_oenb[0] net4 la_data_out[1] la_oenb[1] gpio_noesd[16] audio_out_p
+x38 vdda2 vccd2 vssd2 vssa2 gpio_noesd[16] la_data_out[0] la_oenb[0] net3 la_data_out[1] la_oenb[1] gpio_noesd[16] audio_out_p
 + switch_array_2
-x40 vdda2 vccd2 vssd2 vssa2 gpio_noesd[6] la_oenb[117] la_data_out[117] sample_out net5[1] net5[0] gpio_noesd[6] ulpcomp_vinn
-+ switch_array_2
-x41 vdda2 vccd2 vssd2 vssa2 gpio_noesd[5] la_oenb[119] la_data_out[119] sample_in la_oenb[118] la_data_out[118] gpio_noesd[5]
+x40 vdda1 vccd1 vssd1 vssa1 gpio_noesd[6] la_oenb[117] la_data_out[117] sample_out la_oenb[116] la_data_out[116] gpio_noesd[6]
++ ulpcomp_vinn switch_array_2
+x41 vdda1 vccd1 vssd1 vssa1 gpio_noesd[5] la_oenb[119] la_data_out[119] sample_in la_oenb[118] la_data_out[118] gpio_noesd[5]
 + por_outh[1] switch_array_2
-x42 vdda2 vccd2 vssd2 vssa2 gpio_noesd[4] la_oenb[121] la_data_out[121] ulpcomp_vinp la_oenb[120] la_data_out[120] gpio_noesd[4]
+x42 vdda1 vccd1 vssd1 vssa1 gpio_noesd[4] la_oenb[121] la_data_out[121] ulpcomp_vinp la_oenb[120] la_data_out[120] gpio_noesd[4]
 + pll_lf switch_array_2
-x43 vdda2 vccd2 vssd2 vssa2 gpio_noesd[3] la_oenb[123] la_data_out[123] rdac_vh la_oenb[122] la_data_out[122] gpio_noesd[3]
+x43 vdda1 vccd1 vssd1 vssa1 gpio_noesd[3] la_oenb[123] la_data_out[123] rdac_vh la_oenb[122] la_data_out[122] gpio_noesd[3]
 + rheostat_vh switch_array_2
-x45 vdda2 vccd2 vssd2 vssa2 gpio_noesd[1] la_oenb[125] la_data_out[125] rdac_vl la_oenb[124] la_data_out[124] gpio_noesd[1]
+x45 vdda1 vccd1 vssd1 vssa1 gpio_noesd[1] la_oenb[125] la_data_out[125] rdac_vl la_oenb[124] la_data_out[124] gpio_noesd[1]
 + rheostat_vl switch_array_2
-x46 vdda2 vccd2 vssd2 vssa2 gpio_noesd[0] la_oenb[127] la_data_out[127] rheostat_out la_oenb[126] la_data_out[126] gpio_noesd[0]
+x46 vdda1 vccd1 vssd1 vssa1 gpio_noesd[0] la_oenb[127] la_data_out[127] rheostat_out la_oenb[126] la_data_out[126] gpio_noesd[0]
 + rdac_out switch_array_2
 x39 io_out[17] vccd2 vssd2 io_analog[8] vssa2 ccomp_vinp ccomp_vinm vssa2 la_data_out[27] sky130_ef_ip__ccomp3v_cl
 R14 rheostat_vh io_in_3v3[5] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
-R15 rheostat_vl net6 sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R15 rheostat_vl net4 sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R16 rdac_vh io_in_3v3[3] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
 R17 rdac_vl io_in_3v3[4] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
-R18 gpio_noesd[17] vbg sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
-x17 la_oenb[95] la_data_out[96] io_analog[3] la_oenb[103] la_data_out[95] la_oenb[96] la_oenb[102] vssd1 la_oenb[94]
+R18 gpio_analog[17] vbg sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+x17 la_oenb[95] la_data_out[96] vdd_spare_1 la_oenb[103] la_data_out[95] la_oenb[96] la_oenb[102] vssd1 la_oenb[94]
 + la_data_out[97] io_out[20] io_out[11] la_data_out[94] la_oenb[97] pll_fin io_out[12] la_oenb[93] la_data_out[98] pll_ibias io_out[15] la_oenb[98]
 + la_data_out[104] la_data_out[103] la_data_out[99] pll_vctrl_in la_oenb[104] la_data_out[102] la_data_out[105] la_oenb[101] io_out[16] la_oenb[105]
 + io_out[14] la_data_out[101] pll_lf la_data_out[106] la_oenb[100] la_data_out[100] io_out[19] la_data_out[93] io_out[18] la_oenb[92]
