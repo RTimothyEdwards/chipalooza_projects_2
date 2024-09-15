@@ -1,0 +1,2893 @@
+** sch_path: /home/tim/gits/chipalooza_projects_2/xschem/user_analog_project_wrapper.sch
+.subckt user_analog_project_wrapper vdda1 vdda2 vssa1 vssa2 vccd1 vccd2 vssd1 vssd2 wb_clk_i wb_rst_i wbs_stb_i wbs_cyc_i wbs_we_i
++ wbs_sel_i[3] wbs_sel_i[2] wbs_sel_i[1] wbs_sel_i[0] wbs_dat_i[31] wbs_dat_i[30] wbs_dat_i[29] wbs_dat_i[28] wbs_dat_i[27] wbs_dat_i[26]
++ wbs_dat_i[25] wbs_dat_i[24] wbs_dat_i[23] wbs_dat_i[22] wbs_dat_i[21] wbs_dat_i[20] wbs_dat_i[19] wbs_dat_i[18] wbs_dat_i[17] wbs_dat_i[16]
++ wbs_dat_i[15] wbs_dat_i[14] wbs_dat_i[13] wbs_dat_i[12] wbs_dat_i[11] wbs_dat_i[10] wbs_dat_i[9] wbs_dat_i[8] wbs_dat_i[7] wbs_dat_i[6]
++ wbs_dat_i[5] wbs_dat_i[4] wbs_dat_i[3] wbs_dat_i[2] wbs_dat_i[1] wbs_dat_i[0] wbs_adr_i[31] wbs_adr_i[30] wbs_adr_i[29] wbs_adr_i[28]
++ wbs_adr_i[27] wbs_adr_i[26] wbs_adr_i[25] wbs_adr_i[24] wbs_adr_i[23] wbs_adr_i[22] wbs_adr_i[21] wbs_adr_i[20] wbs_adr_i[19] wbs_adr_i[18]
++ wbs_adr_i[17] wbs_adr_i[16] wbs_adr_i[15] wbs_adr_i[14] wbs_adr_i[13] wbs_adr_i[12] wbs_adr_i[11] wbs_adr_i[10] wbs_adr_i[9] wbs_adr_i[8]
++ wbs_adr_i[7] wbs_adr_i[6] wbs_adr_i[5] wbs_adr_i[4] wbs_adr_i[3] wbs_adr_i[2] wbs_adr_i[1] wbs_adr_i[0] wbs_ack_o wbs_dat_o[31] wbs_dat_o[30]
++ wbs_dat_o[29] wbs_dat_o[28] wbs_dat_o[27] wbs_dat_o[26] wbs_dat_o[25] wbs_dat_o[24] wbs_dat_o[23] wbs_dat_o[22] wbs_dat_o[21] wbs_dat_o[20]
++ wbs_dat_o[19] wbs_dat_o[18] wbs_dat_o[17] wbs_dat_o[16] wbs_dat_o[15] wbs_dat_o[14] wbs_dat_o[13] wbs_dat_o[12] wbs_dat_o[11] wbs_dat_o[10]
++ wbs_dat_o[9] wbs_dat_o[8] wbs_dat_o[7] wbs_dat_o[6] wbs_dat_o[5] wbs_dat_o[4] wbs_dat_o[3] wbs_dat_o[2] wbs_dat_o[1] wbs_dat_o[0]
++ la_data_in[127] la_data_in[126] la_data_in[125] la_data_in[124] la_data_in[123] la_data_in[122] la_data_in[121] la_data_in[120] la_data_in[119]
++ la_data_in[118] la_data_in[117] la_data_in[116] la_data_in[115] la_data_in[114] la_data_in[113] la_data_in[112] la_data_in[111] la_data_in[110]
++ la_data_in[109] la_data_in[108] la_data_in[107] la_data_in[106] la_data_in[105] la_data_in[104] la_data_in[103] la_data_in[102] la_data_in[101]
++ la_data_in[100] la_data_in[99] la_data_in[98] la_data_in[97] la_data_in[96] la_data_in[95] la_data_in[94] la_data_in[93] la_data_in[92]
++ la_data_in[91] la_data_in[90] la_data_in[89] la_data_in[88] la_data_in[87] la_data_in[86] la_data_in[85] la_data_in[84] la_data_in[83]
++ la_data_in[82] la_data_in[81] la_data_in[80] la_data_in[79] la_data_in[78] la_data_in[77] la_data_in[76] la_data_in[75] la_data_in[74]
++ la_data_in[73] la_data_in[72] la_data_in[71] la_data_in[70] la_data_in[69] la_data_in[68] la_data_in[67] la_data_in[66] la_data_in[65]
++ la_data_in[64] la_data_in[63] la_data_in[62] la_data_in[61] la_data_in[60] la_data_in[59] la_data_in[58] la_data_in[57] la_data_in[56]
++ la_data_in[55] la_data_in[54] la_data_in[53] la_data_in[52] la_data_in[51] la_data_in[50] la_data_in[49] la_data_in[48] la_data_in[47]
++ la_data_in[46] la_data_in[45] la_data_in[44] la_data_in[43] la_data_in[42] la_data_in[41] la_data_in[40] la_data_in[39] la_data_in[38]
++ la_data_in[37] la_data_in[36] la_data_in[35] la_data_in[34] la_data_in[33] la_data_in[32] la_data_in[31] la_data_in[30] la_data_in[29]
++ la_data_in[28] la_data_in[27] la_data_in[26] la_data_in[25] la_data_in[24] la_data_in[23] la_data_in[22] la_data_in[21] la_data_in[20]
++ la_data_in[19] la_data_in[18] la_data_in[17] la_data_in[16] la_data_in[15] la_data_in[14] la_data_in[13] la_data_in[12] la_data_in[11]
++ la_data_in[10] la_data_in[9] la_data_in[8] la_data_in[7] la_data_in[6] la_data_in[5] la_data_in[4] la_data_in[3] la_data_in[2] la_data_in[1]
++ la_data_in[0] la_data_out[127] la_data_out[126] la_data_out[125] la_data_out[124] la_data_out[123] la_data_out[122] la_data_out[121]
++ la_data_out[120] la_data_out[119] la_data_out[118] la_data_out[117] la_data_out[116] la_data_out[115] la_data_out[114] la_data_out[113]
++ la_data_out[112] la_data_out[111] la_data_out[110] la_data_out[109] la_data_out[108] la_data_out[107] la_data_out[106] la_data_out[105]
++ la_data_out[104] la_data_out[103] la_data_out[102] la_data_out[101] la_data_out[100] la_data_out[99] la_data_out[98] la_data_out[97]
++ la_data_out[96] la_data_out[95] la_data_out[94] la_data_out[93] la_data_out[92] la_data_out[91] la_data_out[90] la_data_out[89] la_data_out[88]
++ la_data_out[87] la_data_out[86] la_data_out[85] la_data_out[84] la_data_out[83] la_data_out[82] la_data_out[81] la_data_out[80] la_data_out[79]
++ la_data_out[78] la_data_out[77] la_data_out[76] la_data_out[75] la_data_out[74] la_data_out[73] la_data_out[72] la_data_out[71] la_data_out[70]
++ la_data_out[69] la_data_out[68] la_data_out[67] la_data_out[66] la_data_out[65] la_data_out[64] la_data_out[63] la_data_out[62] la_data_out[61]
++ la_data_out[60] la_data_out[59] la_data_out[58] la_data_out[57] la_data_out[56] la_data_out[55] la_data_out[54] la_data_out[53] la_data_out[52]
++ la_data_out[51] la_data_out[50] la_data_out[49] la_data_out[48] la_data_out[47] la_data_out[46] la_data_out[45] la_data_out[44] la_data_out[43]
++ la_data_out[42] la_data_out[41] la_data_out[40] la_data_out[39] la_data_out[38] la_data_out[37] la_data_out[36] la_data_out[35] la_data_out[34]
++ la_data_out[33] la_data_out[32] la_data_out[31] la_data_out[30] la_data_out[29] la_data_out[28] la_data_out[27] la_data_out[26] la_data_out[25]
++ la_data_out[24] la_data_out[23] la_data_out[22] la_data_out[21] la_data_out[20] la_data_out[19] la_data_out[18] la_data_out[17] la_data_out[16]
++ la_data_out[15] la_data_out[14] la_data_out[13] la_data_out[12] la_data_out[11] la_data_out[10] la_data_out[9] la_data_out[8] la_data_out[7]
++ la_data_out[6] la_data_out[5] la_data_out[4] la_data_out[3] la_data_out[2] la_data_out[1] la_data_out[0] la_oenb[127] la_oenb[126] la_oenb[125]
++ la_oenb[124] la_oenb[123] la_oenb[122] la_oenb[121] la_oenb[120] la_oenb[119] la_oenb[118] la_oenb[117] la_oenb[116] la_oenb[115] la_oenb[114]
++ la_oenb[113] la_oenb[112] la_oenb[111] la_oenb[110] la_oenb[109] la_oenb[108] la_oenb[107] la_oenb[106] la_oenb[105] la_oenb[104] la_oenb[103]
++ la_oenb[102] la_oenb[101] la_oenb[100] la_oenb[99] la_oenb[98] la_oenb[97] la_oenb[96] la_oenb[95] la_oenb[94] la_oenb[93] la_oenb[92]
++ la_oenb[91] la_oenb[90] la_oenb[89] la_oenb[88] la_oenb[87] la_oenb[86] la_oenb[85] la_oenb[84] la_oenb[83] la_oenb[82] la_oenb[81]
++ la_oenb[80] la_oenb[79] la_oenb[78] la_oenb[77] la_oenb[76] la_oenb[75] la_oenb[74] la_oenb[73] la_oenb[72] la_oenb[71] la_oenb[70]
++ la_oenb[69] la_oenb[68] la_oenb[67] la_oenb[66] la_oenb[65] la_oenb[64] la_oenb[63] la_oenb[62] la_oenb[61] la_oenb[60] la_oenb[59]
++ la_oenb[58] la_oenb[57] la_oenb[56] la_oenb[55] la_oenb[54] la_oenb[53] la_oenb[52] la_oenb[51] la_oenb[50] la_oenb[49] la_oenb[48]
++ la_oenb[47] la_oenb[46] la_oenb[45] la_oenb[44] la_oenb[43] la_oenb[42] la_oenb[41] la_oenb[40] la_oenb[39] la_oenb[38] la_oenb[37]
++ la_oenb[36] la_oenb[35] la_oenb[34] la_oenb[33] la_oenb[32] la_oenb[31] la_oenb[30] la_oenb[29] la_oenb[28] la_oenb[27] la_oenb[26]
++ la_oenb[25] la_oenb[24] la_oenb[23] la_oenb[22] la_oenb[21] la_oenb[20] la_oenb[19] la_oenb[18] la_oenb[17] la_oenb[16] la_oenb[15]
++ la_oenb[14] la_oenb[13] la_oenb[12] la_oenb[11] la_oenb[10] la_oenb[9] la_oenb[8] la_oenb[7] la_oenb[6] la_oenb[5] la_oenb[4] la_oenb[3]
++ la_oenb[2] la_oenb[1] la_oenb[0] io_in[26] io_in[25] io_in[24] io_in[23] io_in[22] io_in[21] io_in[20] io_in[19] io_in[18] io_in[17]
++ io_in[16] io_in[15] io_in[14] io_in[13] io_in[12] io_in[11] io_in[10] io_in[9] io_in[8] io_in[7] io_in[6] io_in[5] io_in[4] io_in[3]
++ io_in[2] io_in[1] io_in[0] io_in_3v3[26] io_in_3v3[25] io_in_3v3[24] io_in_3v3[23] io_in_3v3[22] io_in_3v3[21] io_in_3v3[20] io_in_3v3[19]
++ io_in_3v3[18] io_in_3v3[17] io_in_3v3[16] io_in_3v3[15] io_in_3v3[14] io_in_3v3[13] io_in_3v3[12] io_in_3v3[11] io_in_3v3[10] io_in_3v3[9]
++ io_in_3v3[8] io_in_3v3[7] io_in_3v3[6] io_in_3v3[5] io_in_3v3[4] io_in_3v3[3] io_in_3v3[2] io_in_3v3[1] io_in_3v3[0] io_out[26] io_out[25]
++ io_out[24] io_out[23] io_out[22] io_out[21] io_out[20] io_out[19] io_out[18] io_out[17] io_out[16] io_out[15] io_out[14] io_out[13]
++ io_out[12] io_out[11] io_out[10] io_out[9] io_out[8] io_out[7] io_out[6] io_out[5] io_out[4] io_out[3] io_out[2] io_out[1] io_out[0]
++ io_oeb[26] io_oeb[25] io_oeb[24] io_oeb[23] io_oeb[22] io_oeb[21] io_oeb[20] io_oeb[19] io_oeb[18] io_oeb[17] io_oeb[16] io_oeb[15]
++ io_oeb[14] io_oeb[13] io_oeb[12] io_oeb[11] io_oeb[10] io_oeb[9] io_oeb[8] io_oeb[7] io_oeb[6] io_oeb[5] io_oeb[4] io_oeb[3] io_oeb[2]
++ io_oeb[1] io_oeb[0] gpio_analog[17] gpio_analog[16] gpio_analog[15] gpio_analog[14] gpio_analog[13] gpio_analog[12] gpio_analog[11]
++ gpio_analog[10] gpio_analog[9] gpio_analog[8] gpio_analog[7] gpio_analog[6] gpio_analog[5] gpio_analog[4] gpio_analog[3] gpio_analog[2]
++ gpio_analog[1] gpio_analog[0] gpio_noesd[17] gpio_noesd[16] gpio_noesd[15] gpio_noesd[14] gpio_noesd[13] gpio_noesd[12] gpio_noesd[11]
++ gpio_noesd[10] gpio_noesd[9] gpio_noesd[8] gpio_noesd[7] gpio_noesd[6] gpio_noesd[5] gpio_noesd[4] gpio_noesd[3] gpio_noesd[2] gpio_noesd[1]
++ gpio_noesd[0] io_analog[10] io_analog[9] io_analog[8] io_analog[7] io_analog[6] io_analog[5] io_analog[4] io_analog[3] io_analog[2]
++ io_analog[1] io_analog[0] io_clamp_high[2] io_clamp_high[1] io_clamp_high[0] io_clamp_low[2] io_clamp_low[1] io_clamp_low[0] user_clock2
++ user_irq[2] user_irq[1] user_irq[0]
+*.PININFO vdda1:B vdda2:B vssa1:B vssa2:B vccd1:B vccd2:B vssd1:B vssd2:B wb_clk_i:I wb_rst_i:I wbs_stb_i:I wbs_cyc_i:I wbs_we_i:I
+*+ wbs_sel_i[3:0]:I wbs_dat_i[31:0]:I wbs_adr_i[31:0]:I wbs_ack_o:O wbs_dat_o[31:0]:O la_data_in[127:0]:I la_data_out[127:0]:O io_in[26:0]:I
+*+ io_in_3v3[26:0]:I user_clock2:I io_out[26:0]:O io_oeb[26:0]:O gpio_analog[17:0]:B gpio_noesd[17:0]:B io_analog[10:0]:B io_clamp_high[2:0]:B
+*+ io_clamp_low[2:0]:B user_irq[2:0]:O la_oenb[127:0]:I
+x1 vccd1 vccd2 vdda1 vdda2 vssa1 vssa2 io_oeb[26] io_oeb[25] io_oeb[24] io_oeb[23] io_oeb[22] io_oeb[21] io_oeb[20] io_oeb[19]
++ io_oeb[18] io_oeb[17] io_oeb[16] io_oeb[15] io_oeb[14] io_oeb[13] io_oeb[12] io_oeb[11] io_oeb[10] io_oeb[9] io_oeb[8] io_oeb[7] io_oeb[6]
++ io_oeb[5] io_oeb[4] io_oeb[3] io_oeb[2] io_oeb[1] io_oeb[0] io_out[26] io_out[25] io_out[24] io_out[23] io_out[22] io_out[21] io_out[20]
++ io_out[19] io_out[18] io_out[17] io_out[16] io_out[15] io_out[14] io_out[13] io_out[12] io_out[11] io_out[10] io_out[9] io_out[8] io_out[7]
++ io_out[6] io_out[5] io_out[4] io_out[3] io_out[2] io_out[1] io_out[0] gpio_noesd[17] gpio_noesd[16] gpio_noesd[15] gpio_noesd[14]
++ gpio_noesd[13] gpio_noesd[12] gpio_noesd[11] gpio_noesd[10] gpio_noesd[9] gpio_noesd[8] gpio_noesd[7] gpio_noesd[6] gpio_noesd[5] gpio_noesd[4]
++ gpio_noesd[3] gpio_noesd[2] gpio_noesd[1] gpio_noesd[0] gpio_analog[17] gpio_analog[16] gpio_analog[15] gpio_analog[14] gpio_analog[13]
++ gpio_analog[12] gpio_analog[11] gpio_analog[10] gpio_analog[9] gpio_analog[8] gpio_analog[7] gpio_analog[6] gpio_analog[5] gpio_analog[4]
++ gpio_analog[3] gpio_analog[2] gpio_analog[1] gpio_analog[0] io_analog[10] io_analog[9] io_analog[8] io_analog[7] io_analog[6] io_analog[5]
++ io_analog[4] io_analog[3] io_analog[2] io_analog[1] io_analog[0] la_data_out[127] la_data_out[126] la_data_out[125] la_data_out[124]
++ la_data_out[123] la_data_out[122] la_data_out[121] la_data_out[120] la_data_out[119] la_data_out[118] la_data_out[117] la_data_out[116]
++ la_data_out[115] la_data_out[114] la_data_out[113] la_data_out[112] la_data_out[111] la_data_out[110] la_data_out[109] la_data_out[108]
++ la_data_out[107] la_data_out[106] la_data_out[105] la_data_out[104] la_data_out[103] la_data_out[102] la_data_out[101] la_data_out[100]
++ la_data_out[99] la_data_out[98] la_data_out[97] la_data_out[96] la_data_out[95] la_data_out[94] la_data_out[93] la_data_out[92] la_data_out[91]
++ la_data_out[90] la_data_out[89] la_data_out[88] la_data_out[87] la_data_out[86] la_data_out[85] la_data_out[84] la_data_out[83] la_data_out[82]
++ la_data_out[81] la_data_out[80] la_data_out[79] la_data_out[78] la_data_out[77] la_data_out[76] la_data_out[75] la_data_out[74] la_data_out[73]
++ la_data_out[72] la_data_out[71] la_data_out[70] la_data_out[69] la_data_out[68] la_data_out[67] la_data_out[66] la_data_out[65] la_data_out[64]
++ la_data_out[63] la_data_out[62] la_data_out[61] la_data_out[60] la_data_out[59] la_data_out[58] la_data_out[57] la_data_out[56] la_data_out[55]
++ la_data_out[54] la_data_out[53] la_data_out[52] la_data_out[51] la_data_out[50] la_data_out[49] la_data_out[48] la_data_out[47] la_data_out[46]
++ la_data_out[45] la_data_out[44] la_data_out[43] la_data_out[42] la_data_out[41] la_data_out[40] la_data_out[39] la_data_out[38] la_data_out[37]
++ la_data_out[36] la_data_out[35] la_data_out[34] la_data_out[33] la_data_out[32] la_data_out[31] la_data_out[30] la_data_out[29] la_data_out[28]
++ la_data_out[27] la_data_out[26] la_data_out[25] la_data_out[24] la_data_out[23] la_data_out[22] la_data_out[21] la_data_out[20] la_data_out[19]
++ la_data_out[18] la_data_out[17] la_data_out[16] la_data_out[15] la_data_out[14] la_data_out[13] la_data_out[12] la_data_out[11] la_data_out[10]
++ la_data_out[9] la_data_out[8] la_data_out[7] la_data_out[6] la_data_out[5] la_data_out[4] la_data_out[3] la_data_out[2] la_data_out[1]
++ la_data_out[0] la_data_in[127] la_data_in[126] la_data_in[125] la_data_in[124] la_data_in[123] la_data_in[122] la_data_in[121] la_data_in[120]
++ la_data_in[119] la_data_in[118] la_data_in[117] la_data_in[116] la_data_in[115] la_data_in[114] la_data_in[113] la_data_in[112] la_data_in[111]
++ la_data_in[110] la_data_in[109] la_data_in[108] la_data_in[107] la_data_in[106] la_data_in[105] la_data_in[104] la_data_in[103] la_data_in[102]
++ la_data_in[101] la_data_in[100] la_data_in[99] la_data_in[98] la_data_in[97] la_data_in[96] la_data_in[95] la_data_in[94] la_data_in[93]
++ la_data_in[92] la_data_in[91] la_data_in[90] la_data_in[89] la_data_in[88] la_data_in[87] la_data_in[86] la_data_in[85] la_data_in[84]
++ la_data_in[83] la_data_in[82] la_data_in[81] la_data_in[80] la_data_in[79] la_data_in[78] la_data_in[77] la_data_in[76] la_data_in[75]
++ la_data_in[74] la_data_in[73] la_data_in[72] la_data_in[71] la_data_in[70] la_data_in[69] la_data_in[68] la_data_in[67] la_data_in[66]
++ la_data_in[65] la_data_in[64] la_data_in[63] la_data_in[62] la_data_in[61] la_data_in[60] la_data_in[59] la_data_in[58] la_data_in[57]
++ la_data_in[56] la_data_in[55] la_data_in[54] la_data_in[53] la_data_in[52] la_data_in[51] la_data_in[50] la_data_in[49] la_data_in[48]
++ la_data_in[47] la_data_in[46] la_data_in[45] la_data_in[44] la_data_in[43] la_data_in[42] la_data_in[41] la_data_in[40] la_data_in[39]
++ la_data_in[38] la_data_in[37] la_data_in[36] la_data_in[35] la_data_in[34] la_data_in[33] la_data_in[32] la_data_in[31] la_data_in[30]
++ la_data_in[29] la_data_in[28] la_data_in[27] la_data_in[26] la_data_in[25] la_data_in[24] la_data_in[23] la_data_in[22] la_data_in[21]
++ la_data_in[20] la_data_in[19] la_data_in[18] la_data_in[17] la_data_in[16] la_data_in[15] la_data_in[14] la_data_in[13] la_data_in[12]
++ la_data_in[11] la_data_in[10] la_data_in[9] la_data_in[8] la_data_in[7] la_data_in[6] la_data_in[5] la_data_in[4] la_data_in[3] la_data_in[2]
++ la_data_in[1] la_data_in[0] vssd2 vssd1 chipalooza_testchip2
+.ends
+
+* expanding   symbol:  chipalooza_testchip2.sym # of pins=15
+** sym_path: /home/tim/gits/chipalooza_projects_2/xschem/chipalooza_testchip2.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/xschem/chipalooza_testchip2.sch
+.subckt chipalooza_testchip2 vccd1 vccd2 vdda1 vdda2 vssa1 vssa2 io_oeb[26] io_oeb[25] io_oeb[24] io_oeb[23] io_oeb[22] io_oeb[21]
++ io_oeb[20] io_oeb[19] io_oeb[18] io_oeb[17] io_oeb[16] io_oeb[15] io_oeb[14] io_oeb[13] io_oeb[12] io_oeb[11] io_oeb[10] io_oeb[9] io_oeb[8]
++ io_oeb[7] io_oeb[6] io_oeb[5] io_oeb[4] io_oeb[3] io_oeb[2] io_oeb[1] io_oeb[0] io_out[26] io_out[25] io_out[24] io_out[23] io_out[22]
++ io_out[21] io_out[20] io_out[19] io_out[18] io_out[17] io_out[16] io_out[15] io_out[14] io_out[13] io_out[12] io_out[11] io_out[10]
++ io_out[9] io_out[8] io_out[7] io_out[6] io_out[5] io_out[4] io_out[3] io_out[2] io_out[1] io_out[0] gpio_noesd[17] gpio_noesd[16]
++ gpio_noesd[15] gpio_noesd[14] gpio_noesd[13] gpio_noesd[12] gpio_noesd[11] gpio_noesd[10] gpio_noesd[9] gpio_noesd[8] gpio_noesd[7]
++ gpio_noesd[6] gpio_noesd[5] gpio_noesd[4] gpio_noesd[3] gpio_noesd[2] gpio_noesd[1] gpio_noesd[0] gpio_analog[17] gpio_analog[16]
++ gpio_analog[15] gpio_analog[14] gpio_analog[13] gpio_analog[12] gpio_analog[11] gpio_analog[10] gpio_analog[9] gpio_analog[8] gpio_analog[7]
++ gpio_analog[6] gpio_analog[5] gpio_analog[4] gpio_analog[3] gpio_analog[2] gpio_analog[1] gpio_analog[0] io_analog[10] io_analog[9] io_analog[8]
++ io_analog[7] io_analog[6] io_analog[5] io_analog[4] io_analog[3] io_analog[2] io_analog[1] io_analog[0] la_data_out[127] la_data_out[126]
++ la_data_out[125] la_data_out[124] la_data_out[123] la_data_out[122] la_data_out[121] la_data_out[120] la_data_out[119] la_data_out[118]
++ la_data_out[117] la_data_out[116] la_data_out[115] la_data_out[114] la_data_out[113] la_data_out[112] la_data_out[111] la_data_out[110]
++ la_data_out[109] la_data_out[108] la_data_out[107] la_data_out[106] la_data_out[105] la_data_out[104] la_data_out[103] la_data_out[102]
++ la_data_out[101] la_data_out[100] la_data_out[99] la_data_out[98] la_data_out[97] la_data_out[96] la_data_out[95] la_data_out[94] la_data_out[93]
++ la_data_out[92] la_data_out[91] la_data_out[90] la_data_out[89] la_data_out[88] la_data_out[87] la_data_out[86] la_data_out[85] la_data_out[84]
++ la_data_out[83] la_data_out[82] la_data_out[81] la_data_out[80] la_data_out[79] la_data_out[78] la_data_out[77] la_data_out[76] la_data_out[75]
++ la_data_out[74] la_data_out[73] la_data_out[72] la_data_out[71] la_data_out[70] la_data_out[69] la_data_out[68] la_data_out[67] la_data_out[66]
++ la_data_out[65] la_data_out[64] la_data_out[63] la_data_out[62] la_data_out[61] la_data_out[60] la_data_out[59] la_data_out[58] la_data_out[57]
++ la_data_out[56] la_data_out[55] la_data_out[54] la_data_out[53] la_data_out[52] la_data_out[51] la_data_out[50] la_data_out[49] la_data_out[48]
++ la_data_out[47] la_data_out[46] la_data_out[45] la_data_out[44] la_data_out[43] la_data_out[42] la_data_out[41] la_data_out[40] la_data_out[39]
++ la_data_out[38] la_data_out[37] la_data_out[36] la_data_out[35] la_data_out[34] la_data_out[33] la_data_out[32] la_data_out[31] la_data_out[30]
++ la_data_out[29] la_data_out[28] la_data_out[27] la_data_out[26] la_data_out[25] la_data_out[24] la_data_out[23] la_data_out[22] la_data_out[21]
++ la_data_out[20] la_data_out[19] la_data_out[18] la_data_out[17] la_data_out[16] la_data_out[15] la_data_out[14] la_data_out[13] la_data_out[12]
++ la_data_out[11] la_data_out[10] la_data_out[9] la_data_out[8] la_data_out[7] la_data_out[6] la_data_out[5] la_data_out[4] la_data_out[3]
++ la_data_out[2] la_data_out[1] la_data_out[0] la_data_in[127] la_data_in[126] la_data_in[125] la_data_in[124] la_data_in[123] la_data_in[122]
++ la_data_in[121] la_data_in[120] la_data_in[119] la_data_in[118] la_data_in[117] la_data_in[116] la_data_in[115] la_data_in[114] la_data_in[113]
++ la_data_in[112] la_data_in[111] la_data_in[110] la_data_in[109] la_data_in[108] la_data_in[107] la_data_in[106] la_data_in[105] la_data_in[104]
++ la_data_in[103] la_data_in[102] la_data_in[101] la_data_in[100] la_data_in[99] la_data_in[98] la_data_in[97] la_data_in[96] la_data_in[95]
++ la_data_in[94] la_data_in[93] la_data_in[92] la_data_in[91] la_data_in[90] la_data_in[89] la_data_in[88] la_data_in[87] la_data_in[86]
++ la_data_in[85] la_data_in[84] la_data_in[83] la_data_in[82] la_data_in[81] la_data_in[80] la_data_in[79] la_data_in[78] la_data_in[77]
++ la_data_in[76] la_data_in[75] la_data_in[74] la_data_in[73] la_data_in[72] la_data_in[71] la_data_in[70] la_data_in[69] la_data_in[68]
++ la_data_in[67] la_data_in[66] la_data_in[65] la_data_in[64] la_data_in[63] la_data_in[62] la_data_in[61] la_data_in[60] la_data_in[59]
++ la_data_in[58] la_data_in[57] la_data_in[56] la_data_in[55] la_data_in[54] la_data_in[53] la_data_in[52] la_data_in[51] la_data_in[50]
++ la_data_in[49] la_data_in[48] la_data_in[47] la_data_in[46] la_data_in[45] la_data_in[44] la_data_in[43] la_data_in[42] la_data_in[41]
++ la_data_in[40] la_data_in[39] la_data_in[38] la_data_in[37] la_data_in[36] la_data_in[35] la_data_in[34] la_data_in[33] la_data_in[32]
++ la_data_in[31] la_data_in[30] la_data_in[29] la_data_in[28] la_data_in[27] la_data_in[26] la_data_in[25] la_data_in[24] la_data_in[23]
++ la_data_in[22] la_data_in[21] la_data_in[20] la_data_in[19] la_data_in[18] la_data_in[17] la_data_in[16] la_data_in[15] la_data_in[14]
++ la_data_in[13] la_data_in[12] la_data_in[11] la_data_in[10] la_data_in[9] la_data_in[8] la_data_in[7] la_data_in[6] la_data_in[5] la_data_in[4]
++ la_data_in[3] la_data_in[2] la_data_in[1] la_data_in[0] vssd2 vssd1
+*.PININFO vdda1:I vssa1:I vccd2:I vdda2:I vssa2:I gpio_noesd[17:0]:B gpio_analog[17:0]:B la_data_in[127:0]:I io_out[26:0]:O
+*+ la_data_out[127:0]:O io_oeb[26:0]:O io_analog[10:0]:B vssd2:I vssd1:I vccd1:I
+x2 la_data_out[47] vdda2 vssa2 vssd2 vccd2 vdd_spare_3 power_stage
+x3 la_data_out[46] vdda2 vssa2 vssd2 vccd2 io_analog[10] power_stage
+x4 la_data_out[45] vccd2 vssd2 vssd2 vccd2 io_analog[9] power_stage
+x5 la_data_out[44] vdda2 vssa2 vssd2 vccd2 io_analog[8] power_stage
+x6 la_data_out[43] vdda2 vssa2 vssd2 vccd2 io_analog[7] power_stage
+x7 la_data_out[42] vdda2 vssa2 vssd2 vccd2 io_analog[6] power_stage
+x8 la_data_out[41] vccd2 vssd2 vssd2 vccd2 io_analog[5] power_stage
+x9 la_data_out[48] vdda1 vssa1 vssd1 vccd1 io_analog[4] power_stage
+x10 la_data_out[49] vdda1 vssa1 vssd1 vccd1 vdd_spare_2 power_stage
+x11 la_data_out[51] vccd1 vssd1 vssd1 vccd1 vdd_spare_1 power_stage
+x12 la_data_out[50] vdda1 vssa1 vssd1 vccd1 io_analog[3] power_stage
+x13 la_data_out[52] vdda1 vssa1 vssd1 vccd1 io_analog[2] power_stage
+x14 la_data_out[53] vdda1 vssa1 vssd1 vccd1 io_analog[1] power_stage
+x15 la_data_out[54] vdda1 vssa1 vssd1 vccd1 io_analog[0] power_stage
+R1 vssd1 io_oeb[7] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R2 vssd1 io_oeb[8] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R3 vssd1 io_oeb[10] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R4 vssd1 io_oeb[11] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R5 vssd1 io_oeb[12] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R6 vssd1 io_oeb[13] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R7 vssd2 io_oeb[14] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R8 vssd2 io_oeb[15] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R9 vssd2 io_oeb[16] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R10 vssd2 io_oeb[17] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R11 vssd2 io_oeb[18] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R12 vssd2 io_oeb[19] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R13 vssd2 io_oeb[20] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+x16 vccd1 vssa1 vssd1 io_analog[1] la_oenb[107] rheostat_vh la_data_out[108] la_oenb[108] la_data_out[109] rheostat_out
++ la_oenb[109] la_data_out[110] la_oenb[110] la_data_out[111] rheostat_vl sky130_ef_ip__rheostat_8bit
+x18 vccd1 vssd1 la_oenb[91] vdd_spare_2 sample_out sample_in la_data_out[91] vssa1 sky130_ef_ip__samplehold
+x19 la_data_out[26] la_oenb[25] la_data_out[25] la_oenb[24] la_data_out[24] la_oenb[23] la_data_out[23] la_oenb[22]
++ la_data_out[22] la_oenb[21] io_analog[7] vccd2 vssd2 vssa2 cdac_vh cdac_vl cdac_out la_oenb[26] net1 la_data_out[21] la_oenb[20]
++ sky130_ef_ip__cdac3v_12bit
+x20 vccd1 io_analog[3] la_data_out[107] io_out[10] ulpcomp_vinn ulpcomp_vinp la_oenb[106] vssd1 vssa1 sky130_icrg_ip__ulpcomp2
+X21 io_analog[9] vssd2 la_oenb[29] vref_vbg vref_vptat la_data_out[29] la_oenb[28] la_data_out[28] vccd2 vssd2 la_oenb[27]
++ vref_vbgsc vref_vbgtg sky130_ak_ip__cmos_vref
+x22 la_data_out[20] vccd2 io_analog[6] vssd2 vssa2 io_out[21] sky130_ef_ip__rc_osc_16M
+x23 audio_out_p io_analog[5] vccd2 io_in[26] io_in[25] vssd2 audio_out_n sky130_iic_ip__audiodac_drv_lite
+x24 io_analog[10] ldo_vout vssa2 la_oenb[30] vbg la_data_out[30] vccd2 vssd2 sky130_am_ip__ldo_01v8
+x25 la_oenb[90] vccd1 io_analog[4] vssd1 vssa1 io_out[13] sky130_ef_ip__rc_osc_500k
+x26 vbg io_out[7] vssa1 io_analog[2] vccd1 io_out[8] vssd1 por_outh[1] por_outh[0] sky130_sw_ip__bgrref_por
+x27 vccd1 vssa1 vssd1 io_analog[0] la_oenb[111] rdac_vh la_data_out[112] la_oenb[112] la_data_out[113] rdac_out la_oenb[113]
++ la_data_out[114] la_oenb[115] la_oenb[114] la_data_out[115] rdac_vl sky130_ef_ip__rdac3v_8bit
+x29 la_oenb[35] idac_ref_in vbg la_data_out[35] vccd2 vssd2 vdd_spare_3 la_data_out[31] la_oenb[31] la_data_out[32] la_oenb[32]
++ la_data_out[33] la_oenb[33] la_data_out[34] la_oenb[34] vssa2 idac_src_out idac_snk_out sky130_ef_ip__idac3v_8bit
+* noconn #net1
+x1 vdda2 vccd2 vssd2 vssa2 gpio_noesd[7] la_data_out[18] la_oenb[18] idac_src_out la_data_out[19] la_oenb[19] gpio_noesd[7]
++ vref_vptat switch_array_2
+x30 vdda2 vccd2 vssd2 vssa2 gpio_noesd[8] la_data_out[16] la_oenb[16] idac_snk_out la_data_out[17] la_oenb[17] gpio_noesd[8]
++ vref_vbg switch_array_2
+x31 vdda2 vccd2 vssd2 vssa2 gpio_noesd[9] la_data_out[14] la_oenb[14] ldo_vout la_data_out[15] la_oenb[15] gpio_noesd[9]
++ vref_vbgsc switch_array_2
+x32 vdda2 vccd2 vssd2 vssa2 gpio_noesd[10] la_data_out[12] la_oenb[12] idac_ref_in la_data_out[13] la_oenb[13] gpio_noesd[10]
++ vref_vbgtg switch_array_2
+x33 vdda2 vccd2 vssd2 vssa2 gpio_noesd[11] la_data_out[10] la_oenb[10] ccomp_vinp la_data_out[11] la_oenb[11] gpio_noesd[11]
++ cdac_vh switch_array_2
+x34 vdda2 vccd2 vssd2 vssa2 gpio_noesd[12] la_data_out[8] la_oenb[8] ccomp_vinm la_data_out[9] la_oenb[9] gpio_noesd[12] cdac_vl
++ switch_array_2
+x35 vdda2 vccd2 vssd2 vssa2 gpio_noesd[13] la_data_out[6] la_oenb[6] pll_fin la_data_out[7] la_oenb[7] gpio_noesd[13] cdac_out
++ switch_array_2
+x36 vdda2 vccd2 vssd2 vssa2 gpio_noesd[14] la_data_out[4] la_oenb[4] pll_ibias la_data_out[5] la_oenb[5] gpio_noesd[14] net2
++ switch_array_2
+x37 vdda2 vccd2 vssd2 vssa2 gpio_noesd[15] la_data_out[2] la_oenb[2] pll_vctrl_in la_data_out[3] la_oenb[3] gpio_noesd[15]
++ audio_out_n switch_array_2
+x38 vdda2 vccd2 vssd2 vssa2 gpio_noesd[16] la_data_out[0] la_oenb[0] net3 la_data_out[1] la_oenb[1] gpio_noesd[16] audio_out_p
++ switch_array_2
+x40 vdda1 vccd1 vssd1 vssa1 gpio_noesd[6] la_oenb[117] la_data_out[117] sample_out la_oenb[116] la_data_out[116] gpio_noesd[6]
++ ulpcomp_vinn switch_array_2
+x41 vdda1 vccd1 vssd1 vssa1 gpio_noesd[5] la_oenb[119] la_data_out[119] sample_in la_oenb[118] la_data_out[118] gpio_noesd[5]
++ por_outh[1] switch_array_2
+x42 vdda1 vccd1 vssd1 vssa1 gpio_noesd[4] la_oenb[121] la_data_out[121] ulpcomp_vinp la_oenb[120] la_data_out[120] gpio_noesd[4]
++ pll_lf switch_array_2
+x43 vdda1 vccd1 vssd1 vssa1 gpio_noesd[3] la_oenb[123] la_data_out[123] rdac_vh la_oenb[122] la_data_out[122] gpio_noesd[3]
++ rheostat_vh switch_array_2
+x45 vdda1 vccd1 vssd1 vssa1 gpio_noesd[1] la_oenb[125] la_data_out[125] rdac_vl la_oenb[124] la_data_out[124] gpio_noesd[1]
++ rheostat_vl switch_array_2
+x46 vdda1 vccd1 vssd1 vssa1 gpio_noesd[0] la_oenb[127] la_data_out[127] rheostat_out la_oenb[126] la_data_out[126] gpio_noesd[0]
++ rdac_out switch_array_2
+x39 io_out[17] vccd2 vssd2 io_analog[8] vssa2 ccomp_vinp ccomp_vinm vssa2 la_data_out[27] sky130_ef_ip__ccomp3v_cl
+R14 rheostat_vh io_in_3v3[5] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R15 rheostat_vl net4 sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R16 rdac_vh io_in_3v3[3] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R17 rdac_vl io_in_3v3[4] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+R18 gpio_analog[17] vbg sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+x17 la_oenb[95] la_data_out[96] vdd_spare_1 la_oenb[103] la_data_out[95] la_oenb[96] la_oenb[102] vssd1 la_oenb[94]
++ la_data_out[97] io_out[20] io_out[11] la_data_out[94] la_oenb[97] pll_fin io_out[12] la_oenb[93] la_data_out[98] pll_ibias io_out[15] la_oenb[98]
++ la_data_out[104] la_data_out[103] la_data_out[99] pll_vctrl_in la_oenb[104] la_data_out[102] la_data_out[105] la_oenb[101] io_out[16] la_oenb[105]
++ io_out[14] la_data_out[101] pll_lf la_data_out[106] la_oenb[100] la_data_out[100] io_out[19] la_data_out[93] io_out[18] la_oenb[92]
++ la_data_out[92] sky130_aa_ip__programmable_pll
+R19 vssd2 io_oeb[21] sky130_fd_pr__res_generic_m3 W=1 L=1 m=1
+.ends
+
+
+* expanding   symbol:  power_stage.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/power_stage.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/power_stage.sch
+.subckt power_stage P_IN VDD_PWR VSS DVSS DVDD SW_NODE
+*.PININFO P_IN:I SW_NODE:I VDD_PWR:I VSS:I DVSS:I DVDD:I
+XM14 SW_NODE P_DRIVE VDD_PWR VDD_PWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4.38 nf=1 m=4512
+x2 net1 net2 P_DRIVE VDD_PWR VSS DVSS gate_drive
+x1 P_IN DVSS DVSS DVDD DVDD net1 sky130_fd_sc_hd__inv_4
+x3 net1 DVSS DVSS DVDD DVDD net2 sky130_fd_sc_hd__inv_4
+x4[1] DVSS DVSS DVDD DVDD sky130_fd_sc_hd__decap_3
+x4[0] DVSS DVSS DVDD DVDD sky130_fd_sc_hd__decap_3
+x6[2] DVSS DVDD sky130_fd_sc_hd__tapvpwrvgnd_1
+x6[1] DVSS DVDD sky130_fd_sc_hd__tapvpwrvgnd_1
+x6[0] DVSS DVDD sky130_fd_sc_hd__tapvpwrvgnd_1
+x9 P_IN DVSS DVSS DVDD DVDD sky130_fd_sc_hd__diode_2
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__rheostat_8bit.sym # of pins=15
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/sky130_ef_ip__rheostat_8bit.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/sky130_ef_ip__rheostat_8bit.sch
+.subckt sky130_ef_ip__rheostat_8bit dvdd vss dvss vdd b0 Vhigh b1 b2 b3 out b4 b5 b6 b7 Vlow
+*.PININFO out:B vss:B vdd:B Vhigh:B Vlow:B b0:I b1:I b2:I b3:I b4:I b5:I b6:I b7:I dvdd:B dvss:B
+x1 vdd vss b3a b4a b3b b4b b5a Vhigh b6a b0a net3 b6b b5b b0b b1a b1b b2a b2b net1 net6 net5 rheo_half
+x2 vdd vss b3a b4a b3b b4b b5a net6 b6a b0a net5 b6b b5b b0b b1a b1b b2a b2b net2 Vlow net4 rheo_half
+x3 vdd b7b out net1 b7a vss passtrans
+x7 vdd dvdd b7a b7b b7 dvss rheo_level_shifter
+x8 vdd dvdd b6a b6b b6 dvss rheo_level_shifter
+x9 vdd dvdd b5a b5b b5 dvss rheo_level_shifter
+x10 vdd dvdd b4a b4b b4 dvss rheo_level_shifter
+x11 vdd dvdd b3a b3b b3 dvss rheo_level_shifter
+x12 vdd dvdd b2a b2b b2 dvss rheo_level_shifter
+x13 vdd dvdd b1a b1b b1 dvss rheo_level_shifter
+x14 vdd dvdd b0a b0b b0 dvss rheo_level_shifter
+x15 vdd b7a out net2 b7b vss passtrans
+x18 vdd net4 Vlow net7 vss net8 rheo_column_dummy
+x5 vdd net8 net7 net9 vss net9 rheo_column_dummy
+x4 vdd net10 net11 Vhigh vss net3 rheo_column_dummy
+x16 vdd net12 net12 net11 vss net10 rheo_column_dummy
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__samplehold.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__samplehold/xschem/sky130_ef_ip__samplehold.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__samplehold/xschem/sky130_ef_ip__samplehold.sch
+.subckt sky130_ef_ip__samplehold dvdd dvss hold vdd out in ena vss
+*.PININFO vdd:I hold:I in:I vss:I out:O dvdd:I dvss:I ena:I
+XC1 holdval vss sky130_fd_pr__cap_mim_m3_1 W=5 L=5 m=48
+XC2 vss holdval sky130_fd_pr__cap_mim_m3_2 W=5 L=5 m=48
+x1 hold3v vss holdval net1 vdd balanced_switch
+x2 vdd out ena3v vss holdval dvss follower_amp
+x3 vdd net1 ena3v vss in dvss follower_amp
+x4 hold dvdd dvss dvss vdd vdd hold3v sky130_fd_sc_hvl__lsbuflv2hv_1
+XXD1 dvss hold sky130_fd_pr__diode_pw2nd_05v5 area=3.6e11 perim=2.4e6
+x5 ena dvdd dvss dvss vdd vdd ena3v sky130_fd_sc_hvl__lsbuflv2hv_1
+XXD2 dvss ena sky130_fd_pr__diode_pw2nd_05v5 area=3.6e11 perim=2.4e6
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__cdac3v_12bit.sym # of pins=21
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/sky130_ef_ip__cdac3v_12bit.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/sky130_ef_ip__cdac3v_12bit.sch
+.subckt sky130_ef_ip__cdac3v_12bit SELD0 SELD1 SELD2 SELD3 SELD4 SELD5 SELD6 SELD7 SELD8 SELD9 VDD DVDD DVSS VSS VH VL OUT RST
++ OUTNC SELD10 SELD11
+*.PININFO SELD0:I SELD1:I SELD2:I SELD3:I SELD4:I SELD5:I SELD6:I SELD7:I SELD8:I SELD9:I VDD:B DVDD:B DVSS:B VH:B VL:B VSS:B
+*+ RST:I OUT:O OUTNC:O SELD10:I SELD11:I
+x4 D8 D0 D4 OUTNC D9 D5 D1 OUT D2 D6 VSS D7 D3 D10 D11 EF_BANK_CAP_12
+x3 D0 SELD0 D1 SELD1 SELD2 D2 SELD3 SELD4 D3 SELD5 D4 SELD6 SELD7 D5 SELD8 D6 SELD9 D7 D8 D9 VDD DVDD DVSS VH VL VSS D10 D11
++ SELD10 SELD11 EF_AMUX0201_ARRAY1
+x1 OUTNC OUT VDD DVDD VSS RST DVSS EF_SW_RST
+.ends
+
+
+* expanding   symbol:  sky130_icrg_ip__ulpcomp2.sym # of pins=9
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/sky130_icrg_ip__ulpcomp2.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/sky130_icrg_ip__ulpcomp2.sch
+.subckt sky130_icrg_ip__ulpcomp2 dvdd avdd ena vout vinn vinp clk dvss avss
+*.PININFO avdd:I vinp:I vinn:I vout:O dvdd:I clk:I ena:I dvss:I avss:I
+x1 dvddb clka clk clkb dvss Stage0_clk_inv
+x2 avdd enab clka vinn vinp net2 net1 avss dvss dvdd Stage1
+x3 dvdd enab dvddb clkb vout net2 net1 dvss Stage2_latch
+x4 dvdd ena enab dvss Stage0_ena_inv
+.ends
+
+
+* expanding   symbol:  sky130_ak_ip__cmos_vref.sym # of pins=13
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/sky130_ak_ip__cmos_vref.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/sky130_ak_ip__cmos_vref.sch
+.subckt sky130_ak_ip__cmos_vref avdd18 avss trim0 vbg vptat trim1 trim2 trim3 dvdd dvss ena vbgsc vbgtg
+*.PININFO vbg:O avss:B avdd18:B dvss:B ena:I vbgsc:O vbgtg:O trim3:I trim2:I trim1:I trim0:I vptat:O dvdd:B
+XM2 vref vref vptat avss sky130_fd_pr__nfet_01v8 L=10 W=2 nf=1 m=1
+XM1 vptat vref avss avss sky130_fd_pr__nfet_01v8 L=20 W=2.5 nf=1 m=1
+XM9 vref pbias net5 avdd_ena sky130_fd_pr__pfet_01v8 L=10 W=50 nf=4 m=1
+XM20 avdd_ena net11 avdd18 dvdd sky130_fd_pr__pfet_01v8 L=0.3 W=10 nf=1 m=1
+x1 net4 pbias vref vptat avss sbvfcm
+x2 avdd_ena vbg vref net1 net2 avss output_amp
+XM3 net2 pbias net3 avdd_ena sky130_fd_pr__pfet_01v8 L=10 W=5 nf=1 m=1
+Vm_b1 avdd_ena net5 0
+.save i(vm_b1)
+Vm_b2 avdd_ena net4 0
+.save i(vm_b2)
+Vm_b3 avdd_ena net3 0
+.save i(vm_b3)
+x3 net6 net10 net8 net7 net9 avss trim_res
+XR4 net6 net1 avss sky130_fd_pr__res_xhigh_po_0p69 L=264.5 mult=1 m=1
+XR3 net1 vbgsc avss sky130_fd_pr__res_xhigh_po_0p69 L=74.5 mult=1 m=1
+XR2 vbgsc vbgtg avss sky130_fd_pr__res_xhigh_po_0p69 L=8.6 mult=1 m=1
+XR1 vbgtg vbg avss sky130_fd_pr__res_xhigh_po_0p69 L=54.5 mult=1 m=1
+x5 trim3 dvss dvss dvdd dvdd net7 sky130_fd_sc_hd__buf_1
+x6 trim2 dvss dvss dvdd dvdd net8 sky130_fd_sc_hd__buf_1
+x7 trim1 dvss dvss dvdd dvdd net9 sky130_fd_sc_hd__buf_1
+x8 trim0 dvss dvss dvdd dvdd net10 sky130_fd_sc_hd__buf_1
+x9 trim0 dvss dvss dvdd dvdd sky130_fd_sc_hd__diode_2
+x14 ena dvss dvss dvdd dvdd net11 sky130_fd_sc_hd__inv_2
+x4 trim1 dvss dvss dvdd dvdd sky130_fd_sc_hd__diode_2
+x10 trim2 dvss dvss dvdd dvdd sky130_fd_sc_hd__diode_2
+x11 trim3 dvss dvss dvdd dvdd sky130_fd_sc_hd__diode_2
+x12 ena dvss dvss dvdd dvdd sky130_fd_sc_hd__diode_2
+x13 dvss dvss dvdd dvdd sky130_fd_sc_hd__decap_6
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__rc_osc_16M.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rc_osc_16M/xschem/sky130_ef_ip__rc_osc_16M.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rc_osc_16M/xschem/sky130_ef_ip__rc_osc_16M.sch
+.subckt sky130_ef_ip__rc_osc_16M ena dvdd avdd dvss avss dout
+*.PININFO avdd:B avss:B dvss:B dvdd:B ena:I dout:O
+XM1 net1 out0 net10 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM2 net1 out0 net9 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM3 net2 net1 net8 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM4 net2 net1 net11 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM5 dout dout0 dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM6 net5 dout0 dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XM9 net3 net2 net7 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM10 net3 net2 net6 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM11 dout0 out0 dvdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1.26 nf=1 m=1
+XM12 net4 out0 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM13 dout0 ena net4 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM24 net9 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM25 net8 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM26 net7 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM27 net6 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM28 net11 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM29 net10 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM21 nbias nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM22 pbias pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2.52 nf=1 m=1
+XR1 net18 avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=112.5 mult=1 m=1
+XM23 net18 ena_h nbias avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM30 net12 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM33 nbias enb_h avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM34 pbias ena_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM36 pbias ena_h net12 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+x1 dvdd ena_h avdd enb_h ena dvss avss enb rc_osc_level_shifter
+XD3 dvss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=4e6
+XM7 net13 net3 net16 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM8 net13 net3 net17 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM15 out0 net13 net15 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 out0 net13 net14 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 net16 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 net15 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net14 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net17 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM43 dout0 ena dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM35 dout enb dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM14 dout enb net5 dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1.5 nf=1 m=1
+XR2 avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=787.5 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  sky130_iic_ip__audiodac_drv_lite.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/sky130_iic_ip__audiodac_drv_lite.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/sky130_iic_ip__audiodac_drv_lite.sch
+.subckt sky130_iic_ip__audiodac_drv_lite out_p vdd in_hi in_p in_n vss out_n
+*.PININFO in_p:I in_n:I out_p:O out_n:O vdd:I in_hi:I vss:I
+x1 vdd drv_p drv_n in_hi in_p in_n vss audiodac_drv_ls
+x2 vdd net1 net2 vss audiodac_drv_latch
+XMdecouple vdd vss vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=10 W=55 nf=1 m=2
+x5 vdd drv_p out_p vss net1 audiodac_drv_lite_half
+x6 vdd drv_n out_n vss net2 audiodac_drv_lite_half
+.ends
+
+
+* expanding   symbol:  sky130_am_ip__ldo_01v8.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_am_ip__ldo_01v8/xschem/sky130_am_ip__ldo_01v8.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_am_ip__ldo_01v8/xschem/sky130_am_ip__ldo_01v8.sch
+.subckt sky130_am_ip__ldo_01v8 AVDD VOUT AVSS ENA VREF_EXT SEL_EXT DVDD DVSS
+*.PININFO ENA:I AVDD:I AVSS:I VOUT:O SEL_EXT:I VREF_EXT:I DVDD:I DVSS:I
+XM46 VX VBIAS_P AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XM48 net2 net2 AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XM52 VX VREF net1 AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM53 VY VM net1 AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM54 net1 VBIAS_N AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=9 W=3 nf=1 m=1
+XM55 VERR net2 AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XM56 VY VBIAS_P AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XM57 VERR VBIAS_C VY AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM58 net2 VBIAS_C VX AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM59 AVSS VERR VPASS AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM60 VPASS VBIAS_P AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XR4 VM VOUT AVSS sky130_fd_pr__res_xhigh_po_0p35 L=180 mult=1 m=1
+XR5 AVSS VM AVSS sky130_fd_pr__res_xhigh_po_0p35 L=360 mult=1 m=1
+XM61 AVDD VPASS VOUT AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1000
+XC1 VERR AVSS sky130_fd_pr__cap_mim_m3_1 W=15 L=15 m=3
+XM62 net3 VBIAS_P AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XM63 VBIAS_P VBIAS_C net3 AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM64 net4 VBIAS_P AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XM65 VBIAS_N VBIAS_C net4 AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM66 VBIAS_P VBIAS_N net5 AVSS sky130_fd_pr__nfet_g5v0d10v5 L=9 W=1 nf=1 m=20
+XM67 VBIAS_N VBIAS_N AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=9 W=1 nf=1 m=5
+XM68 VBIAS_C VBIAS_C AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=10 W=1 nf=1 m=1
+XM69 VBIAS_C VBIAS_N AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=9 W=1 nf=1 m=5
+XM70 VDD_START VSTART VBIAS_N AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM71 net7 net7 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=1 nf=1 m=1
+XM72 net6 net6 net7 AVDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=1 nf=1 m=1
+XM73 VSTART VSTART net6 AVDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=1 nf=1 m=1
+XM74 VSTART VBIAS_N AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=9 W=1 nf=1 m=5
+XM75 NSEL_EXT sel_ext_3v3 AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM76 NSEL_EXT sel_ext_3v3 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2.5 nf=1 m=1
+XM77 VREF NSEL_EXT VREF_INT AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM78 VREF sel_ext_3v3 VREF_EXT AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XC3 VREF AVSS sky130_fd_pr__cap_mim_m3_1 W=5 L=5 m=1
+XR6 AVSS net5 AVSS sky130_fd_pr__res_xhigh_po_0p35 L=40 mult=1 m=1
+XM79 VREF_INT VBIAS_P AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=7 W=1 nf=1 m=1
+XM80 net8 VREF_INT net9 AVSS sky130_fd_pr__nfet_g5v0d10v5 L=10 W=1 nf=1 m=1
+XM81 VREF_INT VREF_INT net8 AVSS sky130_fd_pr__nfet_g5v0d10v5 L=10 W=1 nf=1 m=1
+XM82 net9 VREF_INT AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=10 W=1 nf=1 m=1
+XM83 NENA ena_3v3 AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM84 NENA ena_3v3 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2.5 nf=1 m=1
+XM85 VBIAS_N NENA AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM86 VBIAS_C ena_3v3 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM87 VERR NENA AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM88 VBIAS_P ena_3v3 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM89 VPASS NENA AVSS AVSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM90 VDD_START NENA AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+x1 ENA DVDD DVSS DVSS AVDD AVDD ena_3v3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x2 SEL_EXT DVDD DVSS DVSS AVDD AVDD sel_ext_3v3 sky130_fd_sc_hvl__lsbuflv2hv_1
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__rc_osc_500k.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rc_osc_500k/xschem/sky130_ef_ip__rc_osc_500k.sch
+.subckt sky130_ef_ip__rc_osc_500k ena dvdd avdd dvss avss dout
+*.PININFO avdd:B avss:B dvss:B dvdd:B ena:I dout:O
+XM1 net1 out0 net10 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM2 net1 out0 net9 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM3 net2 net1 net8 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM4 net2 net1 net11 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM5 net5 dout0 dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM6 dout dout0 dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM9 net3 net2 net7 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM10 net3 net2 net6 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM11 dout0 out0 dvdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM12 net4 out0 avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM13 dout0 ena net4 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM14 dout ena net5 dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM24 net9 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM25 net8 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM26 net7 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM27 net6 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM28 net11 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM29 net10 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM21 nbias nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM22 pbias pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XR1 net24 avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=1254 mult=1 m=1
+XM23 net24 ena_h nbias avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM30 net12 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM33 nbias enb_h avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM34 pbias ena_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM36 pbias ena_h net12 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+x1 dvdd ena_h avdd enb_h ena dvss avss enb rc_osc_level_shifter
+XD3 dvss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=4e6
+XM7 net13 net3 net17 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM8 net13 net3 net18 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM15 net14 net13 net16 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 net14 net13 net15 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 net17 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 net16 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net15 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net18 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM31 net19 net14 net22 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM32 net19 net14 net23 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM37 out0 net19 net21 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM38 out0 net19 net20 avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM39 net22 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM40 net21 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM41 net20 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM42 net23 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XC1 net1 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC2 net3 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC3 net14 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC4 net2 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XC5 net13 avss sky130_fd_pr__cap_mim_m3_1 W=3 L=6 m=1
+XM43 dout0 ena dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XM35 dout enb dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+XR2[21] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[20] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[19] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[18] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[17] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[16] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[15] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[14] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[13] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[12] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[11] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[10] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[9] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[8] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[7] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[6] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[5] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[4] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[3] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[2] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[1] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+XR2[0] avdd avdd avss sky130_fd_pr__res_xhigh_po_0p35 L=11 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  sky130_sw_ip__bgrref_por.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/sky130_sw_ip__bgrref_por.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/sky130_sw_ip__bgrref_por.sch
+.subckt sky130_sw_ip__bgrref_por vbg por avss avdd dvdd porb dvss porb_h[1] porb_h[0]
+*.PININFO avdd:B por:O avss:B dvdd:B porb:O vbg:I porb_h[1:0]:O dvss:B
+x1 Vinn Vinp RST avss avdd dvdd comparator_final
+XR1 avss Vinn avss sky130_fd_pr__res_xhigh_po_0p35 L=250 mult=1 m=1
+XR10 Vinn Vinp avss sky130_fd_pr__res_xhigh_po_0p35 L=9 mult=1 m=1
+XR12 Vinp Vproc avss sky130_fd_pr__res_xhigh_po_0p35 L=150 mult=1 m=1
+x2 RST por dvdd dvss vbg avdd porb porb_h[1] porb_h[0] delayPulse_final
+XM2 avdd avdd Vproc avss sky130_fd_pr__nfet_05v0_nvt L=0.9 W=1 nf=1 m=2
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__rdac3v_8bit.sym # of pins=16
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/sky130_ef_ip__rdac3v_8bit.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/sky130_ef_ip__rdac3v_8bit.sch
+.subckt sky130_ef_ip__rdac3v_8bit dvdd vss dvss vdd b0 Vhigh b1 b2 b3 out b4 b5 ena b6 b7 Vlow
+*.PININFO out:O vss:B vdd:B Vhigh:B Vlow:B ena:I b0:I b1:I b2:I b3:I b4:I b5:I b6:I b7:I dvdd:B dvss:B
+x1 vdd vss b3a b4a b3b b4b b5a Vhigh b6a b0a net3 b6b b5b b0b b1a b1b b2a b2b net1 net6 net5 dac_half
+x2 vdd vss b3a b4a b3b b4b b5a net6 b6a b0a net5 b6b b5b b0b b1a b1b b2a b2b net2 Vlow net4 dac_half
+x3 vdd b7b out_unbuf net1 b7a vss passtrans
+x7 vdd dvdd b7a b7b b7 dvss level_shifter
+x8 vdd dvdd b6a b6b b6 dvss level_shifter
+x9 vdd dvdd b5a b5b b5 dvss level_shifter
+x10 vdd dvdd b4a b4b b4 dvss level_shifter
+x11 vdd dvdd b3a b3b b3 dvss level_shifter
+x12 vdd dvdd b2a b2b b2 dvss level_shifter
+x13 vdd dvdd b1a b1b b1 dvss level_shifter
+x14 vdd dvdd b0a b0b b0 dvss level_shifter
+x6 vdd out ena vss out_unbuf dvss follower_amp
+x15 vdd b7a out_unbuf net2 b7b vss passtrans
+x18 vdd net4 Vlow net7 vss net8 dac_column_dummy
+x5 vdd net8 net7 net9 vss net9 dac_column_dummy
+x4 vdd net10 net11 Vhigh vss net3 dac_column_dummy
+x16 vdd net12 net12 net11 vss net10 dac_column_dummy
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__idac3v_8bit.sym # of pins=11
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/sky130_ef_ip__idac3v_8bit.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/sky130_ef_ip__idac3v_8bit.sch
+.subckt sky130_ef_ip__idac3v_8bit ena ref_in vbg ref_sel_vbg dvdd dvss avdd din[7] din[6] din[5] din[4] din[3] din[2] din[1]
++ din[0] avss src_out snk_out
+*.PININFO ena:I din[7:0]:I ref_sel_vbg:I vbg:I ref_in:I src_out:B snk_out:B dvdd:B dvss:B avdd:B avss:B
+x1 avdd ena vbg net4 avss dvdd dvss ref_sel_vbg ref_in dvss net2 net1 net3 net5 dvss bias_generator_fe
+x2 dvdd dvss din[7] din[6] din[5] din[4] din[3] din[2] din[1] din[0] avdd net1 net3 src_out snk_out net2 avss
++ bias_generator_idac_be
+* noconn #net4
+* noconn #net5
+.ends
+
+
+* expanding   symbol:  switch_array_2.sym # of pins=10
+** sym_path: /home/tim/gits/chipalooza_projects_2/xschem/switch_array_2.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/xschem/switch_array_2.sch
+.subckt switch_array_2 avdd dvdd dvss avss channel0_out channel0_in_to_out[1] channel0_in_to_out[0] channel0_in
++ channel1_in_to_out[1] channel1_in_to_out[0] channel1_out channel1_in
+*.PININFO channel0_in:B avdd:B dvdd:B dvss:B avss:B channel0_in_to_out[1:0]:I channel0_out:B channel1_in:B channel1_out:B
+*+ channel1_in_to_out[1:0]:I
+x1 avss channel0_in_to_out[0] channel0_out channel0_in avdd dvdd dvss channel0_in_to_out[1] isolated_switch_xlarge
+x2 avss channel1_in_to_out[0] channel1_out channel1_in avdd dvdd dvss channel1_in_to_out[1] isolated_switch_xlarge
+.ends
+
+
+* expanding   symbol:  sky130_ef_ip__ccomp3v_cl.sym # of pins=9
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__ccomp3v/xschem/sky130_ef_ip__ccomp3v_cl.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__ccomp3v/xschem/sky130_ef_ip__ccomp3v_cl.sch
+.subckt sky130_ef_ip__ccomp3v_cl VOUT DVDD DVSS VDD VSS VINP VINM CLOAD ENA
+*.PININFO VDD:I VOUT:O VSS:I VINP:I VINM:I DVDD:I DVSS:I CLOAD:I ENA:I
+x2 VDD VSS VBP VBN ena3v3 comparator_bias
+x3 VDD VBP VBN VSS VINP VOUT VINM DVDD CLOAD ena3v3 comparator_core_cload
+x1 ENA DVDD DVSS DVSS VDD VDD ena3v3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x4 ENA DVSS DVSS VDD VDD sky130_fd_sc_hvl__diode_2
+x5 DVSS DVSS VDD VDD sky130_fd_sc_hvl__decap_4
+.ends
+
+
+* expanding   symbol:  sky130_aa_ip__programmable_pll.sym # of pins=42
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/sky130_aa_ip__programmable_pll.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/sky130_aa_ip__programmable_pll.sch
+.subckt sky130_aa_ip__programmable_pll D12 D0 VDD UP_INPUT D13 D1 DN_INPUT VSS D14 D2 PRE_SCALAR UP_OUT D15 D3 F_IN DN_OUT D16 D4
++ ITAIL DIV_OUT D5 S1 S6 D6 VCTRL_IN D7 S2 D8 S3 OUT D9 OUTB S4 LF_OFFCHIP D10 S5 S7 OUT_USB D17 OUT_CORE D18 D19
+*.PININFO UP_INPUT:I DN_INPUT:I UP_OUT:O DN_OUT:O ITAIL:I OUT:O OUTB:B VDD:B VSS:B PRE_SCALAR:O F_IN:I DIV_OUT:O S1:I S6:I S2:I
+*+ S3:I VCTRL_IN:I S4:I S5:I LF_OFFCHIP:I D0:I D1:I D2:I D3:I D4:I D5:I D6:I D7:I D8:I D9:I D10:I D12:I D13:I D14:I D15:I D16:I OUT_USB:O
+*+ S7:I D17:I D18:I D19:I OUT_CORE:O
+x18 VDD LD2 VSS Q21 VSS Q22 VSS D10 Q23 Q24 D9 D8 Q25 D7 Q26 Q27 F_IN VSS pre_out P22 7b_divider
+x17 VDD LD0 D6 Q01 D5 Q02 D4 D3 Q03 Q04 D2 D1 Q05 D0 Q06 Q07 IN_DIV VSS OUT01 P02 7b_divider
+x28 VDD LD1 VSS Q11 VSS Q12 VSS D15 Q13 Q14 D14 D13 Q15 D12 Q16 Q17 OUT VSS OUT11 P12 7b_divider
+x13 VSS VDD PRE_SCALAR pre_out Tappered-Buffer_1
+x14 VSS VDD UP_OUT UP Tappered-Buffer_1
+x15 VSS VDD OUT OUTA1 Tappered-Buffer_1
+x19 VSS VDD OUTB OUTA2 Tappered-Buffer_1
+x20 VSS VDD OUT_D OUTA2 Tappered-Buffer_1
+x21 VSS VDD DN_OUT DN Tappered-Buffer_1
+x22 VSS VDD DIV_OUT OUT01 Tappered-Buffer_1
+x23 VSS VDD OUT_CORE OUT11 Tappered-Buffer_1
+x2 VDD VSS pre_out F_IN S1 FIN A_MUX
+x3 VDD VSS OUT01 VSS S6 FDIV A_MUX
+x4 VDD VSS DN1 DN_INPUT S3 DN A_MUX
+x5 VDD VSS UP1 UP_INPUT S2 UP A_MUX
+x6 VDD VSS MUFTA2 VCTRL_IN S4 VCTRL_OBV A_MUX
+x12 VDD VSS MUFTA LF_OFFCHIP S5 MUFTA2 A_MUX
+x8 VDD ITAIL_SINK ITAIL_SRC MUFTA2 DN UP VSS CP
+x7 VDD VSS VCTRL_OBV VDD OUTA1 OUTA2 VCO_1
+x24 VDD VSS OUT_D F_IN S7 IN_DIV A_MUX
+x1 VDD VSS FDIV FIN UP1 DN1 PFD
+x9 VDD LD1u VSS Q11u VSS Q12u VSS D19 Q13u Q14u D18 D17 Q15u D16 Q16u Q17u OUTB VSS net1 p2u 7b_divider
+x10 VSS VDD OUT_USB net1 Tappered-Buffer_1
+x11 VDD ITAIL ITAIL_SRC ITAIL_SINK VSS Current_Mirror_Top_s
+XC3 net2 VSS sky130_fd_pr__cap_mim_m3_1 W=30 L=30 m=44
+XC4 MUFTA VSS sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=50
+XR1 net2 MUFTA VSS sky130_fd_pr__res_high_po_0p69 L=110 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  gate_drive.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/gate_drive.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/gate_drive.sch
+.subckt gate_drive IN_M IN_P OUT VDD VSS VSUB
+*.PININFO IN_M:I IN_P:I VDD:I VSS:I OUT:O VSUB:I
+XM1 net1 IN_P VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=2
+XM2 net1 S1_N VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=2
+XM3 S1_N IN_M VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=2
+XM4 S1_N net1 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=2
+XM5 S2_N S1_N VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 m=2
+XM6 S2_N S1_N VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=7 nf=1 m=2
+XM7 S3_N S2_N VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 m=6
+XM8 S3_N S2_N VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=7 nf=1 m=6
+XM9 S4_N S3_N VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 m=20
+XM10 S4_N S3_N VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=7 nf=1 m=20
+XM11 OUT S4_N VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=15 nf=1 m=60
+XM12 OUT S4_N VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=7 nf=1 m=60
+.ends
+
+
+* expanding   symbol:  rheo_half.sym # of pins=21
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_half.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_half.sch
+.subckt rheo_half vdd vss b3 b4 b3b b4b b5 res_in b6 b0 dum_in b6b b5b b0b b1 b1b b2 b2b out res_out dum_out
+*.PININFO res_in:B res_out:B out:B vdd:B vss:B b3:I b3b:I b5:I b5b:I b6:I b6b:I dum_out:B dum_in:B b4:I b4b:I b0:I b0b:I b1:I
+*+ b1b:I b2:I b2b:I
+x1 b2 b2b b1 b1b b0 b0b vdd net9 net8 net44 net16 vss net15 rheo_column
+x2 b2 b2b b1 b1b b0 b0b vdd net10 net7 net43 net8 vss net9 rheo_column
+x3 b2 b2b b1 b1b b0 b0b vdd net11 net6 net42 net7 vss net10 rheo_column
+x4 b2 b2b b1 b1b b0 b0b vdd net12 net5 net41 net6 vss net11 rheo_column
+x5 b2 b2b b1 b1b b0 b0b vdd net13 net4 net40 net5 vss net12 rheo_column
+x6 b2 b2b b1 b1b b0 b0b vdd net14 net3 net39 net4 vss net13 rheo_column
+x7 b2 b2b b1 b1b b0 b0b vdd net2 net1 net38 net3 vss net14 rheo_column
+x8 b2 b2b b1 b1b b0 b0b vdd dum_in res_in net37 net1 vss net2 rheo_column
+x9 b2 b2b b1 b1b b0 b0b vdd net25 net24 net52 res_out vss dum_out rheo_column
+x10 b2 b2b b1 b1b b0 b0b vdd net26 net23 net51 net24 vss net25 rheo_column
+x11 b2 b2b b1 b1b b0 b0b vdd net27 net22 net50 net23 vss net26 rheo_column
+x12 b2 b2b b1 b1b b0 b0b vdd net28 net21 net49 net22 vss net27 rheo_column
+x13 b2 b2b b1 b1b b0 b0b vdd net29 net20 net48 net21 vss net28 rheo_column
+x14 b2 b2b b1 b1b b0 b0b vdd net30 net19 net47 net20 vss net29 rheo_column
+x15 b2 b2b b1 b1b b0 b0b vdd net18 net17 net46 net19 vss net30 rheo_column
+x16 b2 b2b b1 b1b b0 b0b vdd net15 net16 net45 net17 vss net18 rheo_column
+x17 vdd b4 net31 net54 b4b vss passtrans
+x18 vdd b4b net31 net53 b4 vss passtrans
+x19 vdd b4 net32 net55 b4b vss passtrans
+x20 vdd b4b net32 net56 b4 vss passtrans
+x21 vdd b4 net33 net57 b4b vss passtrans
+x22 vdd b4b net33 net58 b4 vss passtrans
+x23 vdd b4 net34 net59 b4b vss passtrans
+x24 vdd b4b net34 net60 b4 vss passtrans
+x25 vdd b5b net36 net34 b5 vss passtrans
+x26 vdd b5 net36 net33 b5b vss passtrans
+x27 vdd b5b net35 net32 b5 vss passtrans
+x28 vdd b5 net35 net31 b5b vss passtrans
+x29 vdd b6b out net36 b6 vss passtrans
+x30 vdd b6 out net35 b6b vss passtrans
+x33 vdd b3b net60 net37 b3 vss passtrans
+x31 vdd b3 net60 net38 b3b vss passtrans
+x32 vdd b3b net59 net39 b3 vss passtrans
+x34 vdd b3 net59 net40 b3b vss passtrans
+x35 vdd b3b net58 net41 b3 vss passtrans
+x36 vdd b3 net58 net42 b3b vss passtrans
+x37 vdd b3b net57 net43 b3 vss passtrans
+x38 vdd b3 net57 net44 b3b vss passtrans
+x39 vdd b3b net56 net45 b3 vss passtrans
+x40 vdd b3 net56 net46 b3b vss passtrans
+x41 vdd b3b net55 net47 b3 vss passtrans
+x42 vdd b3 net55 net48 b3b vss passtrans
+x43 vdd b3b net53 net49 b3 vss passtrans
+x44 vdd b3 net53 net50 b3b vss passtrans
+x45 vdd b3b net54 net51 b3 vss passtrans
+x46 vdd b3 net54 net52 b3b vss passtrans
+x47 vdd vdd net61 net61 vss vss passtrans
+.ends
+
+
+* expanding   symbol:  passtrans.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/passtrans.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/passtrans.sch
+.subckt passtrans vdd enab out in ena vss
+*.PININFO enab:I ena:I vss:B vdd:B in:B out:B
+XM1 in ena out vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.65 nf=1 m=1
+XM2 in enab out vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  rheo_level_shifter.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_level_shifter.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_level_shifter.sch
+.subckt rheo_level_shifter avdd dvdd bit_out bitb_out bit_in dvss
+*.PININFO bit_in:I bit_out:O bitb_out:O dvss:I dvdd:I avdd:I
+x1 bit_in dvdd dvss dvss avdd avdd net1 sky130_fd_sc_hvl__lsbuflv2hv_1
+x2 net1 dvss dvss avdd avdd net2 sky130_fd_sc_hvl__inv_2
+x3 net2 dvss dvss avdd avdd net3 sky130_fd_sc_hvl__inv_4
+x4 net3 dvss dvss avdd avdd bitb_out sky130_fd_sc_hvl__inv_8
+x5 bitb_out dvss dvss avdd avdd bit_out sky130_fd_sc_hvl__inv_8
+XXD1 dvss bit_in sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+.ends
+
+
+* expanding   symbol:  rheo_column_dummy.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_column_dummy.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_column_dummy.sch
+.subckt rheo_column_dummy vdd dum_in res_in res_out vss dum_out
+*.PININFO res_in:B vss:B vdd:B dum_in:B res_out:B dum_out:B
+x1 vdd vdd net17 net1 vss vss passtrans
+x2 vdd vdd net16 net2 vss vss passtrans
+x3 vdd vdd net15 net3 vss vss passtrans
+x4 vdd vdd net14 net4 vss vss passtrans
+x5 vdd vdd net13 net5 vss vss passtrans
+x6 vdd vdd net12 net6 vss vss passtrans
+x7 vdd vdd net10 net7 vss vss passtrans
+x8 vdd vdd net11 res_in vss vss passtrans
+x9 vdd vdd net8 dum_in vss vss passtrans
+x10 vdd vdd net9 res_out vss vss passtrans
+x11 vdd vdd net12 net12 vss vss passtrans
+x12 vdd vdd net13 net13 vss vss passtrans
+x13 vdd vdd net14 net14 vss vss passtrans
+x14 vdd vdd net15 net15 vss vss passtrans
+x15 vdd vdd net11 net11 vss vss passtrans
+x16 vdd vdd net16 net16 vss vss passtrans
+x17 vdd vdd net8 net8 vss vss passtrans
+x18 vdd vdd net9 net9 vss vss passtrans
+x19 vdd vdd net10 net10 vss vss passtrans
+x20 vdd vdd net17 net17 vss vss passtrans
+XR11 res_in dum_in sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR1 net7 res_in sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR2 net6 net7 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR3 net5 net6 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR4 net4 net5 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR5 net3 net4 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR6 net2 net3 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR7 net1 net2 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR8 res_out net1 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR9 dum_out res_out sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+.ends
+
+
+* expanding   symbol:  balanced_switch.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__samplehold/xschem/balanced_switch.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__samplehold/xschem/balanced_switch.sch
+.subckt balanced_switch hold vss out in vdd
+*.PININFO in:I out:O vss:I vdd:I hold:I
+XM1 in holdb out vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=2 m=1
+XM2 in holdp out vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10 nf=2 m=1
+XM3 out holdp out vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM4 out holdb out vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1
+XM5 in holdp in vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM6 in holdb in vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1
+XM7 holdb hold vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1
+XM8 holdb hold vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM9 holdp holdb vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1
+XM10 holdp holdb vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XXD1 vss hold sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+.ends
+
+
+* expanding   symbol:  follower_amp.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__samplehold/xschem/follower_amp.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__samplehold/xschem/follower_amp.sch
+.subckt follower_amp vdd out ena vss in vsub
+*.PININFO in:I vdd:I vss:I out:O ena:I vsub:I
+XM4 pdrv1 net1 vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM5 vdd net1 net1 vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM10 vss nbias nbias vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=4 m=1
+XM20 out pdrv1 vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=280 nf=280 m=1
+XM22 out ndrv vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=4 m=1
+XM24 pbias nbias vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM25 vdd pbias pbias vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM26 vcomp pbias vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM27 net2 out vcomp vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM28 vcomp in ndrv vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM29 ndrv net2 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM30 vss net2 net2 vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM1 net1 out vcomn1 vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM2 vcomn1 in pdrv1 vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM3 pdrv2 net3 vdd vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM6 vdd net3 net3 vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM7 vcomn2 nbias vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM12 vdd pdrv2 out vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=20 m=1
+XXD1 vss in sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=4e6
+XM13 net4 ena nbias vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XXD2 vss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=4e6
+XM11 pdrv2 in vcomn2 vss sky130_fd_pr__nfet_05v0_nvt L=0.9 W=1 nf=1 m=1
+XM9 net3 out vcomn2 vss sky130_fd_pr__nfet_05v0_nvt L=0.9 W=1 nf=1 m=1
+XM8 vcomn1 nbias vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XR2 net4 vdd vss sky130_fd_pr__res_xhigh_po_0p35 L=35 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  EF_BANK_CAP_12.sym # of pins=15
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_BANK_CAP_12.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_BANK_CAP_12.sch
+.subckt EF_BANK_CAP_12 D8 D0 D4 VP1 D9 D5 D1 VP2 D2 D6 VSS D7 D3 D10 D11
+*.PININFO D0:B D1:B D2:B D3:B D4:B D5:B D6:B D7:B D8:B D9:B VSS:B VP1:B VP2:B D10:B D11:B
+x4 VP1 VSS D0 D1 D2 D3 D4 D5 EF_LSB_CAP
+x1 D8 D10 D9 VP2 D6 VSS D7 D11 EF_MSB_CAP
+x2 VP1 VP2 VSS EF_SC_CAP
+.ends
+
+
+* expanding   symbol:  EF_AMUX0201_ARRAY1.sym # of pins=30
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_AMUX0201_ARRAY1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_AMUX0201_ARRAY1.sch
+.subckt EF_AMUX0201_ARRAY1 D0 SELD0 D1 SELD1 SELD2 D2 SELD3 SELD4 D3 SELD5 D4 SELD6 SELD7 D5 SELD8 D6 SELD9 D7 D8 D9 VDD DVDD DVSS
++ VH VL VSS D10 D11 SELD10 SELD11
+*.PININFO VDD:B DVDD:B DVSS:B VH:B VL:B SELD0:I SELD1:I SELD2:I SELD3:I SELD4:I SELD5:I SELD6:I SELD7:I SELD8:I SELD9:I VSS:B D0:B
+*+ D1:B D2:B D3:B D4:B D5:B D6:B D7:B D8:B D9:B SELD10:I SELD11:I D10:B D11:B
+x2 VDD DVDD D0 VSS VH VL SELD0 DVSS EF_AMUX21x
+x1 VDD DVDD D1 VSS VH VL SELD1 DVSS EF_AMUX21x
+x3 VDD DVDD D2 VSS VH VL SELD2 DVSS EF_AMUX21x
+x4 VDD DVDD D3 VSS VH VL SELD3 DVSS EF_AMUX21x
+x5 VDD DVDD D4 VSS VH VL SELD4 DVSS EF_AMUX21x
+x8 VDD DVDD D5 VSS VH VL SELD5 DVSS EF_AMUX21x
+x9 VDD DVDD D6 VSS VH VL SELD6 DVSS EF_AMUX21x
+x10 VDD DVDD D7 VSS VH VL SELD7 DVSS EF_AMUX21x
+x11 VDD DVDD D8 VSS VH VL SELD8 DVSS EF_AMUX21x
+x12 VDD DVDD D9 VSS VH VL SELD9 DVSS EF_AMUX21x
+x6 VDD DVDD D10 VSS VH VL SELD10 DVSS EF_AMUX21x
+x7 VDD DVDD D11 VSS VH VL SELD11 DVSS EF_AMUX21x
+.ends
+
+
+* expanding   symbol:  EF_SW_RST.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_SW_RST.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_SW_RST.sch
+.subckt EF_SW_RST VP1 VP2 AVDD DVDD AVSS RST DVSS
+*.PININFO AVSS:B DVDD:B AVDD:B VP1:B VP2:B RST:I DVSS:B
+x1 AVSS RST VP2 AVSS AVDD DVDD DVSS simple_analog_switch_ena1v8
+x2 AVSS RST AVSS VP1 AVDD DVDD DVSS minimal_n_switch_ena1v8
+.ends
+
+
+* expanding   symbol:  Stage0_clk_inv.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage0_clk_inv.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage0_clk_inv.sch
+.subckt Stage0_clk_inv dvddb clka clk clkb dvss
+*.PININFO dvss:O dvddb:I clka:O clk:I clkb:O
+XM22 clka clkb dvddb dvddb sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=1 m=1
+XM8 clkb clk dvddb dvddb sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=1 m=1
+XM6 clkb clk dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
+XM21 clka clkb dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  Stage1.sym # of pins=10
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage1.sch
+.subckt Stage1 avdd enab clka vinn vinp oneg opos avss dvss dvdd
+*.PININFO avdd:I vinp:I vinn:I opos:O oneg:O clka:I enab:I dvdd:I avss:I dvss:I
+XM1 net4 net5 avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=50 nf=2 m=2
+x2 clka dvdd dvss dvss avdd avdd net2 sky130_fd_sc_hvl__lsbuflv2hv_1
+XM6 net1 net2 net4 net4 sky130_fd_pr__pfet_g5v0d10v5 L=1 W=50 nf=2 m=2
+XM2 oneg vinp net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=1 W=20 nf=2 m=2
+XM3 opos vinn net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=1 W=20 nf=2 m=2
+XM4 net3 net3 avss avss sky130_fd_pr__nfet_03v3_nvt L=0.5 W=5 nf=1 m=2
+XM8 opos net2 net3 net3 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1
+XM5 oneg net2 net3 net3 sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=5 nf=1 m=1
+x1 enab dvdd dvss dvss avdd avdd net5 sky130_fd_sc_hvl__lsbuflv2hv_1
+.ends
+
+
+* expanding   symbol:  Stage2_latch.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage2_latch.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage2_latch.sch
+.subckt Stage2_latch dvdd enab dvddb clkb vout oneg opos dvss
+*.PININFO clkb:I vout:O dvss:O dvdd:I opos:I oneg:I enab:I dvddb:O
+XM18 vout net1 dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
+XM19 vout net1 dvddb dvddb sky130_fd_pr__pfet_01v8 L=1 W=2 nf=1 m=1
+XM15 net5 clkb dvss dvss sky130_fd_pr__nfet_03v3_nvt L=0.5 W=2 nf=1 m=1
+XM9 net1 clkb dvddb dvddb sky130_fd_pr__pfet_01v8_hvt L=1 W=3 nf=1 m=2
+XM10 net2 net1 dvddb dvddb sky130_fd_pr__pfet_01v8_hvt L=1 W=3 nf=1 m=2
+XM11 net1 net2 dvddb dvddb sky130_fd_pr__pfet_01v8_hvt L=1 W=3 nf=1 m=2
+XM12 net2 clkb dvddb dvddb sky130_fd_pr__pfet_01v8_hvt L=1 W=3 nf=1 m=2
+XM1 dvddb enab dvdd dvdd sky130_fd_pr__pfet_01v8_hvt L=1 W=3 nf=1 m=2
+XM2 net1 opos net3 dvss sky130_fd_pr__nfet_03v3_nvt L=0.5 W=1 nf=1 m=1
+XM3 net4 net1 net5 dvss sky130_fd_pr__nfet_03v3_nvt L=0.5 W=1 nf=1 m=1
+XM4 net3 net2 net5 dvss sky130_fd_pr__nfet_03v3_nvt L=0.5 W=1 nf=1 m=1
+XM5 net2 oneg net4 dvss sky130_fd_pr__nfet_03v3_nvt L=0.5 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  Stage0_ena_inv.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage0_ena_inv.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_icrg_ip__ulpcomp/xschem/Stage0_ena_inv.sch
+.subckt Stage0_ena_inv dvdd ena enab dvss
+*.PININFO ena:I dvdd:I dvss:O enab:O
+XM25 enab ena dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=1 m=1
+XM24 enab ena dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  sbvfcm.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/sbvfcm.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/sbvfcm.sch
+.subckt sbvfcm vdd pbias nbias vx vss
+*.PININFO vss:B vdd:B vx:B pbias:B nbias:B
+XM3 net1 vbias_st vx vss sky130_fd_pr__nfet_01v8 L=2 W=100 nf=8 m=1
+XM4 net2 vbias_st vss vss sky130_fd_pr__nfet_01v8 L=2 W=5 nf=1 m=1
+XM5 pbias nbias net1 vss sky130_fd_pr__nfet_01v8 L=10 W=10 nf=1 m=1
+XM6 vbias_st nbias net2 vss sky130_fd_pr__nfet_01v8 L=10 W=10 nf=1 m=1
+XM7 pbias pbias net6 vdd sky130_fd_pr__pfet_01v8 L=10 W=5 nf=1 m=1
+XM8 vbias_st pbias net7 vdd sky130_fd_pr__pfet_01v8 L=10 W=5 nf=1 m=1
+XM10 net4 net3 vss vss sky130_fd_pr__nfet_01v8 L=10 W=5 nf=1 m=1
+XM11 net3 vbias_st vss vss sky130_fd_pr__nfet_01v8 L=5 W=10 nf=1 m=1
+XC1 net5 net3 sky130_fd_pr__cap_mim_m3_1 W=5 L=5 m=2
+Vm_st1 pbias net4 0
+.save i(vm_st1)
+Vm_st2 vdd net5 0
+.save i(vm_st2)
+Vm_b1 vdd net6 0
+.save i(vm_b1)
+Vm_b2 vdd net7 0
+.save i(vm_b2)
+.ends
+
+
+* expanding   symbol:  output_amp.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/output_amp.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/output_amp.sch
+.subckt output_amp vdd vo vp vn ibias vss
+*.PININFO vp:I vn:I ibias:I vo:O vss:I vdd:I
+XM1 ibias ibias vss vss sky130_fd_pr__nfet_01v8 L=1 W=2.5 nf=1 m=1
+XM2 net2 ibias vss vss sky130_fd_pr__nfet_01v8 L=1 W=5 nf=1 m=1
+XM7 vo_pre net1 net4 vdd sky130_fd_pr__pfet_01v8 L=10 W=5 nf=1 m=1
+XM4 net7 vn vcm vss sky130_fd_pr__nfet_01v8 L=2 W=10 nf=2 m=1
+XM5 net8 vp vcm vss sky130_fd_pr__nfet_01v8 L=2 W=10 nf=2 m=1
+XM6 net1 net1 net3 vdd sky130_fd_pr__pfet_01v8 L=10 W=5 nf=1 m=1
+Vm_b1 vdd net3 0
+.save i(vm_b1)
+XM3 net6 ibias vss vss sky130_fd_pr__nfet_01v8 L=1 W=8 nf=1 m=1
+XM8 vo vo_pre net5 vdd sky130_fd_pr__pfet_01v8 L=5 W=40 nf=2 m=1
+Vm_op vdd net5 0
+.save i(vm_op)
+Vm_cm vcm net2 0
+.save i(vm_cm)
+Vm_b2 vdd net4 0
+.save i(vm_b2)
+XC2 vo vo_pre sky130_fd_pr__cap_mim_m3_1 W=5 L=5 m=10
+Vm_on vo net6 0
+.save i(vm_on)
+XM9 net1 vn net7 vss sky130_fd_pr__nfet_05v0_nvt L=2 W=20 nf=2 m=1
+XM10 vo_pre vp net8 vss sky130_fd_pr__nfet_05v0_nvt L=2 W=20 nf=2 m=1
+.ends
+
+
+* expanding   symbol:  trim_res.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/trim_res.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ak_ip__cmos_vref/xschem/trim_res.sch
+.subckt trim_res A trim0 trim2 trim3 trim1 B
+*.PININFO trim0:I trim1:I trim2:I trim3:I B:B A:B
+XM1 A trim3 net3 B sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 m=1
+XM2 net3 trim2 net2 B sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 m=1
+XM3 net2 trim1 net1 B sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 m=1
+XM4 net1 trim0 B B sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 m=1
+XR1 B net1 B sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR2 net1 net2 B sky130_fd_pr__res_xhigh_po_0p69 L=6.9 mult=1 m=1
+XR3 net2 net3 B sky130_fd_pr__res_xhigh_po_0p69 L=13.8 mult=1 m=1
+XR4 net3 A B sky130_fd_pr__res_xhigh_po_0p69 L=27.6 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  rc_osc_level_shifter.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rc_osc_500k/xschem/rc_osc_level_shifter.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rc_osc_500k/xschem/rc_osc_level_shifter.sch
+.subckt rc_osc_level_shifter dvdd out_h avdd outb_h in_l dvss avss inb_l
+*.PININFO in_l:I dvdd:B avdd:B dvss:B avss:B out_h:O outb_h:O inb_l:O
+XM7 inb_l in_l dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+XM8 inb_l in_l dvss dvss sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM15 out_h outb_h net1 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM16 outb_h out_h net2 avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM17 outb_h in_l avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM18 out_h inb_l avss avss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM19 net1 out_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+XM20 net2 outb_h avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.42 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  audiodac_drv_ls.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/audiodac_drv_ls.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/audiodac_drv_ls.sch
+.subckt audiodac_drv_ls vdd_hi out_p out_n vdd_lo in_p in_n vss_lo
+*.PININFO in_p:I in_n:I out_p:O out_n:O vdd_hi:I vss_lo:I vdd_lo:I
+XM6 out_p out_n vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10 nf=1 m=1
+XM5 out_n out_p vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=10 nf=1 m=1
+XM1 casc1 in_p vss_lo vss_lo sky130_fd_pr__nfet_01v8 L=0.15 W=20 nf=10 m=1
+XM2 casc2 in_n vss_lo vss_lo sky130_fd_pr__nfet_01v8 L=0.15 W=20 nf=10 m=1
+XM3 out_n vdd_lo casc1 vss_lo sky130_fd_pr__nfet_05v0_nvt L=0.9 W=50 nf=5 m=1
+XM4 out_p vdd_lo casc2 vss_lo sky130_fd_pr__nfet_05v0_nvt L=0.9 W=50 nf=5 m=1
+.ends
+
+
+* expanding   symbol:  audiodac_drv_latch.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/audiodac_drv_latch.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/audiodac_drv_latch.sch
+.subckt audiodac_drv_latch vdd_hi in_p in_n vss
+*.PININFO in_p:I in_n:I vdd_hi:I vss:I
+XM19 in_n in_p vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=2 m=1
+XM18 in_n in_p vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=10 nf=2 m=1
+XM20 in_p in_n vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=2 m=1
+XM17 in_p in_n vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=10 nf=2 m=1
+.ends
+
+
+* expanding   symbol:  audiodac_drv_lite_half.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/audiodac_drv_lite_half.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_iic_ip__audiodac_v1/xschem/audiodac_drv_lite_half.sch
+.subckt audiodac_drv_lite_half vdd_hi in out vss crosscon
+*.PININFO in:I out:O vdd_hi:I vss:I crosscon:B
+XM10 out drv4 vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=100 nf=10 m=4
+XM9 out drv4 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=100 nf=10 m=2
+XM8 drv4 crosscon vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=100 nf=10 m=1
+XM7 drv4 crosscon vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=50 nf=5 m=1
+XM6 crosscon drv2 vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=40 nf=4 m=1
+XM5 crosscon drv2 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=20 nf=4 m=1
+XM4 drv2 drv1 vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=8 nf=2 m=1
+XM3 drv2 drv1 vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM2 drv1 in vdd_hi vdd_hi sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM1 drv1 in vss vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  comparator_final.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/comparator_final.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/comparator_final.sch
+.subckt comparator_final Vinn Vinp RST VSS AVDD DVDD
+*.PININFO AVDD:I RST:O VSS:I Vinn:I Vinp:I DVDD:I
+XM1 VS vbn VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM3 vbp vbp AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM2 vt vbp AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM7 vo vt AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+x1 VD VS VY AVDD VSS vo1 mux2to1
+XM6 vo vbn VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM14 vo1 vo VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM15 vo1 vo net1 net1 sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM12 net3 vo1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM13 net3 vo1 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM16 RST net3 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM17 RST net3 DVDD DVDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM4 vbp AVDD net2 VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM8 vt AVDD VD VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XM19 net1 net1 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=2 nf=1 m=1
+XM23 net4 net4 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=4 W=1 nf=1 m=1
+XM24 vbn net4 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=4 W=1 nf=1 m=1
+XR12 VSS net5 VSS sky130_fd_pr__res_xhigh_po_0p35 L=28 mult=1 m=1
+XM25 vbn vbn VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=1
+XM26 net4 vbn net5 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=2
+XM28 net6 vbn VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=4 nf=1 m=1
+XM18 VD Vinn VS VSS sky130_fd_pr__nfet_01v8 L=1 W=2 nf=1 m=3
+XM9 VD Vinn VY VSS sky130_fd_pr__nfet_01v8 L=1 W=2 nf=1 m=3
+XM10 net2 Vinp VS VSS sky130_fd_pr__nfet_01v8 L=1 W=2 nf=1 m=2
+XM5 net7 net7 AVDD AVDD sky130_fd_pr__pfet_g5v0d10v5 L=4 W=1 nf=1 m=1
+XM11 net8 net8 net7 AVDD sky130_fd_pr__pfet_g5v0d10v5 L=4 W=1 nf=1 m=1
+XM20 net6 net6 net8 AVDD sky130_fd_pr__pfet_g5v0d10v5 L=4 W=1 nf=1 m=1
+XM21 net4 net6 vbn VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=1 m=1
+XC1 vo vt sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=1
+.ends
+
+
+* expanding   symbol:  delayPulse_final.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/delayPulse_final.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/delayPulse_final.sch
+.subckt delayPulse_final din por VCCL VSS Vbg VCCH porb porb_h[1] porb_h[0]
+*.PININFO VCCL:I VSS:I din:I Vbg:I por:O VCCH:I porb:O porb_h[1:0]:O
+x1 Td_L Td_Sd VSS VSS VCCL VCCL outxor sky130_fd_sc_ls__xor2_1
+x3 porbPre porbhPre VCCL VSS VCCH levelShifter
+XM2 net1 din VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 m=2
+XM3 Td_S net1 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 m=2
+XM5 VT2 net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=1 nf=2 m=1
+XM7 net1 din VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.5 nf=1 m=2
+XM8 Td_S net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.5 nf=1 m=2
+XM10 VT2 net1 net11 VCCL sky130_fd_pr__pfet_01v8 L=0.3 W=2 nf=2 m=1
+XM13 net4 VT3 VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.5 nf=1 m=2
+XM14 net4 VT3 net5 net5 sky130_fd_pr__pfet_01v8 L=0.3 W=1 nf=1 m=2
+x4 net2 VSS VCCL TieH_1p8
+XM11 vbn1 net8 net6 VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 m=1
+XM17 vbp2 vbn1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=2 nf=1 m=1
+XM18 net6 net7 VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 m=1
+XM19 vbn1 vbn1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=2 nf=1 m=7
+XM24 net8 net8 net7 VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=2 nf=1 m=1
+XM25 net7 net7 VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.8 W=16 nf=8 m=1
+XM26 net8 Vbg net9 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1 W=1 nf=1 m=1
+XM6 VT3 VT2 net3 VSS sky130_fd_pr__nfet_01v8 L=0.3 W=1 nf=2 m=1
+XM12 VT3 VT2 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.3 W=2 nf=2 m=1
+XM1 vbp2 vbp2 vbp1 VCCL sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=2 m=1
+XM15 vbp1 vbp1 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=2 m=7
+XM16 net10 vbp1 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=2 m=1
+XM20 net11 vbp2 net10 VCCL sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=2 m=1
+XM21 net3 vbn1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.8 W=2 nf=1 m=4
+XM22 net12 vbp1 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=2 m=4
+XM23 net5 vbp2 net12 VCCL sky130_fd_pr__pfet_01v8 L=0.5 W=2 nf=2 m=1
+XM27 net13 net4 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM29 net13 net4 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+XM30 Td_L net13 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=2
+XM31 Td_L net13 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=2
+XM32 net14 Td_S VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM33 net14 Td_S VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+XM34 net15 net14 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM35 net15 net14 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+XM36 Td_Sd net16 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=2
+XM38 net16 net15 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM39 net16 net15 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+x6 outxor VSS VSS VCCL VCCL rstn sky130_fd_sc_ls__buf_8
+XC4 VSS net15 sky130_fd_pr__cap_mim_m3_2 W=10 L=10 m=1
+XC7 VSS VT2 sky130_fd_pr__cap_mim_m3_2 W=16 L=16 m=20
+XC2 VSS VT3 sky130_fd_pr__cap_mim_m3_2 W=16 L=16 m=20
+XC8 VSS net14 sky130_fd_pr__cap_mim_m3_2 W=10 L=10 m=1
+XC9 VSS net16 sky130_fd_pr__cap_mim_m3_2 W=10 L=10 m=1
+XM40 Td_Sd net16 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=2
+x5 rstn net2 Td_Sd VSS VSS VCCL VCCL porbPre sky130_fd_sc_ls__dfrtn_1
+x2 Td_Sd net2 Td_Lb VSS VSS VCCL VCCL porPre sky130_fd_sc_ls__dfrtp_1
+XM4 Td_Lb Td_L VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=2
+XM9 Td_Lb Td_L VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=2
+XC1 VSS vbn1 sky130_fd_pr__cap_mim_m3_2 W=16 L=16 m=1
+XC5 VCCH net7 sky130_fd_pr__cap_mim_m3_2 W=16 L=16 m=1
+XC6 VCCL vbp1 sky130_fd_pr__cap_mim_m3_2 W=16 L=16 m=1
+XC3 VCCH net8 sky130_fd_pr__cap_mim_m3_2 W=8 L=8 m=1
+XM28 net17 porPre VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM37 net17 porPre VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+XM41 net18 net17 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=2
+XM42 net18 net17 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=2
+XM43 net19 net18 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=8
+XM44 net19 net18 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=8
+XM45 por net19 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=16
+XM46 por net19 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=16
+XM47 net20 porbPre VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM48 net20 porbPre VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+XM49 net21 net20 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=2
+XM50 net21 net20 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=2
+XM51 net22 net21 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=8
+XM52 net22 net21 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=8
+XM53 porb net22 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=16
+XM54 porb net22 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=16
+XM59 net23 porbhPre VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM60 net23 porbhPre VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=2 m=1
+x7 VSS VSS VCCL VCCL sky130_fd_sc_ls__decap_4
+XC10 net8 VCCH sky130_fd_pr__cap_mim_m3_1 W=8 L=8 m=1
+XC11 net7 VCCH sky130_fd_pr__cap_mim_m3_1 W=16 L=16 m=1
+XC12 vbp1 VCCL sky130_fd_pr__cap_mim_m3_1 W=16 L=16 m=1
+XC13 vbn1 VSS sky130_fd_pr__cap_mim_m3_1 W=16 L=16 m=1
+XC14 VT2 VSS sky130_fd_pr__cap_mim_m3_1 W=16 L=16 m=20
+XC15 VT3 VSS sky130_fd_pr__cap_mim_m3_1 W=16 L=16 m=20
+XC16 net14 VSS sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=1
+XC17 net15 VSS sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=1
+XC18 net16 VSS sky130_fd_pr__cap_mim_m3_1 W=10 L=10 m=1
+XR1 net25 net9 VSS sky130_fd_pr__res_xhigh_po_0p69 L=240 mult=1 m=1
+XR7 VSS net25 VSS sky130_fd_pr__res_xhigh_po_0p69 L=240 mult=1 m=1
+XM55 net24 net23 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM56 net24 net23 VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=2 m=1
+XM57 por_h net24 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=2 m=1
+XM58 por_h net24 VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5 nf=2 m=1
+x10 por_h VSS VSS VCCH VCCH porb_h[0] sky130_fd_sc_hvl__inv_16
+x8 por_h VSS VSS VCCH VCCH porb_h[1] sky130_fd_sc_hvl__inv_16
+.ends
+
+
+* expanding   symbol:  dac_half.sym # of pins=21
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/dac_half.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/dac_half.sch
+.subckt dac_half vdd vss b3 b4 b3b b4b b5 res_in b6 b0 dum_in b6b b5b b0b b1 b1b b2 b2b out res_out dum_out
+*.PININFO res_in:B res_out:B out:B vdd:B vss:B b3:I b3b:I b5:I b5b:I b6:I b6b:I dum_out:B dum_in:B b4:I b4b:I b0:I b0b:I b1:I
+*+ b1b:I b2:I b2b:I
+x1 b2 b2b b1 b1b b0 b0b vdd net9 net8 net44 net16 vss net15 dac_column
+x2 b2 b2b b1 b1b b0 b0b vdd net10 net7 net43 net8 vss net9 dac_column
+x3 b2 b2b b1 b1b b0 b0b vdd net11 net6 net42 net7 vss net10 dac_column
+x4 b2 b2b b1 b1b b0 b0b vdd net12 net5 net41 net6 vss net11 dac_column
+x5 b2 b2b b1 b1b b0 b0b vdd net13 net4 net40 net5 vss net12 dac_column
+x6 b2 b2b b1 b1b b0 b0b vdd net14 net3 net39 net4 vss net13 dac_column
+x7 b2 b2b b1 b1b b0 b0b vdd net2 net1 net38 net3 vss net14 dac_column
+x8 b2 b2b b1 b1b b0 b0b vdd dum_in res_in net37 net1 vss net2 dac_column
+x9 b2 b2b b1 b1b b0 b0b vdd net25 net24 net52 res_out vss dum_out dac_column
+x10 b2 b2b b1 b1b b0 b0b vdd net26 net23 net51 net24 vss net25 dac_column
+x11 b2 b2b b1 b1b b0 b0b vdd net27 net22 net50 net23 vss net26 dac_column
+x12 b2 b2b b1 b1b b0 b0b vdd net28 net21 net49 net22 vss net27 dac_column
+x13 b2 b2b b1 b1b b0 b0b vdd net29 net20 net48 net21 vss net28 dac_column
+x14 b2 b2b b1 b1b b0 b0b vdd net30 net19 net47 net20 vss net29 dac_column
+x15 b2 b2b b1 b1b b0 b0b vdd net18 net17 net46 net19 vss net30 dac_column
+x16 b2 b2b b1 b1b b0 b0b vdd net15 net16 net45 net17 vss net18 dac_column
+x17 vdd b4 net31 net54 b4b vss passtrans
+x18 vdd b4b net31 net53 b4 vss passtrans
+x19 vdd b4 net32 net55 b4b vss passtrans
+x20 vdd b4b net32 net56 b4 vss passtrans
+x21 vdd b4 net33 net57 b4b vss passtrans
+x22 vdd b4b net33 net58 b4 vss passtrans
+x23 vdd b4 net34 net59 b4b vss passtrans
+x24 vdd b4b net34 net60 b4 vss passtrans
+x25 vdd b5b net36 net34 b5 vss passtrans
+x26 vdd b5 net36 net33 b5b vss passtrans
+x27 vdd b5b net35 net32 b5 vss passtrans
+x28 vdd b5 net35 net31 b5b vss passtrans
+x29 vdd b6b out net36 b6 vss passtrans
+x30 vdd b6 out net35 b6b vss passtrans
+x33 vdd b3b net60 net37 b3 vss passtrans
+x31 vdd b3 net60 net38 b3b vss passtrans
+x32 vdd b3b net59 net39 b3 vss passtrans
+x34 vdd b3 net59 net40 b3b vss passtrans
+x35 vdd b3b net58 net41 b3 vss passtrans
+x36 vdd b3 net58 net42 b3b vss passtrans
+x37 vdd b3b net57 net43 b3 vss passtrans
+x38 vdd b3 net57 net44 b3b vss passtrans
+x39 vdd b3b net56 net45 b3 vss passtrans
+x40 vdd b3 net56 net46 b3b vss passtrans
+x41 vdd b3b net55 net47 b3 vss passtrans
+x42 vdd b3 net55 net48 b3b vss passtrans
+x43 vdd b3b net53 net49 b3 vss passtrans
+x44 vdd b3 net53 net50 b3b vss passtrans
+x45 vdd b3b net54 net51 b3 vss passtrans
+x46 vdd b3 net54 net52 b3b vss passtrans
+x47 vdd vdd net61 net61 vss vss passtrans
+.ends
+
+
+* expanding   symbol:  level_shifter.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/level_shifter.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/level_shifter.sch
+.subckt level_shifter vdd dvdd bit_out bitb_out bit_in dvss
+*.PININFO bit_in:I bit_out:O bitb_out:O dvss:I dvdd:I vdd:I
+x1 bit_in dvdd dvss dvss vdd vdd net1 sky130_fd_sc_hvl__lsbuflv2hv_1
+x2 net1 dvss dvss vdd vdd net2 sky130_fd_sc_hvl__inv_2
+x3 net2 dvss dvss vdd vdd net3 sky130_fd_sc_hvl__inv_4
+x4 net3 dvss dvss vdd vdd bitb_out sky130_fd_sc_hvl__inv_8
+x5 bitb_out dvss dvss vdd vdd bit_out sky130_fd_sc_hvl__inv_8
+XXD1 dvss bit_in sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+.ends
+
+
+* expanding   symbol:  dac_column_dummy.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/dac_column_dummy.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/dac_column_dummy.sch
+.subckt dac_column_dummy vdd dum_in res_in res_out vss dum_out
+*.PININFO res_in:B vss:B vdd:B dum_in:B res_out:B dum_out:B
+x1 vdd vdd net17 net1 vss vss passtrans
+XR1 res_out net1 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+x2 vdd vdd net16 net2 vss vss passtrans
+x3 vdd vdd net15 net3 vss vss passtrans
+x4 vdd vdd net14 net4 vss vss passtrans
+x5 vdd vdd net13 net5 vss vss passtrans
+x6 vdd vdd net12 net6 vss vss passtrans
+x7 vdd vdd net10 net7 vss vss passtrans
+x8 vdd vdd net11 res_in vss vss passtrans
+x9 vdd vdd net8 dum_in vss vss passtrans
+x10 vdd vdd net9 res_out vss vss passtrans
+XR2 net1 net2 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR3 net2 net3 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR4 net3 net4 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR5 net4 net5 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR6 net5 net6 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR7 net6 net7 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR9 net7 res_in vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR10 res_in dum_in vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR12 dum_out res_out vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+x11 vdd vdd net12 net12 vss vss passtrans
+x12 vdd vdd net13 net13 vss vss passtrans
+x13 vdd vdd net14 net14 vss vss passtrans
+x14 vdd vdd net15 net15 vss vss passtrans
+x15 vdd vdd net11 net11 vss vss passtrans
+x16 vdd vdd net16 net16 vss vss passtrans
+x17 vdd vdd net8 net8 vss vss passtrans
+x18 vdd vdd net9 net9 vss vss passtrans
+x19 vdd vdd net10 net10 vss vss passtrans
+x20 vdd vdd net17 net17 vss vss passtrans
+.ends
+
+
+* expanding   symbol:  bias_generator_fe.sym # of pins=15
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_generator_fe.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_generator_fe.sch
+.subckt bias_generator_fe avdd ena vbg src_test0 avss dvdd ena_src_test0 ref_sel_vbg ref_in dvss nbias pcasc pbias snk_test0
++ ena_snk_test0
+*.PININFO ref_in:I avss:B ref_sel_vbg:I avdd:B ena_src_test0:I ena_snk_test0:I src_test0:B snk_test0:B vbg:I ena:I dvdd:B dvss:B
+*+ pcasc:O pbias:O nbias:O
+x2[19] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[18] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[17] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[16] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[15] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[14] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[13] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[12] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[11] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[10] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[9] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[8] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[7] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[6] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[5] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[4] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[3] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[2] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[1] net1 ena_3v3 nbias nbias avss bias_nstack
+x2[0] net1 ena_3v3 nbias nbias avss bias_nstack
+XR4 pcasc ref_in avss sky130_fd_pr__res_high_po_0p35 L=1500 mult=1 m=1
+x4 pbias enb_vbg_3v3 net2 nbias avss bias_nstack
+x2 avdd pbias pcasc net5 ena_vbg_3v3 avss pbias bias_pstack
+x13[9] avdd pbias pcasc net6[9] enb_test0_3v3 avss src_test0 bias_pstack
+x13[8] avdd pbias pcasc net6[8] enb_test0_3v3 avss src_test0 bias_pstack
+x13[7] avdd pbias pcasc net6[7] enb_test0_3v3 avss src_test0 bias_pstack
+x13[6] avdd pbias pcasc net6[6] enb_test0_3v3 avss src_test0 bias_pstack
+x13[5] avdd pbias pcasc net6[5] enb_test0_3v3 avss src_test0 bias_pstack
+x13[4] avdd pbias pcasc net6[4] enb_test0_3v3 avss src_test0 bias_pstack
+x13[3] avdd pbias pcasc net6[3] enb_test0_3v3 avss src_test0 bias_pstack
+x13[2] avdd pbias pcasc net6[2] enb_test0_3v3 avss src_test0 bias_pstack
+x13[1] avdd pbias pcasc net6[1] enb_test0_3v3 avss src_test0 bias_pstack
+x13[0] avdd pbias pcasc net6[0] enb_test0_3v3 avss src_test0 bias_pstack
+x17[1] snk_test0 ena_test0_3v3 net7[1] nbias avss bias_nstack
+x17[0] snk_test0 ena_test0_3v3 net7[0] nbias avss bias_nstack
+x1 ref_sel_vbg dvdd dvss dvss avdd avdd ena_vbg_3v3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x11 ena_snk_test0 dvdd dvss dvss avdd avdd ena_test0_3v3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x23 ena_src_test0 dvdd dvss dvss avdd avdd net4 sky130_fd_sc_hvl__lsbuflv2hv_1
+x24 ena_vbg_3v3 dvss dvss avdd avdd enb_vbg_3v3 sky130_fd_sc_hvl__inv_2
+x35 net4 dvss dvss avdd avdd enb_test0_3v3 sky130_fd_sc_hvl__inv_2
+x3 avdd pbias vbg vfb nbias avss ena_vbg_3v3 bias_amp
+XR1 avss net3 avss sky130_fd_pr__res_high_po_0p35 L=2008 mult=1 m=1
+XC1 pbias vfb sky130_fd_pr__cap_mim_m3_1 W=5 L=5 m=8
+x36 ena dvdd dvss dvss avdd avdd ena_3v3 sky130_fd_sc_hvl__lsbuflv2hv_1
+* noconn #net2
+* noconn #net7
+* noconn #net6
+XR2 net1 pcasc avss sky130_fd_pr__res_high_po_0p35 L=900 mult=1 m=1
+Vmeas vfb net3 0
+.save i(vmeas)
+x19[11] avdd pbias pcasc net8[11] enb_vbg_3v3 avss vfb bias_pstack
+x19[10] avdd pbias pcasc net8[10] enb_vbg_3v3 avss vfb bias_pstack
+x19[9] avdd pbias pcasc net8[9] enb_vbg_3v3 avss vfb bias_pstack
+x19[8] avdd pbias pcasc net8[8] enb_vbg_3v3 avss vfb bias_pstack
+x19[7] avdd pbias pcasc net8[7] enb_vbg_3v3 avss vfb bias_pstack
+x19[6] avdd pbias pcasc net8[6] enb_vbg_3v3 avss vfb bias_pstack
+x19[5] avdd pbias pcasc net8[5] enb_vbg_3v3 avss vfb bias_pstack
+x19[4] avdd pbias pcasc net8[4] enb_vbg_3v3 avss vfb bias_pstack
+x19[3] avdd pbias pcasc net8[3] enb_vbg_3v3 avss vfb bias_pstack
+x19[2] avdd pbias pcasc net8[2] enb_vbg_3v3 avss vfb bias_pstack
+x19[1] avdd pbias pcasc net8[1] enb_vbg_3v3 avss vfb bias_pstack
+x19[0] avdd pbias pcasc net8[0] enb_vbg_3v3 avss vfb bias_pstack
+* noconn #net8
+* noconn #net5
+XD1 avss vbg sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+x5[1] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x5[0] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x5 ref_sel_vbg dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x6 ena dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x7 ena_src_test0 dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x8 ena_snk_test0 dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+.ends
+
+
+* expanding   symbol:  bias_generator_idac_be.sym # of pins=10
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_generator_idac_be.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_generator_idac_be.sch
+.subckt bias_generator_idac_be dvdd dvss ena[7] ena[6] ena[5] ena[4] ena[3] ena[2] ena[1] ena[0] avdd pcasc pbias src_out snk_out
++ nbias avss
+*.PININFO avss:B avdd:B src_out:B ena[7:0]:I dvdd:B dvss:B pcasc:I pbias:I nbias:I snk_out:B
+x3 snk_out avss net1 nbias avss bias_nstack
+x1 avdd pbias pcasc net2 avdd avss src_out bias_pstack
+x8 avdd pbias pcasc net3 enb_bit0 avss src_out bias_pstack
+x4[1] avdd pbias pcasc net4[1] enb_bit1 avss src_out bias_pstack
+x4[0] avdd pbias pcasc net4[0] enb_bit1 avss src_out bias_pstack
+x5[3] avdd pbias pcasc net5[3] enb_bit2 avss src_out bias_pstack
+x5[2] avdd pbias pcasc net5[2] enb_bit2 avss src_out bias_pstack
+x5[1] avdd pbias pcasc net5[1] enb_bit2 avss src_out bias_pstack
+x5[0] avdd pbias pcasc net5[0] enb_bit2 avss src_out bias_pstack
+x6[7] avdd pbias pcasc net6[7] enb_bit3 avss src_out bias_pstack
+x6[6] avdd pbias pcasc net6[6] enb_bit3 avss src_out bias_pstack
+x6[5] avdd pbias pcasc net6[5] enb_bit3 avss src_out bias_pstack
+x6[4] avdd pbias pcasc net6[4] enb_bit3 avss src_out bias_pstack
+x6[3] avdd pbias pcasc net6[3] enb_bit3 avss src_out bias_pstack
+x6[2] avdd pbias pcasc net6[2] enb_bit3 avss src_out bias_pstack
+x6[1] avdd pbias pcasc net6[1] enb_bit3 avss src_out bias_pstack
+x6[0] avdd pbias pcasc net6[0] enb_bit3 avss src_out bias_pstack
+x7[15] avdd pbias pcasc net7[15] enb_bit4 avss src_out bias_pstack
+x7[14] avdd pbias pcasc net7[14] enb_bit4 avss src_out bias_pstack
+x7[13] avdd pbias pcasc net7[13] enb_bit4 avss src_out bias_pstack
+x7[12] avdd pbias pcasc net7[12] enb_bit4 avss src_out bias_pstack
+x7[11] avdd pbias pcasc net7[11] enb_bit4 avss src_out bias_pstack
+x7[10] avdd pbias pcasc net7[10] enb_bit4 avss src_out bias_pstack
+x7[9] avdd pbias pcasc net7[9] enb_bit4 avss src_out bias_pstack
+x7[8] avdd pbias pcasc net7[8] enb_bit4 avss src_out bias_pstack
+x7[7] avdd pbias pcasc net7[7] enb_bit4 avss src_out bias_pstack
+x7[6] avdd pbias pcasc net7[6] enb_bit4 avss src_out bias_pstack
+x7[5] avdd pbias pcasc net7[5] enb_bit4 avss src_out bias_pstack
+x7[4] avdd pbias pcasc net7[4] enb_bit4 avss src_out bias_pstack
+x7[3] avdd pbias pcasc net7[3] enb_bit4 avss src_out bias_pstack
+x7[2] avdd pbias pcasc net7[2] enb_bit4 avss src_out bias_pstack
+x7[1] avdd pbias pcasc net7[1] enb_bit4 avss src_out bias_pstack
+x7[0] avdd pbias pcasc net7[0] enb_bit4 avss src_out bias_pstack
+x11[31] avdd pbias pcasc net8[31] enb_bit5 avss src_out bias_pstack
+x11[30] avdd pbias pcasc net8[30] enb_bit5 avss src_out bias_pstack
+x11[29] avdd pbias pcasc net8[29] enb_bit5 avss src_out bias_pstack
+x11[28] avdd pbias pcasc net8[28] enb_bit5 avss src_out bias_pstack
+x11[27] avdd pbias pcasc net8[27] enb_bit5 avss src_out bias_pstack
+x11[26] avdd pbias pcasc net8[26] enb_bit5 avss src_out bias_pstack
+x11[25] avdd pbias pcasc net8[25] enb_bit5 avss src_out bias_pstack
+x11[24] avdd pbias pcasc net8[24] enb_bit5 avss src_out bias_pstack
+x11[23] avdd pbias pcasc net8[23] enb_bit5 avss src_out bias_pstack
+x11[22] avdd pbias pcasc net8[22] enb_bit5 avss src_out bias_pstack
+x11[21] avdd pbias pcasc net8[21] enb_bit5 avss src_out bias_pstack
+x11[20] avdd pbias pcasc net8[20] enb_bit5 avss src_out bias_pstack
+x11[19] avdd pbias pcasc net8[19] enb_bit5 avss src_out bias_pstack
+x11[18] avdd pbias pcasc net8[18] enb_bit5 avss src_out bias_pstack
+x11[17] avdd pbias pcasc net8[17] enb_bit5 avss src_out bias_pstack
+x11[16] avdd pbias pcasc net8[16] enb_bit5 avss src_out bias_pstack
+x11[15] avdd pbias pcasc net8[15] enb_bit5 avss src_out bias_pstack
+x11[14] avdd pbias pcasc net8[14] enb_bit5 avss src_out bias_pstack
+x11[13] avdd pbias pcasc net8[13] enb_bit5 avss src_out bias_pstack
+x11[12] avdd pbias pcasc net8[12] enb_bit5 avss src_out bias_pstack
+x11[11] avdd pbias pcasc net8[11] enb_bit5 avss src_out bias_pstack
+x11[10] avdd pbias pcasc net8[10] enb_bit5 avss src_out bias_pstack
+x11[9] avdd pbias pcasc net8[9] enb_bit5 avss src_out bias_pstack
+x11[8] avdd pbias pcasc net8[8] enb_bit5 avss src_out bias_pstack
+x11[7] avdd pbias pcasc net8[7] enb_bit5 avss src_out bias_pstack
+x11[6] avdd pbias pcasc net8[6] enb_bit5 avss src_out bias_pstack
+x11[5] avdd pbias pcasc net8[5] enb_bit5 avss src_out bias_pstack
+x11[4] avdd pbias pcasc net8[4] enb_bit5 avss src_out bias_pstack
+x11[3] avdd pbias pcasc net8[3] enb_bit5 avss src_out bias_pstack
+x11[2] avdd pbias pcasc net8[2] enb_bit5 avss src_out bias_pstack
+x11[1] avdd pbias pcasc net8[1] enb_bit5 avss src_out bias_pstack
+x11[0] avdd pbias pcasc net8[0] enb_bit5 avss src_out bias_pstack
+x12[63] avdd pbias pcasc net9[63] enb_bit6 avss src_out bias_pstack
+x12[62] avdd pbias pcasc net9[62] enb_bit6 avss src_out bias_pstack
+x12[61] avdd pbias pcasc net9[61] enb_bit6 avss src_out bias_pstack
+x12[60] avdd pbias pcasc net9[60] enb_bit6 avss src_out bias_pstack
+x12[59] avdd pbias pcasc net9[59] enb_bit6 avss src_out bias_pstack
+x12[58] avdd pbias pcasc net9[58] enb_bit6 avss src_out bias_pstack
+x12[57] avdd pbias pcasc net9[57] enb_bit6 avss src_out bias_pstack
+x12[56] avdd pbias pcasc net9[56] enb_bit6 avss src_out bias_pstack
+x12[55] avdd pbias pcasc net9[55] enb_bit6 avss src_out bias_pstack
+x12[54] avdd pbias pcasc net9[54] enb_bit6 avss src_out bias_pstack
+x12[53] avdd pbias pcasc net9[53] enb_bit6 avss src_out bias_pstack
+x12[52] avdd pbias pcasc net9[52] enb_bit6 avss src_out bias_pstack
+x12[51] avdd pbias pcasc net9[51] enb_bit6 avss src_out bias_pstack
+x12[50] avdd pbias pcasc net9[50] enb_bit6 avss src_out bias_pstack
+x12[49] avdd pbias pcasc net9[49] enb_bit6 avss src_out bias_pstack
+x12[48] avdd pbias pcasc net9[48] enb_bit6 avss src_out bias_pstack
+x12[47] avdd pbias pcasc net9[47] enb_bit6 avss src_out bias_pstack
+x12[46] avdd pbias pcasc net9[46] enb_bit6 avss src_out bias_pstack
+x12[45] avdd pbias pcasc net9[45] enb_bit6 avss src_out bias_pstack
+x12[44] avdd pbias pcasc net9[44] enb_bit6 avss src_out bias_pstack
+x12[43] avdd pbias pcasc net9[43] enb_bit6 avss src_out bias_pstack
+x12[42] avdd pbias pcasc net9[42] enb_bit6 avss src_out bias_pstack
+x12[41] avdd pbias pcasc net9[41] enb_bit6 avss src_out bias_pstack
+x12[40] avdd pbias pcasc net9[40] enb_bit6 avss src_out bias_pstack
+x12[39] avdd pbias pcasc net9[39] enb_bit6 avss src_out bias_pstack
+x12[38] avdd pbias pcasc net9[38] enb_bit6 avss src_out bias_pstack
+x12[37] avdd pbias pcasc net9[37] enb_bit6 avss src_out bias_pstack
+x12[36] avdd pbias pcasc net9[36] enb_bit6 avss src_out bias_pstack
+x12[35] avdd pbias pcasc net9[35] enb_bit6 avss src_out bias_pstack
+x12[34] avdd pbias pcasc net9[34] enb_bit6 avss src_out bias_pstack
+x12[33] avdd pbias pcasc net9[33] enb_bit6 avss src_out bias_pstack
+x12[32] avdd pbias pcasc net9[32] enb_bit6 avss src_out bias_pstack
+x12[31] avdd pbias pcasc net9[31] enb_bit6 avss src_out bias_pstack
+x12[30] avdd pbias pcasc net9[30] enb_bit6 avss src_out bias_pstack
+x12[29] avdd pbias pcasc net9[29] enb_bit6 avss src_out bias_pstack
+x12[28] avdd pbias pcasc net9[28] enb_bit6 avss src_out bias_pstack
+x12[27] avdd pbias pcasc net9[27] enb_bit6 avss src_out bias_pstack
+x12[26] avdd pbias pcasc net9[26] enb_bit6 avss src_out bias_pstack
+x12[25] avdd pbias pcasc net9[25] enb_bit6 avss src_out bias_pstack
+x12[24] avdd pbias pcasc net9[24] enb_bit6 avss src_out bias_pstack
+x12[23] avdd pbias pcasc net9[23] enb_bit6 avss src_out bias_pstack
+x12[22] avdd pbias pcasc net9[22] enb_bit6 avss src_out bias_pstack
+x12[21] avdd pbias pcasc net9[21] enb_bit6 avss src_out bias_pstack
+x12[20] avdd pbias pcasc net9[20] enb_bit6 avss src_out bias_pstack
+x12[19] avdd pbias pcasc net9[19] enb_bit6 avss src_out bias_pstack
+x12[18] avdd pbias pcasc net9[18] enb_bit6 avss src_out bias_pstack
+x12[17] avdd pbias pcasc net9[17] enb_bit6 avss src_out bias_pstack
+x12[16] avdd pbias pcasc net9[16] enb_bit6 avss src_out bias_pstack
+x12[15] avdd pbias pcasc net9[15] enb_bit6 avss src_out bias_pstack
+x12[14] avdd pbias pcasc net9[14] enb_bit6 avss src_out bias_pstack
+x12[13] avdd pbias pcasc net9[13] enb_bit6 avss src_out bias_pstack
+x12[12] avdd pbias pcasc net9[12] enb_bit6 avss src_out bias_pstack
+x12[11] avdd pbias pcasc net9[11] enb_bit6 avss src_out bias_pstack
+x12[10] avdd pbias pcasc net9[10] enb_bit6 avss src_out bias_pstack
+x12[9] avdd pbias pcasc net9[9] enb_bit6 avss src_out bias_pstack
+x12[8] avdd pbias pcasc net9[8] enb_bit6 avss src_out bias_pstack
+x12[7] avdd pbias pcasc net9[7] enb_bit6 avss src_out bias_pstack
+x12[6] avdd pbias pcasc net9[6] enb_bit6 avss src_out bias_pstack
+x12[5] avdd pbias pcasc net9[5] enb_bit6 avss src_out bias_pstack
+x12[4] avdd pbias pcasc net9[4] enb_bit6 avss src_out bias_pstack
+x12[3] avdd pbias pcasc net9[3] enb_bit6 avss src_out bias_pstack
+x12[2] avdd pbias pcasc net9[2] enb_bit6 avss src_out bias_pstack
+x12[1] avdd pbias pcasc net9[1] enb_bit6 avss src_out bias_pstack
+x12[0] avdd pbias pcasc net9[0] enb_bit6 avss src_out bias_pstack
+x1[127] avdd pbias pcasc net10[127] enb_bit7 avss src_out bias_pstack
+x1[126] avdd pbias pcasc net10[126] enb_bit7 avss src_out bias_pstack
+x1[125] avdd pbias pcasc net10[125] enb_bit7 avss src_out bias_pstack
+x1[124] avdd pbias pcasc net10[124] enb_bit7 avss src_out bias_pstack
+x1[123] avdd pbias pcasc net10[123] enb_bit7 avss src_out bias_pstack
+x1[122] avdd pbias pcasc net10[122] enb_bit7 avss src_out bias_pstack
+x1[121] avdd pbias pcasc net10[121] enb_bit7 avss src_out bias_pstack
+x1[120] avdd pbias pcasc net10[120] enb_bit7 avss src_out bias_pstack
+x1[119] avdd pbias pcasc net10[119] enb_bit7 avss src_out bias_pstack
+x1[118] avdd pbias pcasc net10[118] enb_bit7 avss src_out bias_pstack
+x1[117] avdd pbias pcasc net10[117] enb_bit7 avss src_out bias_pstack
+x1[116] avdd pbias pcasc net10[116] enb_bit7 avss src_out bias_pstack
+x1[115] avdd pbias pcasc net10[115] enb_bit7 avss src_out bias_pstack
+x1[114] avdd pbias pcasc net10[114] enb_bit7 avss src_out bias_pstack
+x1[113] avdd pbias pcasc net10[113] enb_bit7 avss src_out bias_pstack
+x1[112] avdd pbias pcasc net10[112] enb_bit7 avss src_out bias_pstack
+x1[111] avdd pbias pcasc net10[111] enb_bit7 avss src_out bias_pstack
+x1[110] avdd pbias pcasc net10[110] enb_bit7 avss src_out bias_pstack
+x1[109] avdd pbias pcasc net10[109] enb_bit7 avss src_out bias_pstack
+x1[108] avdd pbias pcasc net10[108] enb_bit7 avss src_out bias_pstack
+x1[107] avdd pbias pcasc net10[107] enb_bit7 avss src_out bias_pstack
+x1[106] avdd pbias pcasc net10[106] enb_bit7 avss src_out bias_pstack
+x1[105] avdd pbias pcasc net10[105] enb_bit7 avss src_out bias_pstack
+x1[104] avdd pbias pcasc net10[104] enb_bit7 avss src_out bias_pstack
+x1[103] avdd pbias pcasc net10[103] enb_bit7 avss src_out bias_pstack
+x1[102] avdd pbias pcasc net10[102] enb_bit7 avss src_out bias_pstack
+x1[101] avdd pbias pcasc net10[101] enb_bit7 avss src_out bias_pstack
+x1[100] avdd pbias pcasc net10[100] enb_bit7 avss src_out bias_pstack
+x1[99] avdd pbias pcasc net10[99] enb_bit7 avss src_out bias_pstack
+x1[98] avdd pbias pcasc net10[98] enb_bit7 avss src_out bias_pstack
+x1[97] avdd pbias pcasc net10[97] enb_bit7 avss src_out bias_pstack
+x1[96] avdd pbias pcasc net10[96] enb_bit7 avss src_out bias_pstack
+x1[95] avdd pbias pcasc net10[95] enb_bit7 avss src_out bias_pstack
+x1[94] avdd pbias pcasc net10[94] enb_bit7 avss src_out bias_pstack
+x1[93] avdd pbias pcasc net10[93] enb_bit7 avss src_out bias_pstack
+x1[92] avdd pbias pcasc net10[92] enb_bit7 avss src_out bias_pstack
+x1[91] avdd pbias pcasc net10[91] enb_bit7 avss src_out bias_pstack
+x1[90] avdd pbias pcasc net10[90] enb_bit7 avss src_out bias_pstack
+x1[89] avdd pbias pcasc net10[89] enb_bit7 avss src_out bias_pstack
+x1[88] avdd pbias pcasc net10[88] enb_bit7 avss src_out bias_pstack
+x1[87] avdd pbias pcasc net10[87] enb_bit7 avss src_out bias_pstack
+x1[86] avdd pbias pcasc net10[86] enb_bit7 avss src_out bias_pstack
+x1[85] avdd pbias pcasc net10[85] enb_bit7 avss src_out bias_pstack
+x1[84] avdd pbias pcasc net10[84] enb_bit7 avss src_out bias_pstack
+x1[83] avdd pbias pcasc net10[83] enb_bit7 avss src_out bias_pstack
+x1[82] avdd pbias pcasc net10[82] enb_bit7 avss src_out bias_pstack
+x1[81] avdd pbias pcasc net10[81] enb_bit7 avss src_out bias_pstack
+x1[80] avdd pbias pcasc net10[80] enb_bit7 avss src_out bias_pstack
+x1[79] avdd pbias pcasc net10[79] enb_bit7 avss src_out bias_pstack
+x1[78] avdd pbias pcasc net10[78] enb_bit7 avss src_out bias_pstack
+x1[77] avdd pbias pcasc net10[77] enb_bit7 avss src_out bias_pstack
+x1[76] avdd pbias pcasc net10[76] enb_bit7 avss src_out bias_pstack
+x1[75] avdd pbias pcasc net10[75] enb_bit7 avss src_out bias_pstack
+x1[74] avdd pbias pcasc net10[74] enb_bit7 avss src_out bias_pstack
+x1[73] avdd pbias pcasc net10[73] enb_bit7 avss src_out bias_pstack
+x1[72] avdd pbias pcasc net10[72] enb_bit7 avss src_out bias_pstack
+x1[71] avdd pbias pcasc net10[71] enb_bit7 avss src_out bias_pstack
+x1[70] avdd pbias pcasc net10[70] enb_bit7 avss src_out bias_pstack
+x1[69] avdd pbias pcasc net10[69] enb_bit7 avss src_out bias_pstack
+x1[68] avdd pbias pcasc net10[68] enb_bit7 avss src_out bias_pstack
+x1[67] avdd pbias pcasc net10[67] enb_bit7 avss src_out bias_pstack
+x1[66] avdd pbias pcasc net10[66] enb_bit7 avss src_out bias_pstack
+x1[65] avdd pbias pcasc net10[65] enb_bit7 avss src_out bias_pstack
+x1[64] avdd pbias pcasc net10[64] enb_bit7 avss src_out bias_pstack
+x1[63] avdd pbias pcasc net10[63] enb_bit7 avss src_out bias_pstack
+x1[62] avdd pbias pcasc net10[62] enb_bit7 avss src_out bias_pstack
+x1[61] avdd pbias pcasc net10[61] enb_bit7 avss src_out bias_pstack
+x1[60] avdd pbias pcasc net10[60] enb_bit7 avss src_out bias_pstack
+x1[59] avdd pbias pcasc net10[59] enb_bit7 avss src_out bias_pstack
+x1[58] avdd pbias pcasc net10[58] enb_bit7 avss src_out bias_pstack
+x1[57] avdd pbias pcasc net10[57] enb_bit7 avss src_out bias_pstack
+x1[56] avdd pbias pcasc net10[56] enb_bit7 avss src_out bias_pstack
+x1[55] avdd pbias pcasc net10[55] enb_bit7 avss src_out bias_pstack
+x1[54] avdd pbias pcasc net10[54] enb_bit7 avss src_out bias_pstack
+x1[53] avdd pbias pcasc net10[53] enb_bit7 avss src_out bias_pstack
+x1[52] avdd pbias pcasc net10[52] enb_bit7 avss src_out bias_pstack
+x1[51] avdd pbias pcasc net10[51] enb_bit7 avss src_out bias_pstack
+x1[50] avdd pbias pcasc net10[50] enb_bit7 avss src_out bias_pstack
+x1[49] avdd pbias pcasc net10[49] enb_bit7 avss src_out bias_pstack
+x1[48] avdd pbias pcasc net10[48] enb_bit7 avss src_out bias_pstack
+x1[47] avdd pbias pcasc net10[47] enb_bit7 avss src_out bias_pstack
+x1[46] avdd pbias pcasc net10[46] enb_bit7 avss src_out bias_pstack
+x1[45] avdd pbias pcasc net10[45] enb_bit7 avss src_out bias_pstack
+x1[44] avdd pbias pcasc net10[44] enb_bit7 avss src_out bias_pstack
+x1[43] avdd pbias pcasc net10[43] enb_bit7 avss src_out bias_pstack
+x1[42] avdd pbias pcasc net10[42] enb_bit7 avss src_out bias_pstack
+x1[41] avdd pbias pcasc net10[41] enb_bit7 avss src_out bias_pstack
+x1[40] avdd pbias pcasc net10[40] enb_bit7 avss src_out bias_pstack
+x1[39] avdd pbias pcasc net10[39] enb_bit7 avss src_out bias_pstack
+x1[38] avdd pbias pcasc net10[38] enb_bit7 avss src_out bias_pstack
+x1[37] avdd pbias pcasc net10[37] enb_bit7 avss src_out bias_pstack
+x1[36] avdd pbias pcasc net10[36] enb_bit7 avss src_out bias_pstack
+x1[35] avdd pbias pcasc net10[35] enb_bit7 avss src_out bias_pstack
+x1[34] avdd pbias pcasc net10[34] enb_bit7 avss src_out bias_pstack
+x1[33] avdd pbias pcasc net10[33] enb_bit7 avss src_out bias_pstack
+x1[32] avdd pbias pcasc net10[32] enb_bit7 avss src_out bias_pstack
+x1[31] avdd pbias pcasc net10[31] enb_bit7 avss src_out bias_pstack
+x1[30] avdd pbias pcasc net10[30] enb_bit7 avss src_out bias_pstack
+x1[29] avdd pbias pcasc net10[29] enb_bit7 avss src_out bias_pstack
+x1[28] avdd pbias pcasc net10[28] enb_bit7 avss src_out bias_pstack
+x1[27] avdd pbias pcasc net10[27] enb_bit7 avss src_out bias_pstack
+x1[26] avdd pbias pcasc net10[26] enb_bit7 avss src_out bias_pstack
+x1[25] avdd pbias pcasc net10[25] enb_bit7 avss src_out bias_pstack
+x1[24] avdd pbias pcasc net10[24] enb_bit7 avss src_out bias_pstack
+x1[23] avdd pbias pcasc net10[23] enb_bit7 avss src_out bias_pstack
+x1[22] avdd pbias pcasc net10[22] enb_bit7 avss src_out bias_pstack
+x1[21] avdd pbias pcasc net10[21] enb_bit7 avss src_out bias_pstack
+x1[20] avdd pbias pcasc net10[20] enb_bit7 avss src_out bias_pstack
+x1[19] avdd pbias pcasc net10[19] enb_bit7 avss src_out bias_pstack
+x1[18] avdd pbias pcasc net10[18] enb_bit7 avss src_out bias_pstack
+x1[17] avdd pbias pcasc net10[17] enb_bit7 avss src_out bias_pstack
+x1[16] avdd pbias pcasc net10[16] enb_bit7 avss src_out bias_pstack
+x1[15] avdd pbias pcasc net10[15] enb_bit7 avss src_out bias_pstack
+x1[14] avdd pbias pcasc net10[14] enb_bit7 avss src_out bias_pstack
+x1[13] avdd pbias pcasc net10[13] enb_bit7 avss src_out bias_pstack
+x1[12] avdd pbias pcasc net10[12] enb_bit7 avss src_out bias_pstack
+x1[11] avdd pbias pcasc net10[11] enb_bit7 avss src_out bias_pstack
+x1[10] avdd pbias pcasc net10[10] enb_bit7 avss src_out bias_pstack
+x1[9] avdd pbias pcasc net10[9] enb_bit7 avss src_out bias_pstack
+x1[8] avdd pbias pcasc net10[8] enb_bit7 avss src_out bias_pstack
+x1[7] avdd pbias pcasc net10[7] enb_bit7 avss src_out bias_pstack
+x1[6] avdd pbias pcasc net10[6] enb_bit7 avss src_out bias_pstack
+x1[5] avdd pbias pcasc net10[5] enb_bit7 avss src_out bias_pstack
+x1[4] avdd pbias pcasc net10[4] enb_bit7 avss src_out bias_pstack
+x1[3] avdd pbias pcasc net10[3] enb_bit7 avss src_out bias_pstack
+x1[2] avdd pbias pcasc net10[2] enb_bit7 avss src_out bias_pstack
+x1[1] avdd pbias pcasc net10[1] enb_bit7 avss src_out bias_pstack
+x1[0] avdd pbias pcasc net10[0] enb_bit7 avss src_out bias_pstack
+x12 ena[0] dvdd dvss dvss avdd avdd ena_bit0 sky130_fd_sc_hvl__lsbuflv2hv_1
+x14 ena[1] dvdd dvss dvss avdd avdd ena_bit1 sky130_fd_sc_hvl__lsbuflv2hv_1
+x15 ena[2] dvdd dvss dvss avdd avdd ena_bit2 sky130_fd_sc_hvl__lsbuflv2hv_1
+x16 ena[3] dvdd dvss dvss avdd avdd ena_bit3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x17 ena[4] dvdd dvss dvss avdd avdd ena_bit4 sky130_fd_sc_hvl__lsbuflv2hv_1
+x18 ena[5] dvdd dvss dvss avdd avdd ena_bit5 sky130_fd_sc_hvl__lsbuflv2hv_1
+x19 ena[6] dvdd dvss dvss avdd avdd ena_bit6 sky130_fd_sc_hvl__lsbuflv2hv_1
+x20 ena[7] dvdd dvss dvss avdd avdd ena_bit7 sky130_fd_sc_hvl__lsbuflv2hv_1
+x25 ena_bit0 dvss dvss avdd avdd enb_bit0 sky130_fd_sc_hvl__inv_2
+x26 ena_bit1 dvss dvss avdd avdd enb_bit1 sky130_fd_sc_hvl__inv_2
+x27 ena_bit2 dvss dvss avdd avdd enb_bit2 sky130_fd_sc_hvl__inv_2
+x28 ena_bit3 dvss dvss avdd avdd enb_bit3 sky130_fd_sc_hvl__inv_2
+x29 ena_bit4 dvss dvss avdd avdd enb_bit4 sky130_fd_sc_hvl__inv_2
+x30 ena_bit5 dvss dvss avdd avdd enb_bit5 sky130_fd_sc_hvl__inv_2
+x31 ena_bit6 dvss dvss avdd avdd enb_bit6 sky130_fd_sc_hvl__inv_2
+x32 ena_bit7 dvss dvss avdd avdd enb_bit7 sky130_fd_sc_hvl__inv_2
+* noconn #net2
+* noconn #net1
+* noconn #net3
+* noconn #net4
+* noconn #net5
+* noconn #net6
+* noconn #net7
+* noconn #net8
+* noconn #net9
+* noconn #net10
+x2 snk_out ena_bit0 net11 nbias avss bias_nstack
+* noconn #net11
+x2[1] snk_out ena_bit1 net12[1] nbias avss bias_nstack
+x2[0] snk_out ena_bit1 net12[0] nbias avss bias_nstack
+* noconn #net12
+x3[3] snk_out ena_bit2 net13[3] nbias avss bias_nstack
+x3[2] snk_out ena_bit2 net13[2] nbias avss bias_nstack
+x3[1] snk_out ena_bit2 net13[1] nbias avss bias_nstack
+x3[0] snk_out ena_bit2 net13[0] nbias avss bias_nstack
+* noconn #net13
+x9[7] snk_out ena_bit3 net14[7] nbias avss bias_nstack
+x9[6] snk_out ena_bit3 net14[6] nbias avss bias_nstack
+x9[5] snk_out ena_bit3 net14[5] nbias avss bias_nstack
+x9[4] snk_out ena_bit3 net14[4] nbias avss bias_nstack
+x9[3] snk_out ena_bit3 net14[3] nbias avss bias_nstack
+x9[2] snk_out ena_bit3 net14[2] nbias avss bias_nstack
+x9[1] snk_out ena_bit3 net14[1] nbias avss bias_nstack
+x9[0] snk_out ena_bit3 net14[0] nbias avss bias_nstack
+* noconn #net14
+x10[15] snk_out ena_bit4 net15[15] nbias avss bias_nstack
+x10[14] snk_out ena_bit4 net15[14] nbias avss bias_nstack
+x10[13] snk_out ena_bit4 net15[13] nbias avss bias_nstack
+x10[12] snk_out ena_bit4 net15[12] nbias avss bias_nstack
+x10[11] snk_out ena_bit4 net15[11] nbias avss bias_nstack
+x10[10] snk_out ena_bit4 net15[10] nbias avss bias_nstack
+x10[9] snk_out ena_bit4 net15[9] nbias avss bias_nstack
+x10[8] snk_out ena_bit4 net15[8] nbias avss bias_nstack
+x10[7] snk_out ena_bit4 net15[7] nbias avss bias_nstack
+x10[6] snk_out ena_bit4 net15[6] nbias avss bias_nstack
+x10[5] snk_out ena_bit4 net15[5] nbias avss bias_nstack
+x10[4] snk_out ena_bit4 net15[4] nbias avss bias_nstack
+x10[3] snk_out ena_bit4 net15[3] nbias avss bias_nstack
+x10[2] snk_out ena_bit4 net15[2] nbias avss bias_nstack
+x10[1] snk_out ena_bit4 net15[1] nbias avss bias_nstack
+x10[0] snk_out ena_bit4 net15[0] nbias avss bias_nstack
+* noconn #net15
+x13[31] snk_out ena_bit5 net16[31] nbias avss bias_nstack
+x13[30] snk_out ena_bit5 net16[30] nbias avss bias_nstack
+x13[29] snk_out ena_bit5 net16[29] nbias avss bias_nstack
+x13[28] snk_out ena_bit5 net16[28] nbias avss bias_nstack
+x13[27] snk_out ena_bit5 net16[27] nbias avss bias_nstack
+x13[26] snk_out ena_bit5 net16[26] nbias avss bias_nstack
+x13[25] snk_out ena_bit5 net16[25] nbias avss bias_nstack
+x13[24] snk_out ena_bit5 net16[24] nbias avss bias_nstack
+x13[23] snk_out ena_bit5 net16[23] nbias avss bias_nstack
+x13[22] snk_out ena_bit5 net16[22] nbias avss bias_nstack
+x13[21] snk_out ena_bit5 net16[21] nbias avss bias_nstack
+x13[20] snk_out ena_bit5 net16[20] nbias avss bias_nstack
+x13[19] snk_out ena_bit5 net16[19] nbias avss bias_nstack
+x13[18] snk_out ena_bit5 net16[18] nbias avss bias_nstack
+x13[17] snk_out ena_bit5 net16[17] nbias avss bias_nstack
+x13[16] snk_out ena_bit5 net16[16] nbias avss bias_nstack
+x13[15] snk_out ena_bit5 net16[15] nbias avss bias_nstack
+x13[14] snk_out ena_bit5 net16[14] nbias avss bias_nstack
+x13[13] snk_out ena_bit5 net16[13] nbias avss bias_nstack
+x13[12] snk_out ena_bit5 net16[12] nbias avss bias_nstack
+x13[11] snk_out ena_bit5 net16[11] nbias avss bias_nstack
+x13[10] snk_out ena_bit5 net16[10] nbias avss bias_nstack
+x13[9] snk_out ena_bit5 net16[9] nbias avss bias_nstack
+x13[8] snk_out ena_bit5 net16[8] nbias avss bias_nstack
+x13[7] snk_out ena_bit5 net16[7] nbias avss bias_nstack
+x13[6] snk_out ena_bit5 net16[6] nbias avss bias_nstack
+x13[5] snk_out ena_bit5 net16[5] nbias avss bias_nstack
+x13[4] snk_out ena_bit5 net16[4] nbias avss bias_nstack
+x13[3] snk_out ena_bit5 net16[3] nbias avss bias_nstack
+x13[2] snk_out ena_bit5 net16[2] nbias avss bias_nstack
+x13[1] snk_out ena_bit5 net16[1] nbias avss bias_nstack
+x13[0] snk_out ena_bit5 net16[0] nbias avss bias_nstack
+* noconn #net16
+x14[63] snk_out ena_bit6 net17[63] nbias avss bias_nstack
+x14[62] snk_out ena_bit6 net17[62] nbias avss bias_nstack
+x14[61] snk_out ena_bit6 net17[61] nbias avss bias_nstack
+x14[60] snk_out ena_bit6 net17[60] nbias avss bias_nstack
+x14[59] snk_out ena_bit6 net17[59] nbias avss bias_nstack
+x14[58] snk_out ena_bit6 net17[58] nbias avss bias_nstack
+x14[57] snk_out ena_bit6 net17[57] nbias avss bias_nstack
+x14[56] snk_out ena_bit6 net17[56] nbias avss bias_nstack
+x14[55] snk_out ena_bit6 net17[55] nbias avss bias_nstack
+x14[54] snk_out ena_bit6 net17[54] nbias avss bias_nstack
+x14[53] snk_out ena_bit6 net17[53] nbias avss bias_nstack
+x14[52] snk_out ena_bit6 net17[52] nbias avss bias_nstack
+x14[51] snk_out ena_bit6 net17[51] nbias avss bias_nstack
+x14[50] snk_out ena_bit6 net17[50] nbias avss bias_nstack
+x14[49] snk_out ena_bit6 net17[49] nbias avss bias_nstack
+x14[48] snk_out ena_bit6 net17[48] nbias avss bias_nstack
+x14[47] snk_out ena_bit6 net17[47] nbias avss bias_nstack
+x14[46] snk_out ena_bit6 net17[46] nbias avss bias_nstack
+x14[45] snk_out ena_bit6 net17[45] nbias avss bias_nstack
+x14[44] snk_out ena_bit6 net17[44] nbias avss bias_nstack
+x14[43] snk_out ena_bit6 net17[43] nbias avss bias_nstack
+x14[42] snk_out ena_bit6 net17[42] nbias avss bias_nstack
+x14[41] snk_out ena_bit6 net17[41] nbias avss bias_nstack
+x14[40] snk_out ena_bit6 net17[40] nbias avss bias_nstack
+x14[39] snk_out ena_bit6 net17[39] nbias avss bias_nstack
+x14[38] snk_out ena_bit6 net17[38] nbias avss bias_nstack
+x14[37] snk_out ena_bit6 net17[37] nbias avss bias_nstack
+x14[36] snk_out ena_bit6 net17[36] nbias avss bias_nstack
+x14[35] snk_out ena_bit6 net17[35] nbias avss bias_nstack
+x14[34] snk_out ena_bit6 net17[34] nbias avss bias_nstack
+x14[33] snk_out ena_bit6 net17[33] nbias avss bias_nstack
+x14[32] snk_out ena_bit6 net17[32] nbias avss bias_nstack
+x14[31] snk_out ena_bit6 net17[31] nbias avss bias_nstack
+x14[30] snk_out ena_bit6 net17[30] nbias avss bias_nstack
+x14[29] snk_out ena_bit6 net17[29] nbias avss bias_nstack
+x14[28] snk_out ena_bit6 net17[28] nbias avss bias_nstack
+x14[27] snk_out ena_bit6 net17[27] nbias avss bias_nstack
+x14[26] snk_out ena_bit6 net17[26] nbias avss bias_nstack
+x14[25] snk_out ena_bit6 net17[25] nbias avss bias_nstack
+x14[24] snk_out ena_bit6 net17[24] nbias avss bias_nstack
+x14[23] snk_out ena_bit6 net17[23] nbias avss bias_nstack
+x14[22] snk_out ena_bit6 net17[22] nbias avss bias_nstack
+x14[21] snk_out ena_bit6 net17[21] nbias avss bias_nstack
+x14[20] snk_out ena_bit6 net17[20] nbias avss bias_nstack
+x14[19] snk_out ena_bit6 net17[19] nbias avss bias_nstack
+x14[18] snk_out ena_bit6 net17[18] nbias avss bias_nstack
+x14[17] snk_out ena_bit6 net17[17] nbias avss bias_nstack
+x14[16] snk_out ena_bit6 net17[16] nbias avss bias_nstack
+x14[15] snk_out ena_bit6 net17[15] nbias avss bias_nstack
+x14[14] snk_out ena_bit6 net17[14] nbias avss bias_nstack
+x14[13] snk_out ena_bit6 net17[13] nbias avss bias_nstack
+x14[12] snk_out ena_bit6 net17[12] nbias avss bias_nstack
+x14[11] snk_out ena_bit6 net17[11] nbias avss bias_nstack
+x14[10] snk_out ena_bit6 net17[10] nbias avss bias_nstack
+x14[9] snk_out ena_bit6 net17[9] nbias avss bias_nstack
+x14[8] snk_out ena_bit6 net17[8] nbias avss bias_nstack
+x14[7] snk_out ena_bit6 net17[7] nbias avss bias_nstack
+x14[6] snk_out ena_bit6 net17[6] nbias avss bias_nstack
+x14[5] snk_out ena_bit6 net17[5] nbias avss bias_nstack
+x14[4] snk_out ena_bit6 net17[4] nbias avss bias_nstack
+x14[3] snk_out ena_bit6 net17[3] nbias avss bias_nstack
+x14[2] snk_out ena_bit6 net17[2] nbias avss bias_nstack
+x14[1] snk_out ena_bit6 net17[1] nbias avss bias_nstack
+x14[0] snk_out ena_bit6 net17[0] nbias avss bias_nstack
+* noconn #net17
+x15[127] snk_out ena_bit7 net18[127] nbias avss bias_nstack
+x15[126] snk_out ena_bit7 net18[126] nbias avss bias_nstack
+x15[125] snk_out ena_bit7 net18[125] nbias avss bias_nstack
+x15[124] snk_out ena_bit7 net18[124] nbias avss bias_nstack
+x15[123] snk_out ena_bit7 net18[123] nbias avss bias_nstack
+x15[122] snk_out ena_bit7 net18[122] nbias avss bias_nstack
+x15[121] snk_out ena_bit7 net18[121] nbias avss bias_nstack
+x15[120] snk_out ena_bit7 net18[120] nbias avss bias_nstack
+x15[119] snk_out ena_bit7 net18[119] nbias avss bias_nstack
+x15[118] snk_out ena_bit7 net18[118] nbias avss bias_nstack
+x15[117] snk_out ena_bit7 net18[117] nbias avss bias_nstack
+x15[116] snk_out ena_bit7 net18[116] nbias avss bias_nstack
+x15[115] snk_out ena_bit7 net18[115] nbias avss bias_nstack
+x15[114] snk_out ena_bit7 net18[114] nbias avss bias_nstack
+x15[113] snk_out ena_bit7 net18[113] nbias avss bias_nstack
+x15[112] snk_out ena_bit7 net18[112] nbias avss bias_nstack
+x15[111] snk_out ena_bit7 net18[111] nbias avss bias_nstack
+x15[110] snk_out ena_bit7 net18[110] nbias avss bias_nstack
+x15[109] snk_out ena_bit7 net18[109] nbias avss bias_nstack
+x15[108] snk_out ena_bit7 net18[108] nbias avss bias_nstack
+x15[107] snk_out ena_bit7 net18[107] nbias avss bias_nstack
+x15[106] snk_out ena_bit7 net18[106] nbias avss bias_nstack
+x15[105] snk_out ena_bit7 net18[105] nbias avss bias_nstack
+x15[104] snk_out ena_bit7 net18[104] nbias avss bias_nstack
+x15[103] snk_out ena_bit7 net18[103] nbias avss bias_nstack
+x15[102] snk_out ena_bit7 net18[102] nbias avss bias_nstack
+x15[101] snk_out ena_bit7 net18[101] nbias avss bias_nstack
+x15[100] snk_out ena_bit7 net18[100] nbias avss bias_nstack
+x15[99] snk_out ena_bit7 net18[99] nbias avss bias_nstack
+x15[98] snk_out ena_bit7 net18[98] nbias avss bias_nstack
+x15[97] snk_out ena_bit7 net18[97] nbias avss bias_nstack
+x15[96] snk_out ena_bit7 net18[96] nbias avss bias_nstack
+x15[95] snk_out ena_bit7 net18[95] nbias avss bias_nstack
+x15[94] snk_out ena_bit7 net18[94] nbias avss bias_nstack
+x15[93] snk_out ena_bit7 net18[93] nbias avss bias_nstack
+x15[92] snk_out ena_bit7 net18[92] nbias avss bias_nstack
+x15[91] snk_out ena_bit7 net18[91] nbias avss bias_nstack
+x15[90] snk_out ena_bit7 net18[90] nbias avss bias_nstack
+x15[89] snk_out ena_bit7 net18[89] nbias avss bias_nstack
+x15[88] snk_out ena_bit7 net18[88] nbias avss bias_nstack
+x15[87] snk_out ena_bit7 net18[87] nbias avss bias_nstack
+x15[86] snk_out ena_bit7 net18[86] nbias avss bias_nstack
+x15[85] snk_out ena_bit7 net18[85] nbias avss bias_nstack
+x15[84] snk_out ena_bit7 net18[84] nbias avss bias_nstack
+x15[83] snk_out ena_bit7 net18[83] nbias avss bias_nstack
+x15[82] snk_out ena_bit7 net18[82] nbias avss bias_nstack
+x15[81] snk_out ena_bit7 net18[81] nbias avss bias_nstack
+x15[80] snk_out ena_bit7 net18[80] nbias avss bias_nstack
+x15[79] snk_out ena_bit7 net18[79] nbias avss bias_nstack
+x15[78] snk_out ena_bit7 net18[78] nbias avss bias_nstack
+x15[77] snk_out ena_bit7 net18[77] nbias avss bias_nstack
+x15[76] snk_out ena_bit7 net18[76] nbias avss bias_nstack
+x15[75] snk_out ena_bit7 net18[75] nbias avss bias_nstack
+x15[74] snk_out ena_bit7 net18[74] nbias avss bias_nstack
+x15[73] snk_out ena_bit7 net18[73] nbias avss bias_nstack
+x15[72] snk_out ena_bit7 net18[72] nbias avss bias_nstack
+x15[71] snk_out ena_bit7 net18[71] nbias avss bias_nstack
+x15[70] snk_out ena_bit7 net18[70] nbias avss bias_nstack
+x15[69] snk_out ena_bit7 net18[69] nbias avss bias_nstack
+x15[68] snk_out ena_bit7 net18[68] nbias avss bias_nstack
+x15[67] snk_out ena_bit7 net18[67] nbias avss bias_nstack
+x15[66] snk_out ena_bit7 net18[66] nbias avss bias_nstack
+x15[65] snk_out ena_bit7 net18[65] nbias avss bias_nstack
+x15[64] snk_out ena_bit7 net18[64] nbias avss bias_nstack
+x15[63] snk_out ena_bit7 net18[63] nbias avss bias_nstack
+x15[62] snk_out ena_bit7 net18[62] nbias avss bias_nstack
+x15[61] snk_out ena_bit7 net18[61] nbias avss bias_nstack
+x15[60] snk_out ena_bit7 net18[60] nbias avss bias_nstack
+x15[59] snk_out ena_bit7 net18[59] nbias avss bias_nstack
+x15[58] snk_out ena_bit7 net18[58] nbias avss bias_nstack
+x15[57] snk_out ena_bit7 net18[57] nbias avss bias_nstack
+x15[56] snk_out ena_bit7 net18[56] nbias avss bias_nstack
+x15[55] snk_out ena_bit7 net18[55] nbias avss bias_nstack
+x15[54] snk_out ena_bit7 net18[54] nbias avss bias_nstack
+x15[53] snk_out ena_bit7 net18[53] nbias avss bias_nstack
+x15[52] snk_out ena_bit7 net18[52] nbias avss bias_nstack
+x15[51] snk_out ena_bit7 net18[51] nbias avss bias_nstack
+x15[50] snk_out ena_bit7 net18[50] nbias avss bias_nstack
+x15[49] snk_out ena_bit7 net18[49] nbias avss bias_nstack
+x15[48] snk_out ena_bit7 net18[48] nbias avss bias_nstack
+x15[47] snk_out ena_bit7 net18[47] nbias avss bias_nstack
+x15[46] snk_out ena_bit7 net18[46] nbias avss bias_nstack
+x15[45] snk_out ena_bit7 net18[45] nbias avss bias_nstack
+x15[44] snk_out ena_bit7 net18[44] nbias avss bias_nstack
+x15[43] snk_out ena_bit7 net18[43] nbias avss bias_nstack
+x15[42] snk_out ena_bit7 net18[42] nbias avss bias_nstack
+x15[41] snk_out ena_bit7 net18[41] nbias avss bias_nstack
+x15[40] snk_out ena_bit7 net18[40] nbias avss bias_nstack
+x15[39] snk_out ena_bit7 net18[39] nbias avss bias_nstack
+x15[38] snk_out ena_bit7 net18[38] nbias avss bias_nstack
+x15[37] snk_out ena_bit7 net18[37] nbias avss bias_nstack
+x15[36] snk_out ena_bit7 net18[36] nbias avss bias_nstack
+x15[35] snk_out ena_bit7 net18[35] nbias avss bias_nstack
+x15[34] snk_out ena_bit7 net18[34] nbias avss bias_nstack
+x15[33] snk_out ena_bit7 net18[33] nbias avss bias_nstack
+x15[32] snk_out ena_bit7 net18[32] nbias avss bias_nstack
+x15[31] snk_out ena_bit7 net18[31] nbias avss bias_nstack
+x15[30] snk_out ena_bit7 net18[30] nbias avss bias_nstack
+x15[29] snk_out ena_bit7 net18[29] nbias avss bias_nstack
+x15[28] snk_out ena_bit7 net18[28] nbias avss bias_nstack
+x15[27] snk_out ena_bit7 net18[27] nbias avss bias_nstack
+x15[26] snk_out ena_bit7 net18[26] nbias avss bias_nstack
+x15[25] snk_out ena_bit7 net18[25] nbias avss bias_nstack
+x15[24] snk_out ena_bit7 net18[24] nbias avss bias_nstack
+x15[23] snk_out ena_bit7 net18[23] nbias avss bias_nstack
+x15[22] snk_out ena_bit7 net18[22] nbias avss bias_nstack
+x15[21] snk_out ena_bit7 net18[21] nbias avss bias_nstack
+x15[20] snk_out ena_bit7 net18[20] nbias avss bias_nstack
+x15[19] snk_out ena_bit7 net18[19] nbias avss bias_nstack
+x15[18] snk_out ena_bit7 net18[18] nbias avss bias_nstack
+x15[17] snk_out ena_bit7 net18[17] nbias avss bias_nstack
+x15[16] snk_out ena_bit7 net18[16] nbias avss bias_nstack
+x15[15] snk_out ena_bit7 net18[15] nbias avss bias_nstack
+x15[14] snk_out ena_bit7 net18[14] nbias avss bias_nstack
+x15[13] snk_out ena_bit7 net18[13] nbias avss bias_nstack
+x15[12] snk_out ena_bit7 net18[12] nbias avss bias_nstack
+x15[11] snk_out ena_bit7 net18[11] nbias avss bias_nstack
+x15[10] snk_out ena_bit7 net18[10] nbias avss bias_nstack
+x15[9] snk_out ena_bit7 net18[9] nbias avss bias_nstack
+x15[8] snk_out ena_bit7 net18[8] nbias avss bias_nstack
+x15[7] snk_out ena_bit7 net18[7] nbias avss bias_nstack
+x15[6] snk_out ena_bit7 net18[6] nbias avss bias_nstack
+x15[5] snk_out ena_bit7 net18[5] nbias avss bias_nstack
+x15[4] snk_out ena_bit7 net18[4] nbias avss bias_nstack
+x15[3] snk_out ena_bit7 net18[3] nbias avss bias_nstack
+x15[2] snk_out ena_bit7 net18[2] nbias avss bias_nstack
+x15[1] snk_out ena_bit7 net18[1] nbias avss bias_nstack
+x15[0] snk_out ena_bit7 net18[0] nbias avss bias_nstack
+* noconn #net18
+x8[7] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x8[6] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x8[5] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x8[4] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x8[3] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x8[2] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x8[1] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x8[0] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x4 ena[0] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x5 ena[1] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x6 ena[2] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x7 ena[3] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x9 ena[4] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x10 ena[5] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x11 ena[6] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x13 ena[7] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+.ends
+
+
+* expanding   symbol:  isolated_switch_xlarge.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/isolated_switch_xlarge.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/isolated_switch_xlarge.sch
+.subckt isolated_switch_xlarge avss on out in avdd dvdd dvss off
+*.PININFO on:I avss:B out:B in:B avdd:B dvdd:B dvss:B off:I
+x2 on dvdd dvss dvss avdd avdd net1 sky130_fd_sc_hvl__lsbuflv2hv_1
+x1 net1 net2 avss out in avdd net3 isolated_switch_4
+x3 off dvdd dvss dvss avdd avdd net3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x4 net1 dvss dvss avdd avdd net2 sky130_fd_sc_hvl__inv_1
+x5 on dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x6 off dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+.ends
+
+
+* expanding   symbol:  comparator_bias.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__ccomp3v/xschem/comparator_bias.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__ccomp3v/xschem/comparator_bias.sch
+.subckt comparator_bias VDD VSS VBP VBN ena3v3
+*.PININFO VBP:O VBN:O VDD:B VSS:B ena3v3:I
+XM3 net1 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=20 nf=1 m=1
+XM4 net3 net1 net2 VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=20 nf=1 m=1
+XM5 VBN VBN net2 VDD sky130_fd_pr__pfet_g5v0d10v5 L=15 W=1 nf=1 m=1
+XM7 VBP VBP VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=1 W=4 nf=1 m=1
+XM1 VBN VBN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XM2 net1 VBN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XM6 VBP VBN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XM8 net3 ena3v3 VBN VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XM9 net1 VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XM10 VBP VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XR2 net2 VDD VDD sky130_fd_pr__res_high_po_1p41 L=135 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  comparator_core_cload.sym # of pins=10
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__ccomp3v/xschem/comparator_core_cload.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__ccomp3v/xschem/comparator_core_cload.sch
+.subckt comparator_core_cload VDD VBP VBN VSS VINP VOUT VINM DVDD CLOAD ena3v3
+*.PININFO VINP:I VINM:I VBN:I VBP:I VDD:B VSS:B VOUT:O DVDD:B CLOAD:I ena3v3:I
+XM3 net10 VBN VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM4 net4 net4 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=3 W=5 nf=1 m=2
+XM5 net11 net4 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=3 W=15 nf=3 m=2
+XM6 net3 net3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM7 net2 net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM8 net4 net3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=3 W=5 nf=1 m=2
+XM9 VOUTANALOG net2 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=3 W=15 nf=3 m=2
+XM10 net6 VINM net5 VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=4
+XM11 net7 VINP net5 VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=4
+XM12 net12 VBP VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM13 net8 net8 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM14 VOUTANALOG net8 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=15 nf=3 m=2
+XM15 net6 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM16 net7 net7 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM17 net8 net6 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM18 VOUTANALOG net7 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=15 nf=3 m=2
+XM19 net9 VOUTANALOG VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=20 nf=4 m=1
+XM20 net9 VOUTANALOG VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XM21 VOUT net9 DVDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=10 nf=1 m=1
+XM22 VOUT net9 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=1
+XM23 net1 VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM24 net5 VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=2
+XM25 VSS VSS VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=7
+XM26 VDD VDD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=7
+XM1 net3 VINM net1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=4
+XM2 net2 VINP net1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=4
+XM27 net1 VBP net10 VSS sky130_fd_pr__nfet_g5v0d10v5 L=8 W=5 nf=1 m=2
+XM28 VOUTANALOG VBP net11 VSS sky130_fd_pr__nfet_g5v0d10v5 L=1.75 W=5 nf=1 m=2
+XM29 net5 VBN net12 VDD sky130_fd_pr__pfet_g5v0d10v5 L=8 W=5 nf=1 m=2
+XM30 VSS CLOAD VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=2 W=5 nf=1 m=4
+XM31 VDD CLOAD VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=2 W=5 nf=1 m=4
+XM32 VOUTANALOG ena3v3 VDD VDD sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  7b_divider.sym # of pins=20
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/7b_divider.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/7b_divider.sch
+.subckt 7b_divider VDD LD D2_7 Q1 D2_6 Q2 D2_5 D2_4 Q3 Q4 D2_3 D2_2 Q5 D2_1 Q6 Q7 CLK VSS OUT1 P2
+*.PININFO VDD:B VSS:B D2_1:I CLK:I D2_2:I D2_3:I D2_4:I D2_5:I D2_6:I D2_7:I LD:O Q1:O Q2:O Q3:O Q4:O Q5:O Q6:O Q7:O P2:O OUT1:O
+x16 VDD P0 P2 net1 VSS OR
+x17 net11 net1 VDD OUT_EVEN VSS div_by_2
+x1 LD VDD Q6 Q4 Q2 Q5 Q1 Q3 Q7 D2_7 D2_6 D2_3 D2_5 D2_2 D2_4 D2_1 CLK VSS 7b_counter_new
+x8 CLK VDD LD P0 VSS DFF
+x30 VDD P0 P1 net2 VSS OR
+x31 net12 net2 VDD OUT_ODD VSS div_by_2
+x32 VDD D2_1 OUT_EVEN OUT_E_O VSS OUT_ODD MUX
+x2 Q1 VDD D2_7 Q2 VSS D2_6 D2_5 Q3 D2_4 Q4 D2_3 Q5 D2_2 Q6 P2 D2_1 Q7 CLK P2_GENERATOR
+x3 P1 Q1 VDD D2_7 Q2 D2_6 VSS Q3 D2_5 Q4 D2_4 D2_3 Q5 D2_2 Q6 D2_1 Q7 CLK P3_GENERATION
+x5 VDD net6 OUT_E_O OUT_FINAL VSS P0 MUX
+x6 VDD D2_1 D2_2 D2_3 net5 VSS 3_inp_NOR
+x7 VDD D2_4 D2_5 net4 VSS NOR
+x9 VDD D2_6 D2_7 net3 VSS NOR
+x10 VDD net6 net5 net4 net3 VSS 3_inp_AND
+x13 VDD net9 D2_1 D2_2 D2_3 VSS 3_inp_AND
+x14 VDD net8 D2_4 D2_5 VSS AND
+x15 VDD net7 D2_6 D2_7 VSS AND
+x4 VDD net10 net9 net8 net7 VSS 3_inp_AND
+x11 VDD net10 OUT_FINAL OUT1 VSS CLK MUX
+.ends
+
+
+* expanding   symbol:  Tappered-Buffer_1.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/Tappered-Buffer_1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/Tappered-Buffer_1.sch
+.subckt Tappered-Buffer_1 VSS VDD OUT IN
+*.PININFO VDD:B VSS:B IN:I OUT:O
+XM1 net1 IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=4 nf=1 m=2
+XM2 net2 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=8 nf=1 m=2
+XM3 net3 net2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=16 nf=1 m=2
+XM5 net1 IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=2 nf=1 m=2
+XM6 net2 net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=4 nf=1 m=2
+XM7 net3 net2 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=8 nf=1 m=2
+XM4 OUT net3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=32 nf=1 m=2
+XM8 OUT net3 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=16 nf=1 m=2
+.ends
+
+
+* expanding   symbol:  A_MUX.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/A_MUX.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/A_MUX.sch
+.subckt A_MUX VDD VSS IN1 IN2 SEL OUT
+*.PININFO VSS:B IN1:I IN2:I SEL:I OUT:O VDD:B
+x1 OUT VDD VSS IN2 SEL TR_Gate
+x2 OUT VDD VSS IN1 net1 TR_Gate
+x3 VSS VDD net1 SEL INV_Mux
+.ends
+
+
+* expanding   symbol:  CP.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/CP.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/CP.sch
+.subckt CP VDD ITAIL ITAIL1 VCTRL UP down VSS
+*.PININFO UP:I down:I VCTRL:B VDD:B VSS:B ITAIL1:B ITAIL:B
+XM8 net2 UP VDD VDD sky130_fd_pr__pfet_01v8 L=0.3 W=0.8 nf=1 m=1
+XM1 net1 net2 VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=12 nf=1 m=1
+XM10 net2 UP VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.4 nf=1 m=1
+XM2 VCTRL ITAIL net1 VDD sky130_fd_pr__pfet_01v8 L=1 W=12 nf=1 m=1
+XM3 ITAIL ITAIL VDD VDD sky130_fd_pr__pfet_01v8 L=1 W=12 nf=1 m=1
+XM5 ITAIL1 ITAIL1 VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4 nf=1 m=1
+XM6 VCTRL ITAIL1 net3 net3 sky130_fd_pr__nfet_01v8 L=1 W=4 nf=1 m=1
+XM4 net3 down VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=4 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  VCO_1.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/VCO_1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/VCO_1.sch
+.subckt VCO_1 VDD VSS VCTRL VCTRL2 OUT OUTB
+*.PININFO OUT:O VDD:B VSS:B OUTB:O VCTRL:I VCTRL2:I
+x1 VDD VSS net5 net6 VCTRL VCTRL2 net1 net2 DelayCell_1
+x2 VDD VSS net7 net8 VCTRL VCTRL2 out1 outb1 DelayCell_1
+x3 VSS VDD net7 net1 INV_1
+x4 VSS VDD net8 net2 INV_1
+x5 VSS VDD net4 out1 INV_1
+x6 VSS VDD net5 net4 INV_1
+x7 VSS VDD net3 outb1 INV_1
+x8 VSS VDD net6 net3 INV_1
+x9 OUTB net5 VDD OUT VSS div_by_2
+.ends
+
+
+* expanding   symbol:  PFD.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/PFD.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/PFD.sch
+.subckt PFD VDD VSS FDIV FIN UP DOWN
+*.PININFO FDIV:I FIN:I UP:O DOWN:O VSS:B VDD:B
+XM2 A FIN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM3 x1 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=2.4 nf=1 m=1
+XM4 x1 x1 net1 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.9 nf=1 m=1
+XM5 net1 x2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.9 nf=1 m=1
+XM6 x3 x1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.3 W=0.9 nf=1 m=1
+XM7 A x1b net2 VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.6 nf=1 m=1
+XM8 net2 x2b net12 VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.6 nf=1 m=1
+XM9 x1 FIN net3 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM10 net3 A VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM11 x3 x1 net4 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM12 net4 x1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM13 x3 x2b VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=2.4 nf=1 m=1
+XM15 B FDIV VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM16 x2 B VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=2.4 nf=1 m=1
+XM17 x2 x2 net5 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.9 nf=1 m=1
+XM18 net5 x1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.9 nf=1 m=1
+XM19 x4 x2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.3 W=0.9 nf=1 m=1
+XM20 B x2b net6 VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.6 nf=1 m=1
+XM21 net6 x1b net11 VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.6 nf=1 m=1
+XM22 x2 FDIV net8 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM23 net8 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM24 x4 x2 net7 VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM25 net7 x2 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.6 nf=1 m=1
+XM26 x4 x1b VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=2.4 nf=1 m=1
+XM1 net11 FDIV VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.6 nf=1 m=1
+XM14 net12 FIN VSS VSS sky130_fd_pr__nfet_01v8 L=0.3 W=0.6 nf=1 m=1
+x1 VDD VSS x1 x1b PFD_INV
+x2 VDD VSS x2 x2b PFD_INV
+x3 VDD VSS x3 net10 PFD_INV
+x5 VDD VSS x4 net9 PFD_INV
+x6 VDD VSS net9 DOWN PFD_INV
+x4 VDD VSS net10 UP PFD_INV
+.ends
+
+
+* expanding   symbol:  Current_Mirror_Top_s.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/Current_Mirror_Top_s.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/Current_Mirror_Top_s.sch
+.subckt Current_Mirror_Top_s VDD ITAIL ITAIL_SRC ITAIL_SINK VSS
+*.PININFO ITAIL:I VDD:B VSS:B ITAIL_SRC:O ITAIL_SINK:O
+XM8 net1 G_source_up VDD VDD sky130_fd_pr__pfet_01v8 L=2 W=8 nf=1 m=1
+XM6 G_source_up G_source_up VDD VDD sky130_fd_pr__pfet_01v8 L=2 W=40 nf=1 m=1
+XM1 ITAIL ITAIL VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=20 nf=1 m=1
+XM2 G_source_up ITAIL VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=20 nf=1 m=1
+XM3 net1 net1 VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=4.2 nf=1 m=1
+XM4 ITAIL_SRC G_source_up VDD VDD sky130_fd_pr__pfet_01v8 L=2 W=8 nf=1 m=1
+XM9 ITAIL_SINK ITAIL VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=4.2 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  rheo_column.sym # of pins=13
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_column.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rheostat_8bit/xschem/rheo_column.sch
+.subckt rheo_column b2 b2b b1 b1b b0 b0b vdd dum_in res_in out res_out vss dum_out
+*.PININFO res_in:B vss:B vdd:B out:B b0:I b0b:I b1:I b1b:I b2:I b2b:I dum_in:B res_out:B dum_out:B
+x1 vdd b0 net8 net1 b0b vss passtrans
+x2 vdd b0b net8 net2 b0 vss passtrans
+x3 vdd b0 net9 net3 b0b vss passtrans
+x4 vdd b0b net9 net4 b0 vss passtrans
+x5 vdd b0 net10 net5 b0b vss passtrans
+x6 vdd b0b net10 net6 b0 vss passtrans
+x7 vdd b0 net11 net7 b0b vss passtrans
+x8 vdd b0b net11 res_in b0 vss passtrans
+x9 vdd vdd net14 dum_in vss vss passtrans
+x10 vdd vdd net15 res_out vss vss passtrans
+x11 vdd b1b net13 net11 b1 vss passtrans
+x12 vdd b1 net13 net10 b1b vss passtrans
+x13 vdd b1b net12 net9 b1 vss passtrans
+x14 vdd b1 net12 net8 b1b vss passtrans
+x15 vdd b2b out net13 b2 vss passtrans
+x16 vdd b2 out net12 b2b vss passtrans
+x17 vdd vdd net14 net14 vss vss passtrans
+x18 vdd vdd net15 net15 vss vss passtrans
+XR1 res_in dum_in sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR2 net7 res_in sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR3 net6 net7 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR4 net5 net6 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR5 net4 net5 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR6 net3 net4 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR7 net2 net3 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR8 net1 net2 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR9 res_out net1 sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+XR10 dum_out res_out sky130_fd_pr__res_generic_po W=0.71 L=2.96 m=1
+.ends
+
+
+* expanding   symbol:  EF_LSB_CAP.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_LSB_CAP.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_LSB_CAP.sch
+.subckt EF_LSB_CAP VP1 VSS D0 D1 D2 D3 D4 D5
+*.PININFO VP1:B D0:B D1:B D2:B D3:B D4:B VSS:B D5:B
+XC1 VP1 VSS sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=1
+XC2 VP1 D0 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=1
+XC6 VSS VSS sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=26
+XC8 VSS VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=1
+XC3 VP1 D1 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=2
+XC4 VP1 D2 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=4
+XC5 VP1 D3 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=8
+XC7 VP1 D4 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=16
+XC9 D0 VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=1
+XC10 D1 VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=2
+XC11 D2 VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=4
+XC12 D3 VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=8
+XC13 D4 VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=16
+XC14 VSS VSS sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=26
+XC15 VP1 D5 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=32
+XC16 D5 VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=32
+.ends
+
+
+* expanding   symbol:  EF_MSB_CAP.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_MSB_CAP.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_MSB_CAP.sch
+.subckt EF_MSB_CAP D8 D10 D9 VP2 D6 VSS D7 D11
+*.PININFO D10:B D6:B D7:B D8:B D9:B VP2:B VSS:B D11:B
+XC2 D6 VP2 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=1
+XC3 VSS VSS sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=27
+XC4 VSS VSS sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=27
+XC6 VP2 D6 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=1
+XC7 VP2 D7 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=2
+XC8 VP2 D8 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=4
+XC9 VP2 D9 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=8
+XC10 VP2 D10 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=16
+XC11 D7 VP2 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=2
+XC12 D8 VP2 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=4
+XC13 D9 VP2 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=8
+XC14 D10 VP2 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=16
+XC1 VP2 D11 sky130_fd_pr__cap_mim_m3_1 W=7 L=7 m=32
+XC5 D11 VP2 sky130_fd_pr__cap_mim_m3_2 W=7 L=7 m=32
+.ends
+
+
+* expanding   symbol:  EF_SC_CAP.sym # of pins=3
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_SC_CAP.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_SC_CAP.sch
+.subckt EF_SC_CAP VP1 VP2 VSS
+*.PININFO VP1:B VP2:B VSS:B
+XC13 VP1 VP2 sky130_fd_pr__cap_mim_m3_1 W=7 L=7.055 m=1
+XC6 VSS VSS sky130_fd_pr__cap_mim_m3_1 W=7 L=7.055 m=9
+XC1 VSS VSS sky130_fd_pr__cap_mim_m3_2 W=7 L=7.055 m=9
+XC2 VP2 VP1 sky130_fd_pr__cap_mim_m3_2 W=7 L=7.055 m=1
+.ends
+
+
+* expanding   symbol:  EF_AMUX21x.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_AMUX21x.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__cdac3v_12bit/xschem/EF_AMUX21x.sch
+.subckt EF_AMUX21x vdd3p3 vdd1p8 vo vss a b sel dvss
+*.PININFO sel:I vo:B vdd3p3:B vss:B vdd1p8:B dvss:B a:B b:B
+x1 vss sel vo a vdd3p3 vdd1p8 dvss simple_analog_switch_ena1v8
+x4 vss selp vo b vdd3p3 vdd1p8 dvss simple_analog_switch_ena1v8
+x5 sel dvss dvss vdd1p8 vdd1p8 selp sky130_fd_sc_hd__inv_2
+.ends
+
+
+* expanding   symbol:  ../dependencies/sky130_ef_ip__analog_switches/xschem/simple_analog_switch_ena1v8.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/simple_analog_switch_ena1v8.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/simple_analog_switch_ena1v8.sch
+.subckt simple_analog_switch_ena1v8 avss on out in avdd dvdd dvss
+*.PININFO on:I avss:B out:B in:B avdd:B dvdd:B dvss:B
+x2 on dvdd dvss dvss avdd avdd net3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x3 net1 net2 avss out in avdd simple_analog_switch
+x1 net3 dvss dvss avdd avdd net2 sky130_fd_sc_hvl__inv_2
+x4 net2 dvss dvss avdd avdd net1 sky130_fd_sc_hvl__inv_2
+x5[1] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x5[0] dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x5 on dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+.ends
+
+
+* expanding   symbol:  ../dependencies/sky130_ef_ip__analog_switches/xschem/minimal_n_switch_ena1v8.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/minimal_n_switch_ena1v8.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/minimal_n_switch_ena1v8.sch
+.subckt minimal_n_switch_ena1v8 avss on out in avdd dvdd dvss
+*.PININFO on:I out:B in:B avdd:B dvdd:B dvss:B avss:B
+x2 on dvdd dvss dvss avdd avdd net2 sky130_fd_sc_hvl__lsbuflv2hv_1
+x1 net2 dvss dvss avdd avdd net1 sky130_fd_sc_hvl__inv_2
+x4 net1 dvss dvss avdd avdd net3 sky130_fd_sc_hvl__inv_2
+x6 dvss dvss avdd avdd sky130_fd_sc_hvl__decap_4
+x3 net1 net3 out in avdd avss minimum_analog_switch
+x5 on dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+.ends
+
+
+* expanding   symbol:  mux2to1.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/mux2to1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/mux2to1.sch
+.subckt mux2to1 A1 A0 Z VCC VSS S
+*.PININFO VCC:I VSS:I A0:I A1:I Z:B S:I
+XM12 SB S VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM13 SB S VCC VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM3 Z S A0 VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM4 Z SB A0 VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+XM1 Z SB A1 VCC sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM2 Z S A1 VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  levelShifter.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/levelShifter.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/levelShifter.sch
+.subckt levelShifter ain aout VCCL VSS VCCH
+*.PININFO VCCL:I VSS:I ain:I aout:O VCCH:I
+XM12 net1 S1 VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3.6 nf=1 m=1
+XM13 aob net1 VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5.8 nf=2 m=1
+XM6 S1 ain VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM1 S1 ain VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+XM2 net1 aob VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5.8 nf=2 m=1
+XM3 aob S1B VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=3.6 nf=1 m=1
+XM4 S1B S1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM5 S1B S1 VCCL VCCL sky130_fd_pr__pfet_01v8 L=0.15 W=1.4 nf=2 m=1
+XM7 aout aob VSS VSS sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1.8 nf=1 m=1
+XM8 aout aob VCCH VCCH sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=5.8 nf=2 m=1
+XC1 VCCH aob sky130_fd_pr__cap_mim_m3_1 W=2 L=2 m=1
+.ends
+
+
+* expanding   symbol:  TieH_1p8.sym # of pins=3
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/TieH_1p8.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_sw_ip__bgrref_por/xschem/TieH_1p8.sch
+.subckt TieH_1p8 TieH VSS VCC
+*.PININFO VCC:I VSS:I TieH:B
+XM4 net1 net1 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 m=1
+XM5 TieH net1 VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=2 m=1
+.ends
+
+
+* expanding   symbol:  dac_column.sym # of pins=13
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/dac_column.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__rdac3v_8bit/xschem/dac_column.sch
+.subckt dac_column b2 b2b b1 b1b b0 b0b vdd dum_in res_in out res_out vss dum_out
+*.PININFO res_in:B vss:B vdd:B out:B b0:I b0b:I b1:I b1b:I b2:I b2b:I dum_in:B res_out:B dum_out:B
+x1 vdd b0 net8 net1 b0b vss passtrans
+XR1 res_out net1 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+x2 vdd b0b net8 net2 b0 vss passtrans
+x3 vdd b0 net9 net3 b0b vss passtrans
+x4 vdd b0b net9 net4 b0 vss passtrans
+x5 vdd b0 net10 net5 b0b vss passtrans
+x6 vdd b0b net10 net6 b0 vss passtrans
+x7 vdd b0 net11 net7 b0b vss passtrans
+x8 vdd b0b net11 res_in b0 vss passtrans
+x9 vdd vdd net15 dum_in vss vss passtrans
+x10 vdd vdd net12 res_out vss vss passtrans
+XR2 net1 net2 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR3 net2 net3 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR4 net3 net4 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR5 net4 net5 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR6 net5 net6 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR7 net6 net7 vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR9 net7 res_in vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR10 res_in dum_in vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+XR12 dum_out res_out vss sky130_fd_pr__res_high_po_0p35 L=3.16 mult=1 m=1
+x11 vdd b1b net14 net11 b1 vss passtrans
+x12 vdd b1 net14 net10 b1b vss passtrans
+x13 vdd b1b net13 net9 b1 vss passtrans
+x14 vdd b1 net13 net8 b1b vss passtrans
+x15 vdd b2b out net14 b2 vss passtrans
+x16 vdd b2 out net13 b2b vss passtrans
+x17 vdd vdd net15 net15 vss vss passtrans
+x18 vdd vdd net12 net12 vss vss passtrans
+.ends
+
+
+* expanding   symbol:  bias_nstack.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_nstack.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_nstack.sch
+.subckt bias_nstack itail ena vcasc nbias avss
+*.PININFO avss:B ena:I nbias:I itail:B vcasc:B
+XM3 net1 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=3 nf=1 m=1
+XM6 vcasc nbias net1 avss sky130_fd_pr__nfet_05v0_nvt L=1 W=3 nf=1 m=1
+XM12 itail ena vcasc avss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=3 nf=1 m=1
+XD1 avss ena sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+.ends
+
+
+* expanding   symbol:  bias_pstack.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_pstack.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_pstack.sch
+.subckt bias_pstack avdd pbias pcasc vcasc enb avss itail
+*.PININFO avdd:B itail:B enb:I pcasc:I vcasc:B pbias:I avss:B
+XM13 net1 pbias avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=3 nf=1 m=1
+XM18 itail enb vcasc avdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=3 nf=1 m=1
+XM14 vcasc pcasc net1 avdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=3 nf=1 m=1
+XD1 avss enb sky130_fd_pr__diode_pw2nd_05v5 area=2.025e11 perim=1.8e6
+.ends
+
+
+* expanding   symbol:  bias_amp.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_amp.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__biasgen/xschem/bias_amp.sch
+.subckt bias_amp avdd out inn inp nbias avss ena
+*.PININFO inp:I nbias:I inn:I out:O avdd:B avss:B ena:I
+XM1 net2 nbias avss avss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=2 nf=1 m=1
+XM2 out net1 avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=2 nf=1 m=1
+XM3 net1 net1 avdd avdd sky130_fd_pr__pfet_g5v0d10v5 L=1 W=2 nf=1 m=1
+XM4 net1 inp vcom avss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=4 nf=2 m=1
+XM5 out inn vcom avss sky130_fd_pr__nfet_g5v0d10v5 L=1 W=4 nf=2 m=1
+XM6 vcom ena net2 avss sky130_fd_pr__nfet_05v0_nvt L=1 W=2 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  isolated_switch_4.sym # of pins=7
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/isolated_switch_4.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/isolated_switch_4.sch
+.subckt isolated_switch_4 on off vss out in vdd shunt
+*.PININFO on:I out:B vdd:B vss:B in:B off:I shunt:I
+XM1 in on net1 vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=60 nf=6 m=1
+XM2 in off net1 vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=120 nf=12 m=1
+XM11 net1 on out vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=60 nf=6 m=1
+XM12 net1 off out vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=120 nf=12 m=1
+XM17 vss shunt net1 vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  OR.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/OR.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/OR.sch
+.subckt OR VDD A B VOUT VSS
+*.PININFO VOUT:O VSS:B VDD:B A:I B:I
+x1 VDD A B net1 VSS NOR_1
+x2 VDD VSS VOUT net1 inverter_1
+.ends
+
+
+* expanding   symbol:  div_by_2.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/div_by_2.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/div_by_2.sch
+.subckt div_by_2 QB CLK VDD Q VSS
+*.PININFO VDD:B VSS:B Q:O CLK:I QB:O
+x1 VDD CLKB VSS net2 net1 tg
+x3 VDD CLK VSS net2 net5 tg
+x4 VDD CLK VSS net4 net3 tg
+x5 VDD CLKB VSS net4 net1 tg
+x2 VDD net2 net3 VSS inverter
+x6 VDD net4 Q VSS inverter
+x7 VDD Q net1 VSS inverter
+x8 VDD net3 net5 VSS inverter
+x9 VDD CLK CLKB VSS inverter
+x10 VDD Q QB VSS inverter
+.ends
+
+
+* expanding   symbol:  7b_counter_new.sym # of pins=18
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/7b_counter_new.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/7b_counter_new.sch
+.subckt 7b_counter_new LD VDD Q6 Q4 Q2 Q5 Q1 Q3 Q7 D2_7 D2_6 D2_3 D2_5 D2_2 D2_4 D2_1 G-CLK VSS
+*.PININFO VDD:B VSS:B Q3:O Q1:O D2_1:I D2_2:I D2_3:I G-CLK:I Q2:O LD:O D2_4:I Q4:O D2_5:I Q5:O Q6:O D2_6:I Q7:O D2_7:I
+x1 VDD LD3 D2_1 Q1 a a VSS G-CLK G-CLK MOD_DFF_latest
+x3 VDD LD1 D2_3 Q3 c c VSS Q2 G-CLK MOD_DFF_latest
+x4 VDD LD3 D2_2 Q2 b b VSS Q1 G-CLK MOD_DFF_latest
+x2 VDD LD1 D2_4 Q4 d d VSS Q3 G-CLK MOD_DFF_latest
+x6 VDD LD2 D2_5 Q5 e e VSS Q4 G-CLK MOD_DFF_latest
+x7 VDD LD1 D2_6 Q6 f f VSS Q5 G-CLK MOD_DFF_latest
+x8 VDD LD2 D2_7 Q7 g g VSS Q6 G-CLK MOD_DFF_latest
+x5 Q1 VDD LD1 VSS LD2 Q2 LD3 Q3 Q4 Q5 LD Q6 Q7 G-CLK LD_GENERATOR
+.ends
+
+
+* expanding   symbol:  DFF.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/DFF.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/DFF.sch
+.subckt DFF CLK VDD D Q VSS
+*.PININFO D:I VDD:B VSS:B Q:O CLK:I
+x2 VDD net1 net2 VSS inverter
+x6 VDD net3 Q VSS inverter
+x7 VDD Q net4 VSS inverter
+x8 VDD net2 net5 VSS inverter
+x9 VDD CLK CLKB VSS inverter
+x1 VDD CLKB VSS net1 D tg
+x3 VDD CLK VSS net3 net2 tg
+x4 VDD CLK VSS net1 net5 tg
+x5 VDD CLKB VSS net3 net4 tg
+.ends
+
+
+* expanding   symbol:  MUX.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/MUX.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/MUX.sch
+.subckt MUX VDD SEL IN1 VOUT VSS IN2
+*.PININFO SEL:I IN1:I IN2:I VOUT:O VDD:B VSS:B
+x2 VDD net3 net1 IN1 VSS AND
+x3 VDD net2 SEL IN2 VSS AND
+XM1 net1 SEL VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=6 nf=1 m=1
+XM2 net1 SEL VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3 nf=1 m=1
+x1 VDD net2 net3 VOUT VSS OR
+.ends
+
+
+* expanding   symbol:  P2_GENERATOR.sym # of pins=18
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/P2_GENERATOR.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/P2_GENERATOR.sch
+.subckt P2_GENERATOR Q1 VDD D2_7 Q2 VSS D2_6 D2_5 Q3 D2_4 Q4 D2_3 Q5 D2_2 Q6 P2 D2_1 Q7 CLK
+*.PININFO VDD:B VSS:B Q1:I Q2:I Q3:I Q4:I Q5:I Q6:I Q7:I P2:O D2_1:I D2_2:I D2_3:I D2_4:I D2_5:I D2_6:I D2_7:I CLK:I
+x4 VDD Q2 b D2_3 VSS XNOR
+x5 VDD Q1 a D2_2 VSS XNOR
+x6 VDD Q3 c D2_4 VSS XNOR
+x2 VDD Q4 d D2_5 VSS XNOR
+x3 VDD Q5 e D2_6 VSS XNOR
+x9 VDD Q6 f D2_7 VSS XNOR
+x10 VDD Q7 g D2_1 VSS XNOR
+x7 VDD net3 a b c VSS 3_inp_AND
+x15 VDD net4 net1 net2 net3 VSS 3_inp_AND
+x11 VDD net2 d e VSS AND
+x12 VDD net1 f g VSS AND
+x13 CLK VDD net4 P2 VSS DFF
+.ends
+
+
+* expanding   symbol:  P3_GENERATION.sym # of pins=18
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/P3_GENERATION.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/P3_GENERATION.sch
+.subckt P3_GENERATION P3 Q1 VDD D2_7 Q2 D2_6 VSS Q3 D2_5 Q4 D2_4 D2_3 Q5 D2_2 Q6 D2_1 Q7 CLK
+*.PININFO VDD:B VSS:B Q1:I Q2:I Q3:I Q4:I Q5:I Q6:I Q7:I D2_1:I D2_2:I D2_3:I D2_4:I D2_5:I D2_6:I D2_7:I CLK:I P3:O
+x14 VDD Q2 j2 D2_3 VSS XNOR
+x18 VDD Q1 j1 D2_2 VSS XNOR
+x19 VDD Q3 j3 D2_4 VSS XNOR
+x20 VDD Q4 j4 D2_5 VSS XNOR
+x21 VDD Q5 j5 D2_6 VSS XNOR
+x22 VDD Q6 j6 D2_7 VSS XNOR
+x23 VDD Q7 j7 D2_1B VSS XNOR
+x24 VDD D2_1 D2_1B VSS inverter
+x25 VDD net3 j1 j2 j3 VSS 3_inp_AND
+x26 VDD net4 net1 net2 net3 VSS 3_inp_AND
+x27 VDD net2 j4 j5 VSS AND
+x28 VDD net1 j6 j7 VSS AND
+x29 CLK VDD net4 P3 VSS ned_DFF
+.ends
+
+
+* expanding   symbol:  3_inp_NOR.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/3_inp_NOR.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/3_inp_NOR.sch
+.subckt 3_inp_NOR VDD A B C VOUT VSS
+*.PININFO VSS:B VDD:B A:I B:I C:I VOUT:O
+XM5 net2 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=6 nf=1 m=1
+XM2 VOUT C VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM3 VOUT A VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM4 VOUT B VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM1 VOUT C net1 VDD sky130_fd_pr__pfet_01v8 L=0.2 W=6 nf=1 m=1
+XM6 net1 B net2 VDD sky130_fd_pr__pfet_01v8 L=0.2 W=6 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  NOR.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NOR.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NOR.sch
+.subckt NOR VDD A B VOUT VSS
+*.PININFO VSS:B VDD:B A:I B:I VOUT:O
+XM5 VOUT B net1 VDD sky130_fd_pr__pfet_01v8 L=0.2 W=4 nf=1 m=1
+XM1 VOUT A VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM2 net1 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=4 nf=1 m=1
+XM3 VOUT B VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  3_inp_AND.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/3_inp_AND.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/3_inp_AND.sch
+.subckt 3_inp_AND VDD VOUT A B C VSS
+*.PININFO VSS:B VDD:B A:I B:I C:I VOUT:O
+XM2 net2 C VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3 nf=1 m=1
+XM7 net1 B net2 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3 nf=1 m=1
+XM1 net3 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM8 net3 B VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM10 net3 C VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM11 VOUT net3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM12 net3 A net1 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3 nf=1 m=1
+XM13 VOUT net3 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  AND.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/AND.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/AND.sch
+.subckt AND VDD VOUT A B VSS
+*.PININFO VDD:B VSS:B A:I B:I VOUT:O
+x1 VDD VSS VOUT net1 inverter_1
+x2 VDD net1 A B VSS NAND_1
+.ends
+
+
+* expanding   symbol:  TR_Gate.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/TR_Gate.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/TR_Gate.sch
+.subckt TR_Gate OUT VDD VSS IN CLK
+*.PININFO VDD:B VSS:B IN:I OUT:O CLK:I
+XM2 net1 CLK VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=5 nf=1 m=1
+XM3 IN net1 OUT VDD sky130_fd_pr__pfet_01v8 L=0.2 W=8 nf=1 m=1
+XM4 net1 CLK VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=2.5 nf=1 m=1
+XM5 IN CLK OUT VSS sky130_fd_pr__nfet_01v8 L=0.2 W=8 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  INV_Mux.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/INV_Mux.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/INV_Mux.sch
+.subckt INV_Mux VSS VDD OUT IN
+*.PININFO VDD:B VSS:B IN:I OUT:O
+XM1 OUT IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=4 nf=1 m=1
+XM2 OUT IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  DelayCell_1.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/DelayCell_1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/DelayCell_1.sch
+.subckt DelayCell_1 VDD VSS IN INB VCTRL VCTRL2 OUT OUTB
+*.PININFO VDD:B VSS:B IN:I INB:I VCTRL:I VCTRL2:I OUT:O OUTB:O
+XM1 OUTB OUT VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=1 nf=1 m=1
+XM2 OUT VCTRL VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1 m=1
+XM3 OUT OUTB VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=1 nf=1 m=1
+XM4 OUTB VCTRL VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1 m=1
+XM6 OUT IN net1 VSS sky130_fd_pr__nfet_01v8 L=0.5 W=5 nf=1 m=1
+XM7 OUTB INB net1 VSS sky130_fd_pr__nfet_01v8 L=0.5 W=5 nf=1 m=1
+XM8 net1 VCTRL2 VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=10 nf=1 m=1
+XM5 VDD VDD VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=4 nf=1 m=1
+XM9 VSS VSS VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=6 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  INV_1.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/INV_1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/INV_1.sch
+.subckt INV_1 VSS VDD OUT IN
+*.PININFO VDD:B VSS:B IN:I OUT:O
+XM1 OUT IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=8 nf=1 m=1
+XM2 OUT IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=16 nf=1 m=1
+XM3 VSS VSS VSS VSS sky130_fd_pr__nfet_01v8 L=0.5 W=8 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  PFD_INV.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/PFD_INV.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/PFD_INV.sch
+.subckt PFD_INV VDD VSS IN OUT
+*.PININFO VDD:B VSS:B IN:I OUT:O
+XM1 OUT IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.84 nf=1 m=1
+XM3 OUT IN VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  simple_analog_switch.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/simple_analog_switch.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/simple_analog_switch.sch
+.subckt simple_analog_switch on off vss out in vdd
+*.PININFO on:I out:B vdd:B vss:B in:B off:I
+XM1 in on out vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=4 nf=2 m=1
+XM2 in off out vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=8 nf=4 m=1
+XM3 out off out vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM4 out on out vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=2 m=1
+XM5 in off in vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=2 nf=1 m=1
+XM6 in on in vdd sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=4 nf=2 m=1
+.ends
+
+
+* expanding   symbol:  minimum_analog_switch.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/minimum_analog_switch.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/minimum_analog_switch.sch
+.subckt minimum_analog_switch off on out in vdd vss
+*.PININFO on:I out:B vss:B in:B off:I vdd:B
+XM3 in off in vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
+XM1 out off out vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=0.5 nf=1 m=1
+XM4 out on in vss sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=1 nf=2 m=1
+* noconn vdd
+.ends
+
+
+* expanding   symbol:  NOR_1.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NOR_1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NOR_1.sch
+.subckt NOR_1 VDD A B VOUT VSS
+*.PININFO VSS:B VDD:B A:I B:I VOUT:O
+XM1 net1 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=6 nf=1 m=1
+XM2 VOUT B net1 VDD sky130_fd_pr__pfet_01v8 L=0.2 W=6 nf=1 m=1
+XM4 VOUT A VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1.5 nf=1 m=1
+XM6 VOUT B VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  inverter_1.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/inverter_1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/inverter_1.sch
+.subckt inverter_1 VDD VSS VOUT VIN
+*.PININFO VOUT:O VSS:B VDD:B VIN:I
+XM3 VOUT VIN VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=3 nf=1 m=1
+XM5 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  tg.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/tg.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/tg.sch
+.subckt tg VDD CLK VSS OUT IN
+*.PININFO VDD:B VSS:B CLK:I IN:I OUT:O
+x1 VDD CLK net1 VSS inverter
+XM5 OUT net1 IN VDD sky130_fd_pr__pfet_01v8 L=0.2 W=3.5 nf=1 m=1
+XM2 OUT CLK IN VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  inverter.sym # of pins=4
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/inverter.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/inverter.sch
+.subckt inverter VDD VIN VOUT VSS
+*.PININFO VDD:B VIN:I VOUT:O VSS:B
+XM5 VOUT VIN VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=5 nf=1 m=1
+XM1 VOUT VIN VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=2.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  MOD_DFF_latest.sym # of pins=9
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/MOD_DFF_latest.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/MOD_DFF_latest.sch
+.subckt MOD_DFF_latest VDD LD DATA Q QB D1 VSS CLK G-CLK
+*.PININFO VDD:B LD:I VSS:B D1:I CLK:I G-CLK:I Q:O QB:O DATA:I
+x1 VDD QB net1 ab net2 VSS tspc_FF
+x2 VDD LD D1 net2 VSS DATA MUX
+x3 VDD LD net1 Q VSS DATA MUX
+x4 VDD LD CLK ab VSS G-CLK MUX
+.ends
+
+
+* expanding   symbol:  LD_GENERATOR.sym # of pins=14
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/LD_GENERATOR.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/LD_GENERATOR.sch
+.subckt LD_GENERATOR Q1 VDD LD1 VSS LD2 Q2 LD3 Q3 Q4 Q5 LD Q6 Q7 G_CLK
+*.PININFO LD:O LD1:O LD2:O LD3:O VDD:B VSS:B Q1:I Q2:I Q3:I Q4:I Q5:I Q6:I Q7:I G_CLK:I
+x6 VDD net2 net1 net4 VSS NAND
+x9 VDD Q1 Q2 Q3 net9 VSS 3_inp_NOR
+x7 G_CLK VDD net2 net1 VSS DFF
+x8 VDD net1 LD VSS inverter
+x5 VDD net4 net5 net3 net9 VSS 3_inp_AND
+x13 VDD Q4 Q5 net5 VSS NOR
+x14 VDD Q6 Q7 net3 VSS NOR
+XM5 net7 LD VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=7 nf=1 m=1
+XM2 net8 LD VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3.5 nf=1 m=1
+XM1 net7 LD VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3.5 nf=1 m=1
+XM3 LD2 net7 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3.5 nf=1 m=1
+XM4 LD3 net8 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3.5 nf=1 m=1
+XM6 net6 LD VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3.5 nf=1 m=1
+XM7 LD1 net6 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3.5 nf=1 m=1
+XM8 LD2 net7 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=7 nf=1 m=1
+XM9 net8 LD VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=7 nf=1 m=1
+XM10 LD3 net8 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=7 nf=1 m=1
+XM11 net6 LD VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=7 nf=1 m=1
+XM12 LD1 net6 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=7 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  XNOR.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/XNOR.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/XNOR.sch
+.subckt XNOR VDD A OUT B VSS
+*.PININFO VDD:B VSS:B A:I B:I OUT:O
+x1 VDD A A_bar VSS inverter
+x2 VDD B B_bar VSS inverter
+XM5 net1 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM2 OUT A net3 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM1 OUT B net1 VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM3 OUT B_bar net2 VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM4 net2 A_bar VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2 nf=1 m=1
+XM6 OUT A_bar net4 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM7 net4 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM8 net3 B_bar VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  ned_DFF.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/ned_DFF.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/ned_DFF.sch
+.subckt ned_DFF CLK VDD D Q VSS
+*.PININFO D:I VDD:B VSS:B Q:O CLK:I
+x1 VDD CLK VSS net1 D tg
+x3 VDD CLKB VSS net3 net2 tg
+x4 VDD CLKB VSS net1 net5 tg
+x5 VDD CLK VSS net3 net4 tg
+x2 VDD CLK CLKB VSS inverter
+x6 VDD net1 net2 VSS inverter
+x7 VDD net2 net5 VSS inverter
+x8 VDD Q net4 VSS inverter
+x9 VDD net3 Q VSS inverter
+.ends
+
+
+* expanding   symbol:  NAND_1.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NAND_1.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NAND_1.sch
+.subckt NAND_1 VDD VOUT A B VSS
+*.PININFO VDD:B VSS:B A:I B:I VOUT:O
+XM1 VOUT A net1 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3 nf=1 m=1
+XM2 net1 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=3 nf=1 m=1
+XM6 VOUT B VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=3 nf=1 m=1
+XM7 VOUT A VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=3 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  tspc_FF.sym # of pins=6
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/tspc_FF.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/tspc_FF.sch
+.subckt tspc_FF VDD QB Q CLK D VSS
+*.PININFO D:I CLK:I VDD:B VSS:B QB:O Q:O
+XM2 net2 D VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=5 nf=1 m=1
+XM3 net1 CLK net2 VDD sky130_fd_pr__pfet_01v8 L=0.2 W=5 nf=1 m=1
+XM4 net3 CLK VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2.5 nf=1 m=1
+XM7 QB net3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=2.5 nf=1 m=1
+XM10 Q QB VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=3 nf=1 m=1
+XM1 net1 D VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1.5 nf=1 m=1
+XM5 net4 CLK VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=2.5 nf=1 m=1
+XM6 net3 net1 net4 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=2.5 nf=1 m=1
+XM8 QB CLK net5 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=2.5 nf=1 m=1
+XM9 net5 net3 VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=2.5 nf=1 m=1
+XM11 Q QB VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1.5 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  NAND.sym # of pins=5
+** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NAND.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics/NAND.sch
+.subckt NAND VDD VOUT A B VSS
+*.PININFO VDD:B VSS:B A:I B:I VOUT:O
+XM5 VOUT A VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=4 nf=1 m=1
+XM1 net1 B VSS VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM2 VOUT A net1 VSS sky130_fd_pr__nfet_01v8 L=0.2 W=1 nf=1 m=1
+XM3 VOUT B VDD VDD sky130_fd_pr__pfet_01v8 L=0.2 W=4 nf=1 m=1
+.ends
+
+.end
