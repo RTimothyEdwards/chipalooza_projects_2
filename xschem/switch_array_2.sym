@@ -1,0 +1,52 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -120 130 -120 {}
+L 4 -130 70 130 70 {}
+L 4 -150 0 -130 0 {}
+L 4 -150 40 -130 40 {}
+L 4 30 -10 60 -10 {}
+L 4 30 10 50 10 {}
+L 4 30 30 60 30 {}
+L 4 30 50 50 50 {}
+L 4 20 40 30 50 {}
+L 4 20 -0 30 10 {}
+L 4 -130 -120 -130 70 {}
+L 4 130 -120 130 70 {}
+L 7 130 -110 150 -110 {}
+L 7 130 -90 150 -90 {}
+L 7 130 -70 150 -70 {}
+L 7 130 -50 150 -50 {}
+L 7 130 10 150 10 {}
+L 7 130 -10 150 -10 {}
+L 7 130 50 150 50 {}
+L 7 130 30 150 30 {}
+B 5 147.5 -112.5 152.5 -107.5 {name=avdd dir=inout}
+B 5 147.5 -92.5 152.5 -87.5 {name=dvdd dir=inout}
+B 5 147.5 -72.5 152.5 -67.5 {name=dvss dir=inout}
+B 5 147.5 -52.5 152.5 -47.5 {name=avss dir=inout}
+B 5 147.5 7.5 152.5 12.5 {name=channel0_out dir=inout}
+B 5 -152.5 -2.5 -147.5 2.5 {name=channel0_in_to_out[1:0] dir=in}
+B 5 147.5 -12.5 152.5 -7.5 {name=channel0_in dir=inout}
+B 5 -152.5 37.5 -147.5 42.5 {name=channel1_in_to_out[1:0] dir=in}
+B 5 147.5 47.5 152.5 52.5 {name=channel1_out dir=inout}
+B 5 147.5 27.5 152.5 32.5 {name=channel1_in dir=inout}
+T {@symname} -121 -106 0 0 0.3 0.3 {}
+T {@name} 135 -132 0 0 0.2 0.2 {}
+T {avdd} 125 -114 0 1 0.2 0.2 {}
+T {dvdd} 125 -94 0 1 0.2 0.2 {}
+T {dvss} 125 -74 0 1 0.2 0.2 {}
+T {avss} 125 -54 0 1 0.2 0.2 {}
+T {channel0_out} 125 6 0 1 0.2 0.2 {}
+T {channel0_in_to_out[1:0]} -125 -4 0 0 0.2 0.2 {}
+T {channel0_in} 125 -14 0 1 0.2 0.2 {}
+T {channel1_in_to_out[1:0]} -125 36 0 0 0.2 0.2 {}
+T {channel1_out} 125 46 0 1 0.2 0.2 {}
+T {channel1_in} 125 26 0 1 0.2 0.2 {}

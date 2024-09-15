@@ -1,0 +1,138 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1724444975
+<< metal1 >>
+rect 1008 6080 1206 6114
+rect 1008 5786 1018 6080
+rect 1198 5786 1206 6080
+rect 1008 5772 1206 5786
+rect -284 5624 7820 5684
+rect -284 5504 7820 5564
+rect 1008 5162 1208 5176
+rect 1008 4868 1018 5162
+rect 1198 4868 1208 5162
+rect 1008 4856 1208 4868
+rect 1008 4406 1065 4856
+rect -284 -282 7820 -222
+rect -284 -402 7820 -342
+<< via1 >>
+rect 1018 5786 1198 6080
+rect 1018 4868 1198 5162
+<< metal2 >>
+rect 2668 10728 3640 11108
+rect 6120 10728 7092 11106
+rect 22 6084 174 6558
+rect 2348 6117 2542 6190
+rect 22 5782 28 6084
+rect 164 5782 174 6084
+rect 22 4462 174 5782
+rect 1006 6080 1206 6114
+rect 1006 5786 1018 6080
+rect 1198 5786 1206 6080
+rect 1006 5176 1206 5786
+rect 1460 5680 1520 5878
+rect 1740 5560 1800 5910
+rect 1006 5162 1208 5176
+rect 1006 4868 1018 5162
+rect 1198 4868 1208 5162
+rect 1006 4858 1208 4868
+rect 1008 4856 1208 4858
+rect 2348 4405 2543 6117
+rect 7210 4530 7410 6110
+rect 1460 -226 1520 -28
+rect 1740 -346 1800 4
+rect 2346 -110 2356 204
+rect 2532 -110 2546 204
+rect 2346 -1152 2546 -110
+rect 2668 -1310 3638 404
+rect 6120 -1310 7090 398
+rect 7210 -768 7410 204
+rect 7210 -1138 7220 -768
+rect 7396 -1138 7410 -768
+rect 7210 -1152 7410 -1138
+<< via2 >>
+rect 28 5782 164 6084
+rect 1018 4868 1198 5162
+rect 2356 -110 2532 260
+rect 7220 -1138 7396 -768
+<< metal3 >>
+rect -278 6084 7820 6092
+rect -278 5782 28 6084
+rect 164 5782 7820 6084
+rect -278 5772 7820 5782
+rect -306 5162 7820 5176
+rect -306 4868 1018 5162
+rect 1198 4868 7820 5162
+rect -306 4856 7820 4868
+rect -318 260 7820 272
+rect -318 -110 2356 260
+rect 2532 -110 7820 260
+rect -318 -124 7820 -110
+rect -328 -768 7820 -756
+rect -328 -1138 7220 -768
+rect 7396 -1138 7820 -768
+rect -328 -1152 7820 -1138
+use anablock_via_cut3  anablock_via_cut3_0
+timestamp 1719104139
+transform 0 1 -4164 -1 0 1530
+box 1426 5624 1624 5684
+use anablock_via_cut3  anablock_via_cut3_1
+timestamp 1719104139
+transform 1 0 -36 0 1 2
+box 1426 5624 1624 5684
+use anablock_via_cut3  anablock_via_cut3_2
+timestamp 1719104139
+transform 1 0 296 0 1 -120
+box 1426 5624 1624 5684
+use anablock_via_cut3  anablock_via_cut3_3
+timestamp 1719104139
+transform 0 1 -3884 -1 0 1540
+box 1426 5624 1624 5684
+use anablock_via_cut3  anablock_via_cut3_4
+timestamp 1719104139
+transform 0 1 -4164 -1 0 7436
+box 1426 5624 1624 5684
+use anablock_via_cut3  anablock_via_cut3_5
+timestamp 1719104139
+transform 0 1 -3884 -1 0 7446
+box 1426 5624 1624 5684
+use anablock_via_cut3  anablock_via_cut3_14
+timestamp 1719104139
+transform 1 0 2 0 1 -5906
+box 1426 5624 1624 5684
+use anablock_via_cut3  anablock_via_cut3_15
+timestamp 1719104139
+transform 1 0 262 0 1 -6026
+box 1426 5624 1624 5684
+use isolated_switch_xlarge  isolated_switch_xlarge_0 ../dependencies/sky130_ef_ip__analog_switches/mag
+array 0 1 5906 0 0 -8042
+timestamp 1724442184
+transform 0 -1 1336 1 0 -656
+box 660 -6310 5544 1338
+<< labels >>
+flabel metal1 -4 5654 -4 5654 0 FreeSans 480 0 0 0 channel0_in_to_out[1]
+port 0 nsew
+flabel metal1 -10 5534 -10 5534 0 FreeSans 480 0 0 0 channel0_in_to_out[0]
+port 1 nsew
+flabel metal1 92 -250 92 -250 0 FreeSans 480 0 0 0 channel1_in_to_out[1]
+port 4 nsew
+flabel metal1 86 -370 86 -370 0 FreeSans 480 0 0 0 channel1_in_to_out[0]
+port 5 nsew
+flabel metal3 60 -966 60 -966 0 FreeSans 1600 0 0 0 avss
+port 16 nsew
+flabel metal3 -22 64 -22 64 0 FreeSans 1600 0 0 0 avdd
+port 17 nsew
+flabel metal3 -18 5002 -18 5002 0 FreeSans 1600 0 0 0 dvdd
+port 18 nsew
+flabel metal3 -18 5924 -18 5924 0 FreeSans 1600 0 0 0 dvss
+port 19 nsew
+flabel metal2 3096 10960 3096 10960 0 FreeSans 1600 0 0 0 channel0_in
+port 8 nsew
+flabel metal2 6564 10938 6564 10938 0 FreeSans 1600 0 0 0 channel0_out
+port 9 nsew
+flabel metal2 6592 -1162 6592 -1162 0 FreeSans 1600 0 0 0 channel1_out
+port 13 nsew
+flabel metal2 3150 -1152 3150 -1152 0 FreeSans 1600 0 0 0 channel1_in
+port 12 nsew
+<< end >>
