@@ -863,8 +863,6 @@ N -4810 190 -4750 190 {
 lab=gpio_noesd[14]}
 N -4880 190 -4810 190 {
 lab=gpio_noesd[14]}
-N -4850 170 -4750 170 {
-lab=#net2}
 N -4850 130 -4750 130 {
 lab=pll_ibias}
 N -4850 90 -4750 90 {
@@ -913,8 +911,6 @@ N -4880 640 -4810 640 {
 lab=gpio_noesd[16]}
 N -4850 620 -4750 620 {
 lab=audio_out_p}
-N -4850 580 -4750 580 {
-lab=#net3}
 N -4850 540 -4750 540 {
 lab=vssa2}
 N -4850 520 -4750 520 {
@@ -1072,7 +1068,7 @@ lab=io_in_3v3[5]}
 N -1750 240 -1680 240 {
 lab=rheostat_vl}
 N -1620 240 -1550 240 {
-lab=#net4}
+lab=io_in_3v3[6]}
 N -1750 360 -1680 360 {
 lab=rdac_vh}
 N -1620 360 -1550 360 {
@@ -1087,6 +1083,12 @@ N 480 390 510 390 {
 lab=io_oeb[21]}
 N 420 290 420 390 {
 lab=vssd2}
+N -4830 170 -4830 580 {
+lab=#net2}
+N -4830 580 -4750 580 {
+lab=#net2}
+N -4830 170 -4750 170 {
+lab=#net2}
 C {power_stage.sym} -250 -1170 0 0 {name=x2}
 C {power_stage.sym} -250 -1030 0 0 {name=x3}
 C {power_stage.sym} -250 -860 0 0 {name=x4}
@@ -1622,3 +1624,4 @@ mult=1}
 C {devices/ipin.sym} -3670 1050 0 0 {name=p367 lab=la_oenb[127:0]}
 C {devices/ipin.sym} -3670 840 0 0 {name=p368 lab=io_in[26:0]}
 C {devices/ipin.sym} -3670 810 0 0 {name=p369 lab=io_in_3v3[26:0]}
+C {devices/lab_pin.sym} -4830 220 0 0 {name=p370 sig_type=std_logic lab=loopback_test}

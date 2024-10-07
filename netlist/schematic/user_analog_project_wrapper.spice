@@ -246,12 +246,12 @@ x34 vdda2 vccd2 vssd2 vssa2 gpio_noesd[12] la_data_in[8] la_oenb[8] ccomp_vinm l
 + switch_array_2
 x35 vdda2 vccd2 vssd2 vssa2 gpio_noesd[13] la_data_in[6] la_oenb[6] pll_fin la_data_in[7] la_oenb[7] gpio_noesd[13] cdac_out
 + switch_array_2
-x36 vdda2 vccd2 vssd2 vssa2 gpio_noesd[14] la_data_in[4] la_oenb[4] pll_ibias la_data_in[5] la_oenb[5] gpio_noesd[14] net2
-+ switch_array_2
+x36 vdda2 vccd2 vssd2 vssa2 gpio_noesd[14] la_data_in[4] la_oenb[4] pll_ibias la_data_in[5] la_oenb[5] gpio_noesd[14]
++ loopback_test switch_array_2
 x37 vdda2 vccd2 vssd2 vssa2 gpio_noesd[15] la_data_in[2] la_oenb[2] pll_vctrl_in la_data_in[3] la_oenb[3] gpio_noesd[15]
 + audio_out_n switch_array_2
-x38 vdda2 vccd2 vssd2 vssa2 gpio_noesd[16] la_data_in[0] la_oenb[0] net3 la_data_in[1] la_oenb[1] gpio_noesd[16] audio_out_p
-+ switch_array_2
+x38 vdda2 vccd2 vssd2 vssa2 gpio_noesd[16] la_data_in[0] la_oenb[0] loopback_test la_data_in[1] la_oenb[1] gpio_noesd[16]
++ audio_out_p switch_array_2
 x40 vdda1 vccd1 vssd1 vssa1 gpio_noesd[6] la_oenb[117] la_data_in[117] sample_out la_oenb[116] la_data_in[116] gpio_noesd[6]
 + ulpcomp_vinn switch_array_2
 x41 vdda1 vccd1 vssd1 vssa1 gpio_noesd[5] la_oenb[119] la_data_in[119] sample_in la_oenb[118] la_data_in[118] gpio_noesd[5]

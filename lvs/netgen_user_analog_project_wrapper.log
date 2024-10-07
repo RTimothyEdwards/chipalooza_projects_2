@@ -2987,7 +2987,7 @@ Circuit user_analog_project_wrapper contains 96 device instances.
   Class: sky130_fd_pr__res_generic_m3 instances:  19
   Class: sky130_ef_ip__idac3v_8bit instances:   1
   Class: switch_array_2        instances:  16
-Circuit contains 289 nets, and 448 disconnected pins.
+Circuit contains 288 nets, and 433 disconnected pins.
 Contents of circuit 2:  Circuit: 'user_analog_project_wrapper'
 Circuit user_analog_project_wrapper contains 96 device instances.
   Class: power_stage           instances:  14
@@ -3014,15 +3014,15 @@ Circuit user_analog_project_wrapper contains 96 device instances.
   Class: sky130_fd_pr__res_generic_m3 instances:  19
   Class: sky130_ef_ip__idac3v_8bit instances:   1
   Class: switch_array_2        instances:  16
-Circuit contains 291 nets, and 433 disconnected pins.
+Circuit contains 290 nets, and 433 disconnected pins.
 
 Circuit 1 contains 96 devices, Circuit 2 contains 96 devices.
-Circuit 1 contains 289 nets,    Circuit 2 contains 289 nets.
+Circuit 1 contains 288 nets,    Circuit 2 contains 288 nets.
 
 
 Final result: 
-Top level cell failed pin matching.
-
+Circuits match uniquely.
+.
 
 The following cells had property errors:
  sky130_ef_ip__rc_osc_16M
