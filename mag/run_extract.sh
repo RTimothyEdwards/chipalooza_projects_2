@@ -7,23 +7,6 @@ echo ${PDK:=sky130A} > /dev/null
 
 magic -dnull -noconsole -rcfile \$PDK_ROOT/\$PDK/libs.tech/magic/sky130A.magicrc << EOF
 #
-# NOTE: rdac and rheostat do not extract properly unless flattened first.  Once this is fixed in
-# magic's extraction engine, this step can be removed.
-load ../dependencies/sky130_ef_ip__rdac3v_8bit/mag/sky130_ef_ip__rdac3v_8bit
-select top cell
-flatten sky130_ef_ip__rdac3v_8bit_flat
-load sky130_ef_ip__rdac3v_8bit_flat
-cellname delete sky130_ef_ip__rdac3v_8bit
-cellname rename sky130_ef_ip__rdac3v_8bit_flat sky130_ef_ip__rdac3v_8bit
-#
-load ../dependencies/sky130_ef_ip__rheostat_8bit/mag/sky130_ef_ip__rheostat_8bit
-select top cell
-flatten sky130_ef_ip__rheostat_8bit_flat
-load sky130_ef_ip__rheostat_8bit_flat
-cellname delete sky130_ef_ip__rheostat_8bit
-cellname rename sky130_ef_ip__rheostat_8bit_flat sky130_ef_ip__rheostat_8bit
-#
-
 load $project
 select top cell
 expand
@@ -34,7 +17,7 @@ flush sky130_aa_ip__programmable_pll
 select top cell
 extract path extfiles
 # Reinstate "extract unique" for signoff.
-extract unique
+extract unique notopports
 # Do not do parasitic extraction here. . .
 extract no all
 extract all
