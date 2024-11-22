@@ -658,8 +658,8 @@ x2 dvdd dvss din[7] din[6] din[5] din[4] din[3] din[2] din[1] din[0] avdd net1 n
 + channel1_in_to_out[1] channel1_in_to_out[0] channel1_out channel1_in
 *.PININFO channel0_in:B avdd:B dvdd:B dvss:B avss:B channel0_in_to_out[1:0]:I channel0_out:B channel1_in:B channel1_out:B
 *+ channel1_in_to_out[1:0]:I
-x1 avss channel0_in_to_out[0] channel0_out channel0_in avdd dvdd dvss channel0_in_to_out[1] isolated_switch_xlarge
-x2 avss channel1_in_to_out[0] channel1_out channel1_in avdd dvdd dvss channel1_in_to_out[1] isolated_switch_xlarge
+x7 avss channel0_in_to_out[0] channel0_out channel0_in avdd dvdd dvss channel0_in_to_out[1] isolated_switchb_xlarge
+x1 avss channel1_in_to_out[0] channel1_out channel1_in avdd dvdd dvss channel1_in_to_out[1] isolated_switchb_xlarge
 .ends
 
 
@@ -2030,17 +2030,18 @@ x13 ena[7] dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
 .ends
 
 
-* expanding   symbol:  isolated_switch_xlarge.sym # of pins=8
-** sym_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/isolated_switch_xlarge.sym
-** sch_path: /home/tim/gits/chipalooza_projects_2/dependencies/sky130_ef_ip__analog_switches/xschem/isolated_switch_xlarge.sch
-.subckt isolated_switch_xlarge avss on out in avdd dvdd dvss off
-*.PININFO on:I avss:B out:B in:B avdd:B dvdd:B dvss:B off:I
+* expanding   symbol:  isolated_switchb_xlarge.sym # of pins=8
+** sym_path: /home/tim/gits/chipalooza_projects_2/xschem/isolated_switchb_xlarge.sym
+** sch_path: /home/tim/gits/chipalooza_projects_2/xschem/isolated_switchb_xlarge.sch
+.subckt isolated_switchb_xlarge avss on out in avdd dvdd dvss offb
+*.PININFO on:I avss:B out:B in:B avdd:B dvdd:B dvss:B offb:I
 x2 on dvdd dvss dvss avdd avdd net1 sky130_fd_sc_hvl__lsbuflv2hv_1
 x1 net1 net2 avss out in avdd net3 isolated_switch_4
-x3 off dvdd dvss dvss avdd avdd net3 sky130_fd_sc_hvl__lsbuflv2hv_1
+x3 offb dvdd dvss dvss avdd avdd net4 sky130_fd_sc_hvl__lsbuflv2hv_1
 x4 net1 dvss dvss avdd avdd net2 sky130_fd_sc_hvl__inv_1
 x5 on dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
-x6 off dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x6 offb dvss dvss avdd avdd sky130_fd_sc_hvl__diode_2
+x7 net4 dvss dvss avdd avdd net3 sky130_fd_sc_hvl__inv_1
 .ends
 
 
