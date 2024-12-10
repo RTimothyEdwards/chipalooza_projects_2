@@ -119,7 +119,7 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(ULPCOMP_IP)" ]; then \
 		echo "Creating $(ULPCOMP_IP) repository" ; \
-		git clone --depth=1 --branch=tapeout_ci2406 \
+		git clone --depth=1 --branch=main \
 			$(EFABLESS_URL)/$(ULPCOMP_IP) \
 			$(IP_ROOT)/$(ULPCOMP_IP) ; \
 	else \
@@ -155,7 +155,7 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(SIGMADELTA_IP)" ]; then \
 		echo "Creating $(SIGMADELTA_IP) repository" ; \
-		git clone --depth=1 --branch=tapeout_ci2406 \
+		git clone --depth=1 --branch=main \
 			$(EFABLESS_URL)/$(SIGMADELTA_IP) \
 			$(IP_ROOT)/$(SIGMADELTA_IP) ; \
 	else \
@@ -167,13 +167,16 @@ get_ip_blocks: check_dependencies
 		git clone --depth=1 \
 			$(OPENCIRCUITDESIGN_URL)/$(RDAC_IP) \
 			$(IP_ROOT)/$(RDAC_IP) ; \
+		( cd $(IP_ROOT)/$(RDAC_IP) ; \
+			git submodule update --init ) ; \
 	else \
 		echo "Updating $(RDAC_IP) repository" ; \
-		( cd $(IP_ROOT)/$(RDAC_IP) ; git pull ) ; \
+		( cd $(IP_ROOT)/$(RDAC_IP) ; git pull ; \
+			git submodule update ) ; \
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(CCOMP_IP)" ]; then \
 		echo "Creating $(CCOMP_IP) repository" ; \
-		git clone --depth=1 --branch=tapeout_ci2406 \
+		git clone --depth=1 --branch=main \
 			$(OPENCIRCUITDESIGN_URL)/$(CCOMP_IP) \
 			$(IP_ROOT)/$(CCOMP_IP) ; \
 	else \
@@ -191,12 +194,16 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(CDAC_IP)" ]; then \
 		echo "Creating $(CDAC_IP) repository" ; \
-		git clone --depth=1 \
+		git clone \
 			$(OPENCIRCUITDESIGN_URL)/$(CDAC_IP) \
 			$(IP_ROOT)/$(CDAC_IP) ; \
+		( cd $(IP_ROOT)/$(CDAC_IP) ; \
+			git checkout 06a2cbf18c3e42be18f723740898f3e2fa98e81f ; \
+			git submodule update --init ) ; \
 	else \
 		echo "Updating $(CDAC_IP) repository" ; \
-		( cd $(IP_ROOT)/$(CDAC_IP) ; git pull ) ; \
+		( cd $(IP_ROOT)/$(CDAC_IP) ; git pull ; \
+			git submodule update ) ; \
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(PLL_IP)" ]; then \
 		echo "Creating $(PLL_IP) repository" ; \
