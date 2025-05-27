@@ -1,84 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1748298949
-<< error_s >>
-rect 36509 497886 36650 497977
-rect 36509 497746 36510 497837
-rect 490094 429953 493182 430002
-rect 490094 427735 490117 429953
-rect 493151 427735 493182 429953
-rect 494562 429953 497650 430002
-rect 493593 427815 493601 429663
-rect 494133 427815 494161 429663
-rect 490094 427686 493182 427735
-rect 494562 427735 494583 429953
-rect 497629 427735 497650 429953
-rect 494562 427686 497650 427735
-rect 505106 429953 508194 430002
-rect 505106 427735 505127 429953
-rect 508173 427735 508194 429953
-rect 509574 429953 512662 430002
-rect 508595 427815 508623 429663
-rect 509155 427815 509163 429663
-rect 505106 427686 508194 427735
-rect 509574 427735 509605 429953
-rect 512639 427735 512662 429953
-rect 509574 427686 512662 427735
-rect 490687 427411 498171 427445
-rect 504585 427411 512069 427445
-rect 490687 427395 490721 427411
-rect 512035 427395 512069 427411
-rect 490094 420233 493182 420282
-rect 490094 418015 490117 420233
-rect 493151 418015 493182 420233
-rect 494562 420233 497650 420282
-rect 493593 418095 493601 419943
-rect 494133 418095 494161 419943
-rect 490094 417966 493182 418015
-rect 494562 418015 494583 420233
-rect 497629 418015 497650 420233
-rect 494562 417966 497650 418015
-rect 505104 420205 508192 420254
-rect 505104 417987 505125 420205
-rect 508171 417987 508192 420205
-rect 509572 420205 512660 420254
-rect 508593 418067 508621 419915
-rect 509153 418067 509161 419915
-rect 505104 417938 508192 417987
-rect 509572 417987 509603 420205
-rect 512637 417987 512660 420205
-rect 509572 417938 512660 417987
-rect 490687 417691 498171 417725
-rect 490687 417675 490721 417691
-rect 504583 417663 512067 417697
-rect 512033 417647 512067 417663
-rect 490086 410485 493174 410534
-rect 490086 408267 490109 410485
-rect 493143 408267 493174 410485
-rect 494554 410485 497642 410534
-rect 493585 408347 493593 410195
-rect 494125 408347 494153 410195
-rect 490086 408218 493174 408267
-rect 494554 408267 494575 410485
-rect 497621 408267 497642 410485
-rect 494554 408218 497642 408267
-rect 505102 410485 508190 410534
-rect 505102 408267 505123 410485
-rect 508169 408267 508190 410485
-rect 509570 410485 512658 410534
-rect 508591 408347 508619 410195
-rect 509151 408347 509159 410195
-rect 505102 408218 508190 408267
-rect 509570 408267 509601 410485
-rect 512635 408267 512658 410485
-rect 509570 408218 512658 408267
-rect 490679 407943 498163 407977
-rect 504581 407943 512065 407977
-rect 490679 407927 490713 407943
-rect 512031 407927 512065 407943
-rect 37153 66180 37171 66904
-rect 37553 65780 37571 67304
+timestamp 1748354181
 << isosubstrate >>
 rect 800 649262 286990 704800
 rect 800 602768 170886 649262
@@ -9383,8 +9306,7 @@ rect 470091 71497 473681 72171
 rect 466215 59292 473681 71497
 rect 466215 58179 466321 59292
 rect 473542 58179 473681 59292
-rect 466215 31569 473681 58179
-rect 466215 26129 473681 29457
+rect 466215 26129 473681 58179
 rect 305969 18663 473687 26129
 << fillblock >>
 rect 287497 306699 302657 310031
@@ -9395,15 +9317,15 @@ rect 0 800 800 704800
 rect 584800 800 585600 704800
 rect 0 0 585600 800
 use ct2_switch_array  ct2_switch_array_0
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 -186 0 1 84470
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_1
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 378 0 1 -215552
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_2
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 -186 0 1 41270
 box 2132 252898 13728 266392
 use ct2_switch_array_2  ct2_switch_array_2_0
@@ -9411,173 +9333,173 @@ timestamp 1748298949
 transform 1 0 378 0 1 -172352
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_3
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 -186 0 1 127870
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_4
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 -186 0 1 171070
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_5
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 -186 0 1 214270
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_6
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 -186 0 1 257470
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_7
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 -186 0 1 -1730
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_8
-timestamp 1748298949
+timestamp 1726321856
 transform 1 0 378 0 1 -129152
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_10
-timestamp 1748298949
+timestamp 1726321856
 transform -1 0 584704 0 1 332012
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_11
-timestamp 1748298949
+timestamp 1726321856
 transform -1 0 584704 0 1 17812
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_12
-timestamp 1748298949
+timestamp 1726321856
 transform -1 0 584704 0 1 57012
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_13
-timestamp 1748298949
+timestamp 1726321856
 transform -1 0 584704 0 1 218412
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_14
-timestamp 1748298949
+timestamp 1726321856
 transform -1 0 584704 0 1 251212
 box 2132 252898 13728 266392
 use ct2_switch_array  ct2_switch_array_15
-timestamp 1748298949
+timestamp 1726321856
 transform -1 0 584704 0 1 235012
 box 2132 252898 13728 266392
 use font_4C  font_4C_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598766404
 transform 1 0 295208 0 1 507055
 box 0 0 1080 2520
 use font_4F  font_4F_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598767855
 transform 1 0 296660 0 1 507074
 box 0 0 1080 2520
 use font_4F  font_4F_1
-timestamp 1748298949
+timestamp 1598767855
 transform 1 0 298113 0 1 507092
 box 0 0 1080 2520
 use font_5A  font_5A_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598772956
 transform 1 0 299565 0 1 507111
 box 0 0 1080 2520
 use font_30  font_30_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598786981
 transform 1 0 292120 0 1 503139
 box 0 0 1080 2520
 use font_32  font_32_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598787041
 transform 1 0 290686 0 1 503118
 box 0 0 1080 2520
 use font_32  font_32_1
-timestamp 1748298949
+timestamp 1598787041
 transform 1 0 293535 0 1 503118
 box 0 0 1080 2520
 use font_34  font_34_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598787136
 transform 1 0 295024 0 1 503154
 box 0 0 1080 2520
 use font_41  font_41_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598763107
 transform 1 0 293756 0 1 507074
 box 0 0 1080 2520
 use font_41  font_41_1
-timestamp 1748298949
+timestamp 1598763107
 transform 1 0 300982 0 1 507129
 box 0 0 1080 2520
 use font_43  font_43_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598763351
 transform 1 0 287836 0 1 507088
 box 0 0 1080 2520
 use font_48  font_48_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598765560
 transform 1 0 289326 0 1 507111
 box 0 0 1080 2520
 use font_49  font_49_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598765816
 transform 1 0 290833 0 1 507111
 box 0 0 1080 2520
 use font_50  font_50_0 $PDKPATH/libs.ref/sky130_ml_xx_hd/mag
-timestamp 1748298949
+timestamp 1598768087
 transform 1 0 292285 0 1 507092
 box 0 0 1080 2520
 use power_stage  power_stage_0 ../dependencies/sky130_ef_ip__analog_switches/mag
 array 0 6 90000 0 0 -111006
-timestamp 1748298949
+timestamp 1714671808
 transform 0 -1 234941 1 0 120408
 box -89200 -44204 -9499 66802
 use power_stage  power_stage_1
 array 0 6 90000 0 0 111006
-timestamp 1748298949
+timestamp 1714671808
 transform 0 1 351850 1 0 120408
 box -89200 -44204 -9499 66802
 use sky130_ak_ip__cmos_vref  sky130_ak_ip__cmos_vref_0 ../dependencies/sky130_ak_ip__cmos_vref/mag
-timestamp 1748298949
+timestamp 1721067183
 transform -1 0 61111 0 1 433301
 box 8587 -19903 21921 206
 use sky130_am_ip__ldo_01v8  sky130_am_ip__ldo_01v8_0 ../dependencies/sky130_am_ip__ldo_01v8/mag
-timestamp 1748298949
+timestamp 1747756912
 transform 0 -1 40439 1 0 487967
 box 4248 -10776 28461 6979
 use sky130_ef_ip__ccomp3v_cl  sky130_ef_ip__ccomp3v_cl_0 ../dependencies/sky130_ef_ip__ccomp3v/mag
-timestamp 1748298949
+timestamp 1747682096
 transform 1 0 25256 0 1 330161
 box -358 -2799 13304 10357
 use sky130_ef_ip__cdac3v_12bit  sky130_ef_ip__cdac3v_12bit_0 ../dependencies/sky130_ef_ip__cdac3v_12bit/mag
-timestamp 1748298949
+timestamp 1747671550
 transform -1 0 114444 0 -1 240050
 box 52849 -36568 89580 15691
 use sky130_ef_ip__idac3v_8bit  sky130_ef_ip__idac3v_8bit_0 ../dependencies/sky130_ef_ip__biasgen/mag
-timestamp 1748298949
+timestamp 1747752771
 transform -1 0 73100 0 -1 601014
 box -1186 -1691 49914 35112
 use sky130_ef_ip__rc_osc_16M  sky130_ef_ip__rc_osc_16M_0 ../dependencies/sky130_ef_ip__rc_osc_16M/mag
-timestamp 1748298949
+timestamp 1747746856
 transform 1 0 30916 0 1 124804
 box -24 680 10977 10082
 use sky130_ef_ip__rc_osc_500k  sky130_ef_ip__rc_osc_500k_1 ../dependencies/sky130_ef_ip__rc_osc_500k/mag
-timestamp 1748298949
+timestamp 1747747376
 transform 1 0 546532 0 1 605912
 box -24 -38 12264 10758
 use sky130_ef_ip__rdac3v_8bit  sky130_ef_ip__rdac3v_8bit_0 ../dependencies/sky130_ef_ip__rdac3v_8bit/mag
-timestamp 1748298949
+timestamp 1746732107
 transform -1 0 553201 0 1 56638
 box 0 0 16923 31335
 use sky130_ef_ip__rheostat_8bit  sky130_ef_ip__rheostat_8bit_0 ../dependencies/sky130_ef_ip__rheostat_8bit/mag
-timestamp 1748298949
+timestamp 1716082924
 transform 0 1 534748 1 0 154816
 box -200 -4 25939 16904
 use sky130_ef_ip__samplehold  sky130_ef_ip__samplehold_0 ../dependencies/sky130_ef_ip__samplehold/mag
-timestamp 1748298949
+timestamp 1747701052
 transform 1 0 533972 0 1 513551
 box -27 0 15906 11255
 use sky130_icrg_ip__ulpcomp2  sky130_icrg_ip__ulpcomp2_0 ../dependencies/sky130_icrg_ip__ulpcomp/mag
-timestamp 1748298949
+timestamp 1747754763
 transform 1 0 533375 0 -1 481444
 box -625 -8156 8504 1566
 use sky130_iic_ip__audiodac_drv_lite  sky130_iic_ip__audiodac_drv_lite_0 ../dependencies/sky130_iic_ip__audiodac_lite/mag
-timestamp 1748298949
+timestamp 1747753545
 transform -1 0 40116 0 1 44674
 box -316 -300 9632 28678
 use sky130_pa_ip__instramp  sky130_pa_ip__instramp_0 ../dependencies/sky130_pa_ip__instramp/mag
-timestamp 1748298949
+timestamp 1748312405
 transform 1 0 486589 0 -1 434905
 box 0 0 29566 40042
 use sky130_sw_ip__por  sky130_sw_ip__por_0 ../dependencies/sky130_sw_ip__por/mag
-timestamp 1748298949
+timestamp 1731723950
 transform 1 0 523787 0 1 545780
 box 2366 -300396 39669 -277894
 << labels >>
