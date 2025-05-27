@@ -1,0 +1,110 @@
+logic analyzer OEB assignment
+------------------------------------------------------
+Purpose:  There are way more than 128 digital control
+bits in this design.  By using the logic analyzer OEB
+lines, an additional 128 bits can be used, with the
+important caveat that OEB forces data_out low, so
+for any pair (la_oeb, la_data_out) with the same index,
+the value (1, 1) cannot be used.  The original design
+had many such pairs connected into the same IP blocks,
+making it impossible to set certain values.
+
+It should be feasible to use both la_oeb and la_data_out
+lines, provided that no two lines with the same index
+feed controls to the same IP block.
+
+In retrospect, it would probably have been better just
+to double up the control signals, but anyway. . .
+
+So for the respin, the OEB lines are being shifted
+upward from the bottom and downward from the top, meeting
+in the middle, giving an offset between OEB and data_out
+of about 20 on each side, which should make sure that
+the bits are assigned to different IP blocks.  This is
+not necessarily true, so it is necessary to work through
+the schematic after reassignment and make sure that no
+IP block is controlled by an OEB line and a data_out line
+with the same index.
+
+For help in editing the top-level schematic, the OEB
+reassignments are as follows:
+
+OLD	NEW
+------------
+0	21
+1	22
+2	23
+3	24
+4	25
+5	26
+6	27
+7	28
+8	29
+9	30
+10	31
+11	32
+12	33
+13	34
+14	35
+15	36
+16	37
+17	38
+18	39
+19	40
+
+20	54
+21	55
+22	56
+23	57
+24	58
+25	59
+26	60
+27	61
+28	62
+29	63
+30	64
+31	65
+32	66
+33	67
+34	68
+35	69
+
+90	70
+91	71
+92	72
+93	73
+94	74
+95	75
+96	76
+97	77
+98	78
+99	79
+100	80
+101	81
+102	82
+103	83
+104	84
+105	85
+106	86
+107	87
+108	88
+109	89
+110	90
+111	91
+112	92
+113	93
+114	94
+115	95
+116	96
+117	97
+118	98
+119	99
+120	100
+121	101
+122	102
+123	103
+124	104
+125	105
+126	106
+127	107
+

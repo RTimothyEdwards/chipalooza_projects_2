@@ -10,11 +10,6 @@ magic -dnull -noconsole -rcfile \$PDK_ROOT/\$PDK/libs.tech/magic/sky130A.magicrc
 load $project
 select top cell
 expand
-# NOTE:  programmable PLL cell needs work; replace with abstract view for now.
-cellname filepath sky130_aa_ip__programmable_pll ../dependencies/sky130_aa_ip__programmable_pll/maglef
-flush sky130_aa_ip__programmable_pll
-# Now back to the project
-select top cell
 extract path extfiles
 # Reinstate "extract unique" for signoff.
 extract unique notopports

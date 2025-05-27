@@ -310,11 +310,11 @@ append XSCHEM_LIBRARY_PATH :../dependencies/sky130_ef_ip__cdac3v_12bit/xschem
 append XSCHEM_LIBRARY_PATH :../dependencies/sky130_icrg_ip__ulpcomp/xschem
 append XSCHEM_LIBRARY_PATH :../dependencies/sky130_ak_ip__cmos_vref/xschem
 append XSCHEM_LIBRARY_PATH :../dependencies/sky130_ef_ip__rc_osc_16M/xschem
-append XSCHEM_LIBRARY_PATH :../dependencies/sky130_iic_ip__audiodac_v1/xschem
+append XSCHEM_LIBRARY_PATH :../dependencies/sky130_iic_ip__audiodac_lite/xschem
 append XSCHEM_LIBRARY_PATH :../dependencies/sky130_am_ip__ldo_01v8/xschem
 append XSCHEM_LIBRARY_PATH :../dependencies/sky130_ef_ip__rc_osc_500k/xschem
-append XSCHEM_LIBRARY_PATH :../dependencies/sky130_sw_ip__bgrref_por/xschem
+append XSCHEM_LIBRARY_PATH :../dependencies/sky130_sw_ip__por/xschem
 append XSCHEM_LIBRARY_PATH :../dependencies/sky130_ef_ip__analog_switches/xschem
 append XSCHEM_LIBRARY_PATH :../dependencies/sky130_ef_ip__rdac3v_8bit/xschem
-append XSCHEM_LIBRARY_PATH :../dependencies/sky130_aa_ip__programmable_pll/Xschem/PLL_TOP_Schematics
+append XSCHEM_LIBRARY_PATH :../dependencies/sky130_pa_ip__instramp/xschem
 

@@ -42,9 +42,7 @@ endif
 
 # Get IP blocks used in this test chip
 
-# EFABLESS_URL=git@github.com:efabless
-# OPENCIRCUITDESIGN_URL=git@github.com:RTimothyEdwards
-EFABLESS_URL=https://github.com/efabless
+FOSSI_URL=https://github.com/fossi-foundation
 OPENCIRCUITDESIGN_URL=https://github.com/RTimothyEdwards
 # HSXO_IP=sky130_ht_ip__hsxo_cpz1
 # COMPARATOR_IP=sky130_ak_ip__comparator
@@ -59,16 +57,16 @@ RCOSC500K_IP=sky130_ef_ip__rc_osc_500k
 RHEOSTAT_IP=sky130_ef_ip__rheostat_8bit
 BIASGEN_IP=sky130_ef_ip__biasgen
 SWITCH_IP=sky130_ef_ip__analog_switches
-POR_IP=sky130_sw_ip__bgrref_por
+POR_IP=sky130_sw_ip__por
 ULPCOMP_IP=sky130_icrg_ip__ulpcomp
 MOSREF_IP=sky130_ak_ip__cmos_vref
 LDO_IP=sky130_am_ip__ldo_01v8
-SIGMADELTA_IP=sky130_iic_ip__audiodac_v1
+SIGMADELTA_IP=sky130_iic_ip__audiodac_lite
 RDAC_IP=sky130_ef_ip__rdac3v_8bit
 CCOMP_IP=sky130_ef_ip__ccomp3v
 SAMPLEHOLD_IP=sky130_ef_ip__samplehold
 CDAC_IP=sky130_ef_ip__cdac3v_12bit
-PLL_IP=sky130_aa_ip__programmable_pll
+INSTRAMP_IP=sky130_pa_ip__instramp
 
 .PHONY: get_ip_blocks
 get_ip_blocks: check_dependencies
@@ -119,8 +117,8 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(ULPCOMP_IP)" ]; then \
 		echo "Creating $(ULPCOMP_IP) repository" ; \
-		git clone --depth=1 --branch=main \
-			$(EFABLESS_URL)/$(ULPCOMP_IP) \
+		git clone --depth=1 \
+			$(FOSSI_URL)/$(ULPCOMP_IP) \
 			$(IP_ROOT)/$(ULPCOMP_IP) ; \
 	else \
 		echo "Updating $(ULPCOMP_IP) repository" ; \
@@ -128,8 +126,8 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(LDO_IP)" ]; then \
 		echo "Creating $(LDO_IP) repository" ; \
-		git clone --depth=1 --branch=tapeout_ci2406 \
-			$(EFABLESS_URL)/$(LDO_IP) \
+		git clone --depth=1 \
+			$(FOSSI_URL)/$(LDO_IP) \
 			$(IP_ROOT)/$(LDO_IP) ; \
 	else \
 		echo "Updating $(LDO_IP) repository" ; \
@@ -137,8 +135,8 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(MOSREF_IP)" ]; then \
 		echo "Creating $(MOSREF_IP) repository" ; \
-		git clone --depth=1 --branch=tapeout_ci2406 \
-			$(EFABLESS_URL)/$(MOSREF_IP) \
+		git clone --depth=1 \
+			$(FOSSI_URL)/$(MOSREF_IP) \
 			$(IP_ROOT)/$(MOSREF_IP) ; \
 	else \
 		echo "Updating $(MOSREF_IP) repository" ; \
@@ -146,8 +144,8 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(POR_IP)" ]; then \
 		echo "Creating $(POR_IP) repository" ; \
-		git clone --depth=1 --branch=tapeout_ci2406 \
-			$(EFABLESS_URL)/$(POR_IP) \
+		git clone --depth=1 \
+			$(FOSSI_URL)/$(POR_IP) \
 			$(IP_ROOT)/$(POR_IP) ; \
 	else \
 		echo "Updating $(POR_IP) repository" ; \
@@ -155,8 +153,8 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(SIGMADELTA_IP)" ]; then \
 		echo "Creating $(SIGMADELTA_IP) repository" ; \
-		git clone --depth=1 --branch=main \
-			$(EFABLESS_URL)/$(SIGMADELTA_IP) \
+		git clone --depth=1 \
+			$(FOSSI_URL)/$(SIGMADELTA_IP) \
 			$(IP_ROOT)/$(SIGMADELTA_IP) ; \
 	else \
 		echo "Updating $(SIGMADELTA_IP) repository" ; \
@@ -165,7 +163,7 @@ get_ip_blocks: check_dependencies
 	@if [ ! -d "$(IP_ROOT)/$(RDAC_IP)" ]; then \
 		echo "Creating $(RDAC_IP) repository" ; \
 		git clone --depth=1 \
-			$(OPENCIRCUITDESIGN_URL)/$(RDAC_IP) \
+			$(FOSSI_URL)/$(RDAC_IP) \
 			$(IP_ROOT)/$(RDAC_IP) ; \
 		( cd $(IP_ROOT)/$(RDAC_IP) ; \
 			git submodule update --init ) ; \
@@ -176,8 +174,8 @@ get_ip_blocks: check_dependencies
 	fi
 	@if [ ! -d "$(IP_ROOT)/$(CCOMP_IP)" ]; then \
 		echo "Creating $(CCOMP_IP) repository" ; \
-		git clone --depth=1 --branch=main \
-			$(OPENCIRCUITDESIGN_URL)/$(CCOMP_IP) \
+		git clone --depth=1 \
+			$(FOSSI_URL)/$(CCOMP_IP) \
 			$(IP_ROOT)/$(CCOMP_IP) ; \
 	else \
 		echo "Updating $(CCOMP_IP) repository" ; \
@@ -186,7 +184,7 @@ get_ip_blocks: check_dependencies
 	@if [ ! -d "$(IP_ROOT)/$(SAMPLEHOLD_IP)" ]; then \
 		echo "Creating $(SAMPLEHOLD_IP) repository" ; \
 		git clone --depth=1 \
-			$(OPENCIRCUITDESIGN_URL)/$(SAMPLEHOLD_IP) \
+			$(FOSSI_URL)/$(SAMPLEHOLD_IP) \
 			$(IP_ROOT)/$(SAMPLEHOLD_IP) ; \
 	else \
 		echo "Updating $(SAMPLEHOLD_IP) repository" ; \
@@ -195,24 +193,21 @@ get_ip_blocks: check_dependencies
 	@if [ ! -d "$(IP_ROOT)/$(CDAC_IP)" ]; then \
 		echo "Creating $(CDAC_IP) repository" ; \
 		git clone \
-			$(OPENCIRCUITDESIGN_URL)/$(CDAC_IP) \
+			$(FOSSI_URL)/$(CDAC_IP) \
 			$(IP_ROOT)/$(CDAC_IP) ; \
-		( cd $(IP_ROOT)/$(CDAC_IP) ; \
-			git checkout 06a2cbf18c3e42be18f723740898f3e2fa98e81f ; \
-			git submodule update --init ) ; \
 	else \
 		echo "Updating $(CDAC_IP) repository" ; \
 		( cd $(IP_ROOT)/$(CDAC_IP) ; git pull ; \
 			git submodule update ) ; \
 	fi
-	@if [ ! -d "$(IP_ROOT)/$(PLL_IP)" ]; then \
-		echo "Creating $(PLL_IP) repository" ; \
+	@if [ ! -d "$(IP_ROOT)/$(INSTRAMP_IP)" ]; then \
+		echo "Creating $(INSTRAMP_IP) repository" ; \
 		git clone --depth=1 \
-			$(EFABLESS_URL)/$(PLL_IP) \
-			$(IP_ROOT)/$(PLL_IP) ; \
+			$(FOSSI_URL)/$(INSTRAMP_IP) \
+			$(IP_ROOT)/$(INSTRAMP_IP) ; \
 	else \
-		echo "Updating $(PLL_IP) repository" ; \
-		( cd $(IP_ROOT)/$(PLL_IP) ; git pull ) ; \
+		echo "Updating $(INSTRAMP_IP) repository" ; \
+		( cd $(IP_ROOT)/$(INSTRAMP_IP) ; git pull ) ; \
 	fi
 
 # Include Caravel Makefile Targets

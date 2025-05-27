@@ -39,10 +39,9 @@ The projects on this tapeout and their source URLs are as follows:
 		Alexandre Menu
 
 	5.	Programmable PLL
-		sky130_aa_ip__programmable_pll
-		https://github.com/efabless/sky130_aa_ip__programmable_pll (forked)
-		https://github.com/Azeem-Abbas/Sky130_ef_ip__Programmable_PLL
-		Hafiz Azeem Abbas and team
+		The programmable PLL was deemed to be unusable as it was unable
+		to pass LVS, the layout is far too large for the available
+		area, and there were many issues with the quality of the layout.
 
 	6.	Audio sigma-delta ADC output driver
 		sky130_iic_ip__audiodac_v1
@@ -120,7 +119,12 @@ connections of the GPIO.  Each GPIO will need to be configured for
 digital input, digital output, or analog operation by the program running
 the test.  Because the number of digital outputs exceeds the 128-bit
 width of the logic analyzer, both "la_data_in" and "la_oenb" lines (which
-are effectively just additional output bits) have been used.
+are effectively just additional output bits) have been used.  But note
+that for each index, the "la_oenb" pin, when set to zero, forces the
+corresponding "la_data_in" line to zero, so it is important to make
+sure that no single IP block is controlled by both "la_oenb" and
+"la_data_in" of the same index, or else some configuration settings will
+be impossible to reach.
 
 Unlike the first test chip, this one has a standardized set of
 multiplexers on the GPIO analog pins, allowing each GPIO pin to access
@@ -149,7 +153,7 @@ perimeter.
 
 8-bit IDAC
 (Tim Edwards)
-Enable:	la_oenb[35]
+Enable:	la_oenb[69]
 Bias:   Internally self-biased when Reference select = 0
 Bias:	gpio_analog[17] (pin GPIO 24) set externally to 1.2V nominal
 	when Reference select = 1
@@ -160,32 +164,32 @@ Power supply monitor:  (none)
 Power supply enable: la_data_in[47]
 Digital input:
 	8-bit value vector is:
-		la_data_in[31], la_oenb[31], la_data_in[32], la_oenb[32],
-		la_data_in[33], la_oenb[33], la_data_in[34], la_oenb[34],
+		la_data_in[31], la_oenb[65], la_data_in[32], la_oenb[66],
+		la_data_in[33], la_oenb[67], la_data_in[34], la_oenb[68],
 Analog output:
 	source out = gpio_noesd[7] (pin GPIO 14) when
 		la_data_in[18] = 0 (no ground shunt)
-		la_oeb[18] = 1 (connect channel)
+		la_oenb[39] = 1 (connect channel)
 		la_data_in[19] = 1 (ground shunt on other channel)
-		la_oeb[19] = 0 (disconnect other channel)
+		la_oenb[40] = 0 (disconnect other channel)
 	sink out = gpio_noesd[8] (pin GPIO 15) when
 		la_data_in[16] = 0 (no ground shunt)
-		la_oeb[16] = 1 (connect channel)
+		la_oenb[37] = 1 (connect channel)
 		la_data_in[17] = 1 (ground shunt on other channel)
-		la_oeb[17] = 0 (disconnect other channel)
+		la_oenb[38] = 0 (disconnect other channel)
 Analog input:
 	IDAC reference trim: gpio_noesd[10] (pin GPIO 17) when 
 		la_data_in[12] = 0 (no ground shunt)
-		la_oeb[12] = 1 (connect channel)
+		la_oenb[33] = 1 (connect channel)
 		la_data_in[13] = 1 (ground shunt on other channel)
-		la_oeb[13] = 0 (disconnect other channel)
+		la_oenb[34] = 0 (disconnect other channel)
 
 ---
 
 LDO
 (Alexandre Menu)
 
-Enable:	la_oenb[30]
+Enable:	la_oenb[64]
 Bias:   Internally self-biased when Reference select = 0
 Bias:	gpio_analog[17] (pin GPIO 24) set externally to 1.2V nominal
 	when Reference select = 1
@@ -197,42 +201,42 @@ Power supply enable: la_data_in[46]
 Analog output:
 	voltage out = gpio_noesd[9] (pin GPIO 16) when
 		la_data_in[14] = 0 (no ground shunt)
-		la_oeb[14] = 1 (connect channel)
+		la_oenb[35] = 1 (connect channel)
 		la_data_in[15] = 1 (ground shunt on other channel)
-		la_oeb[15] = 0 (disconnect other channel)
+		la_oenb[36] = 0 (disconnect other channel)
 
 ---
 
 MOSFET voltage reference
 (Adan Kvitschal)
 
-Enable:	la_oenb[27]
+Enable:	la_oenb[61]
 Upstream analog power supply: vccd2/vssd2 (note this is a 1.8V supply)
 Upstream digital power supply: vccd2/vssd2
 Power supply monitor:  io_analog[9] (pin GPIO 23)
 Power supply enable: la_data_in[45]
-Trim: la_data_in[28], la_oenb[28], la_data_in[29], la_oenb[29]
+Trim: la_data_in[28], la_oenb[62], la_data_in[29], la_oenb[63]
 Analog outputs:
 	vbg reference out = gpio_noesd[8] (pin GPIO 15) when
 		la_data_in[17] = 0 (no ground shunt)
-		la_oeb[17] = 1 (connect channel)
+		la_oenb[38] = 1 (connect channel)
 		la_data_in[16] = 1 (ground shunt on other channel)
-		la_oeb[16] = 0 (disconnect other channel)
-	vbgsc reference out = gpio_noesd[9] (pin GPIO 16) when
+		la_oenb[37] = 0 (disconnect other channel)
+	vbgsc reference out = gpio_noesd[11] (pin GPIO 18) when
 		la_data_in[15] = 0 (no ground shunt)
-		la_oeb[15] = 1 (connect channel)
+		la_oenb[36] = 1 (connect channel)
 		la_data_in[14] = 1 (ground shunt on other channel)
-		la_oeb[14] = 0 (disconnect other channel)
-	vbgtg reference out = gpio_noesd[10] (pin GPIO 17) when
+		la_oenb[35] = 0 (disconnect other channel)
+	vbgtg reference out = gpio_noesd[12] (pin GPIO 19) when
 		la_data_in[13] = 0 (no ground shunt)
-		la_oeb[13] = 1 (connect channel)
+		la_oenb[34] = 1 (connect channel)
 		la_data_in[12] = 1 (ground shunt on other channel)
-		la_oeb[12] = 0 (disconnect other channel)
-	vptat reference out = gpio_noesd[11] (pin GPIO 18) when
+		la_oenb[33] = 0 (disconnect other channel)
+	vptat reference out = gpio_noesd[7] (pin GPIO 14) when
 		la_data_in[19] = 0 (no ground shunt)
-		la_oeb[19] = 1 (connect channel)
+		la_oenb[40] = 1 (connect channel)
 		la_data_in[18] = 1 (ground shunt on other channel)
-		la_oeb[18] = 0 (disconnect other channel)
+		la_oenb[39] = 0 (disconnect other channel)
 
 ---
 
@@ -249,14 +253,14 @@ Analog output:
 Analog inputs:
 	in positive = gpio_noesd[11] (pin GPIO 18) when
 		la_data_in[10] = 0 (no ground shunt)
-		la_oeb[10] = 1 (connect channel)
+		la_oenb[31] = 1 (connect channel)
 		la_data_in[11] = 1 (ground shunt on other channel)
-		la_oeb[11] = 0 (disconnect other channel)
+		la_oenb[32] = 0 (disconnect other channel)
 	in negative = gpio_noesd[12] (pin GPIO 19) when
 		la_data_in[8] = 0 (no ground shunt)
-		la_oeb[8] = 1 (connect channel)
+		la_oenb[29] = 1 (connect channel)
 		la_data_in[9] = 1 (ground shunt on other channel)
-		la_oeb[9] = 0 (disconnect other channel)
+		la_oenb[30] = 0 (disconnect other channel)
 
 ---
 
@@ -269,28 +273,38 @@ Upstream digital power supply: vccd2/vssd2
 Power supply monitor:  io_analog[7] (pin GPIO 21)
 Power supply enable: la_data_in[43]
 Analog inputs:
-	reference high = gpio_noesd[11] (pin GPIO 18) when
-		la_data_in[11] = 0 (no ground shunt)
-		la_oeb[11] = 1 (connect channel)
-		la_data_in[10] = 1 (ground shunt on other channel)
-		la_oeb[10] = 0 (disconnect other channel)
-	reference low = gpio_noesd[12] (pin GPIO 19) when
-		la_data_in[9] = 0 (no ground shunt)
-		la_oeb[9] = 1 (connect channel)
-		la_data_in[8] = 1 (ground shunt on other channel)
-		la_oeb[8] = 0 (disconnect other channel)
+	reference high = gpio_noesd[10] (pin GPIO 17) when
+		la_data_in[11] = 0 (no ground shunt) FIXME
+		la_oenb[32] = 1 (connect channel) FIXME
+		la_data_in[10] = 1 (ground shunt on other channel) FIXME
+		la_oenb[31] = 0 (disconnect other channel) FIXME
+	reference low = gpio_noesd[9] (pin GPIO 16) when
+		la_data_in[9] = 0 (no ground shunt) FIXME
+		la_oenb[30] = 1 (connect channel) FIXME
+		la_data_in[8] = 1 (ground shunt on other channel) FIXME
+		la_oenb[29] = 0 (disconnect other channel) FIXME
+	Vref (trim) = reference voltage = gpio_analog[17] (pin GPIO 24)
+		set externally to 0V nominal
+	VCM (common mode) = ccomp vinn = gpio_noesd[12] (pin GPIO 19) when
+		la_oenb[105] = 0 (no ground shunt)
+		la_data_in[125] = 1 (connect channel)
+		la_oenb[104] = 1 (ground shunt on other channel)
+		la_data_in[124] = 0 (disconnect other channel)
+	Vin (input for ADC use) = gpio_analog[13] when
+		(TBD)
 Analog output:
-	CDAC out = gpio_noesd[13] (pin GPIO 20) when
+	CDAC out = ccomp vinp = gpio_noesd[11] (pin GPIO 18) when
 		la_data_in[7] = 0 (no ground shunt)
-		la_oeb[7] = 1 (connect channel)
+		la_oenb[28] = 1 (connect channel)
 		la_data_in[6] = 1 (ground shunt on other channel)
-		la_oeb[6] = 0 (disconnect other channel)
+		la_oenb[27] = 0 (disconnect other channel)
 Digital inputs:
-	reset = la_oenb[26]
+	reset = la_oenb[60]
+	hold = la_data_in[90]
 	12-bit value =
-		la_oenb[20], la_data_in[21], la_oenb[21], la_data_in[22],
-		la_oenb[22], la_data_in[23], la_oenb[23], la_data_in[24],
-		la_oenb[24], la_data_in[25], la_oenb[25], la_data_in[26]
+		la_oenb[54], la_data_in[21], la_oenb[55], la_data_in[22],
+		la_oenb[56], la_data_in[23], la_oenb[57], la_data_in[24],
+		la_oenb[58], la_data_in[25], la_oenb[59], la_data_in[26]
 
 ---
 
@@ -320,21 +334,21 @@ Digital inputs:
 Analog outputs:
 	positive: gpio_noesd[16] (pin GPIO 23) when
 		la_data_in[1] = 0 (no ground shunt)
-		la_oeb[1] = 1 (connect channel)
+		la_oenb[22] = 1 (connect channel)
 		la_data_in[0] = 1 (ground shunt on other channel)
-		la_oeb[0] = 0 (disconnect other channel)
+		la_oenb[21] = 0 (disconnect other channel)
 	negative: gpio_noesd[15] (pin GPIO 22) when
 		la_data_in[3] = 0 (no ground shunt)
-		la_oeb[3] = 1 (connect channel)
+		la_oenb[24] = 1 (connect channel)
 		la_data_in[2] = 1 (ground shunt on other channel)
-		la_oeb[2] = 0 (disconnect other channel)
+		la_oenb[23] = 0 (disconnect other channel)
 
 ---
 
 8-bit RDAC
 (Tim Edwards)
 
-Enable:	la_oenb[115]
+Enable:	la_oenb[95]
 Upstream analog power supply: vdda1/vdda1
 Upstream digital power supply: vccd1/vssd1
 Power supply monitor:  io_analog[0] (pin GPIO 14)
@@ -342,25 +356,25 @@ Power supply enable: la_data_in[54]
 
 Analog inputs:
 	reference high = gpio_noesd[3] (pin GPIO 18) when
-		la_oeb[123] = 0 (no ground shunt)
+		la_oenb[103] = 0 (no ground shunt)
 		la_data_in[123] = 1 (connect channel)
-		la_oeb[122] = 1 (ground shunt on other channel)
+		la_oenb[102] = 1 (ground shunt on other channel)
 		la_data_in[122] = 0 (disconnect other channel)
 	reference low = gpio_noesd[1] (pin GPIO 19) when
-		la_oeb[125] = 0 (no ground shunt)
+		la_oenb[105] = 0 (no ground shunt)
 		la_data_in[125] = 1 (connect channel)
-		la_oeb[124] = 1 (ground shunt on other channel)
+		la_oenb[104] = 1 (ground shunt on other channel)
 		la_data_in[124] = 0 (disconnect other channel)
 
 Analog output:
 	RDAC out = gpio_noesd[0] (pin GPIO 16) when
-		la_oeb[126] = 0 (no ground shunt)
+		la_oenb[106] = 0 (no ground shunt)
 		la_data_in[126] = 1 (connect channel)
-		la_oeb[127] = 1 (ground shunt on other channel)
+		la_oenb[107] = 1 (ground shunt on other channel)
 		la_data_in[127] = 0 (disconnect other channel)
 Digital input:
-	la_data_in[115], la_oenb[114], la_data_in[114], la_oenb[113],
-	la_data_in[113], la_oenb[112], la_data_in[112], la_oenb[111]
+	la_data_in[115], la_oenb[94], la_data_in[114], la_oenb[93],
+	la_data_in[113], la_oenb[92], la_data_in[112], la_oenb[91]
 
 ---
 
@@ -375,25 +389,25 @@ Power supply enable: la_data_in[53]
 
 Analog inputs:
 	reference high = gpio_noesd[3] (pin GPIO 18) when
-		la_oeb[122] = 0 (no ground shunt)
+		la_oenb[102] = 0 (no ground shunt)
 		la_data_in[122] = 1 (connect channel)
-		la_oeb[123] = 1 (ground shunt on other channel)
+		la_oenb[103] = 1 (ground shunt on other channel)
 		la_data_in[123] = 0 (disconnect other channel)
 	reference low = gpio_noesd[1] (pin GPIO 19) when
-		la_oeb[124] = 0 (no ground shunt)
+		la_oenb[104] = 0 (no ground shunt)
 		la_data_in[124] = 1 (connect channel)
-		la_oeb[125] = 1 (ground shunt on other channel)
+		la_oenb[105] = 1 (ground shunt on other channel)
 		la_data_in[125] = 0 (disconnect other channel)
 
 Analog output:
 	RDAC out = gpio_noesd[0] (pin GPIO 16) when
-		la_oeb[127] = 0 (no ground shunt)
+		la_oenb[107] = 0 (no ground shunt)
 		la_data_in[127] = 1 (connect channel)
-		la_oeb[126] = 1 (ground shunt on other channel)
+		la_oenb[106] = 1 (ground shunt on other channel)
 		la_data_in[126] = 0 (disconnect other channel)
 Digital input:
-	la_data_in[111], la_oenb[110], la_data_in[110], la_oenb[109],
-	la_data_in[109], la_oenb[108], la_data_in[108], la_oenb[107]
+	la_data_in[111], la_oenb[90], la_data_in[110], la_oenb[89],
+	la_data_in[109], la_oenb[88], la_data_in[108], la_oenb[87]
 
 ---
 
@@ -410,62 +424,79 @@ Digital outputs:
 	por:	io_out[7] (GPIO 7)
 	porb:	io_out[8] (GPIO 8)
 	porb_h:	gpio_noesd[5] (pin GPIO 21) when
-		la_oeb[118] = 0 (no ground shunt)
+		la_oenb[98] = 0 (no ground shunt)
 		la_data_in[118] = 1 (connect channel)
-		la_oeb[119] = 1 (ground shunt on other channel)
+		la_oenb[99] = 1 (ground shunt on other channel)
 		la_data_in[119] = 0 (disconnect other channel)
 
 ---
 
 Programmable PLL
-(Azeem Abbas)
+
+These control bits are unused unless assigned to something else.
 
 Upstream analog power supply: vccd1/vccd1 (note this is a 1.8V supply)
 Upstream digital power supply: N/A (single supply)
 Power supply monitor:  N/A
 Power supply enable: la_data_in[51]
 Analog I/O:
-	lowpass filter = gpio_noesd[4] (pin GPIO 11) when
-		la_oeb[120] = 0 (no ground shunt)
+	gpio_noesd[4] (pin GPIO 11) when
+		la_oenb[100] = 0 (no ground shunt)
 		la_data_in[120] = 1 (connect channel)
-		la_oeb[121] = 1 (ground shunt on other channel)
+		la_oenb[101] = 1 (ground shunt on other channel)
 		la_data_in[121] = 0 (disconnect other channel)
-	fin = gpio_noesd[13] (pin GPIO 20) when
+	gpio_noesd[13] (pin GPIO 20) when
 		la_data_in[6] = 0 (no ground shunt)
-		la_oeb[6] = 1 (connect channel)
+		la_oenb[27] = 1 (connect channel)
 		la_data_in[7] = 1 (ground shunt on other channel)
-		la_oeb[7] = 0 (disconnect other channel)
-	ibias = gpio_noesd[14] (pin GPIO 21) when
+		la_oenb[28] = 0 (disconnect other channel)
+	gpio_noesd[14] (pin GPIO 21) when
 		la_data_in[5] = 0 (no ground shunt)
-		la_oeb[5] = 1 (connect channel)
+		la_oenb[26] = 1 (connect channel)
 		la_data_in[4] = 1 (ground shunt on other channel)
-		la_oeb[4] = 0 (disconnect other channel)
-	vctrl_in = gpio_noesd[15] (pin GPIO 22) when
+		la_oenb[25] = 0 (disconnect other channel)
+	gpio_noesd[15] (pin GPIO 22) when
 		la_data_in[2] = 0 (no ground shunt)
-		la_oeb[2] = 1 (connect channel)
+		la_oenb[23] = 1 (connect channel)
 		la_data_in[3] = 1 (ground shunt on other channel)
-		la_oeb[3] = 0 (disconnect other channel)
+		la_oenb[24] = 0 (disconnect other channel)
 Digital inputs:
-	S7-S1:  la_data_in[100], la_data_in[103], la_oenb[100], la_data_in[101],
-		la_oenb[101], la_data_in[102], la_data_in[104]
-	D19-D12: la_data_in[92], la_oenb[92], la_data_in[93], la_oenb[93],
-		la_data_in[94], la_oenb[94], la_data_in[95], la_oenb[95]
-	D10-D0: la_data_in[106], la_oenb[105], la_data_in[105], la_oenb[104],
-		la_data_in[99], la_oenb[98], la_data_in[98], la_oenb[97],
-		la_data_in[97], la_oenb[96], la_data_in[96]
-Digital outputs:
-	prescaler: io_out[20] (GPIO 31)
-	up_out: io_out[11] (GPIO 11)
-	dn_out: io_out[12] (GPIO 12)
-	div_out: io_out[15] (GPIO 26)
-	out: io_out[16] (GPIO 27)
-	outb: io_out[14] (GPIO 25)
-	out_usb: io_out[19] (GPIO 30)
-	out_core: io_out[18] (GPIO 29)
+	la_data_in[100]
+	la_data_in[103]
+	la_oenb[80]
+	la_data_in[101],
+	la_oenb[81]
+	la_data_in[102]
+	la_data_in[104]
+	la_data_in[92]
+	la_oenb[72]
+	la_data_in[93]
+	la_oenb[73],
+	la_data_in[94]
+	la_oenb[74]
+	la_data_in[95]
+	la_oenb[75]
+	la_data_in[106]
+	la_oenb[85]
+	la_data_in[105]
+	la_oenb[84],
+	la_data_in[99]
+	la_oenb[78]
+	la_data_in[98]
+	la_oenb[77]
+	la_data_in[97]
+	la_oenb[76]
+	la_data_in[96]
 
-Warning: system runs at 1.8V supply but analog pins are not limited;
-make sure applied voltage does not exceed the 1.8V rail on lowpass
-filter, fin, ibias, and vctrl_in.
+Digital outputs:
+	io_out[20] (GPIO 31)
+	io_out[11] (GPIO 11)
+	io_out[12] (GPIO 12)
+	io_out[15] (GPIO 26)
+	io_out[16] (GPIO 27)
+	io_out[14] (GPIO 25)
+	io_out[19] (GPIO 30)
+	io_out[18] (GPIO 29)
 
 ---
 
@@ -481,16 +512,16 @@ Analog output:
 	io_out[10] (pin GPIO 10)
 Analog inputs:
 	in positive = gpio_noesd[4] (pin GPIO 11) when
-		la_oeb[121] = 0 (no ground shunt)
+		la_oenb[101] = 0 (no ground shunt)
 		la_data_in[121] = 1 (connect channel)
-		la_oeb[120] = 1 (ground shunt on other channel)
+		la_oenb[100] = 1 (ground shunt on other channel)
 		la_data_in[120] = 0 (disconnect other channel)
 	in negative = gpio_noesd[6] (pin GPIO 13) when
-		la_oeb[116] = 0 (no ground shunt)
+		la_oenb[96] = 0 (no ground shunt)
 		la_data_in[116] = 1 (connect channel)
-		la_oeb[117] = 1 (ground shunt on other channel)
+		la_oenb[97] = 1 (ground shunt on other channel)
 		la_data_in[117] = 0 (disconnect other channel)
-Digital clock: la_oenb[106]
+Digital clock: la_oenb[86]
 
 ---
 
@@ -504,24 +535,24 @@ Power supply monitor:  N/A
 Power supply enable: la_data_in[50]
 Analog input:
 	sample in = gpio_noesd[5] (pin GPIO 12) when
-		la_oeb[119] = 0 (no ground shunt)
+		la_oenb[99] = 0 (no ground shunt)
 		la_data_in[119] = 1 (connect channel)
-		la_oeb[118] = 1 (ground shunt on other channel)
+		la_oenb[98] = 1 (ground shunt on other channel)
 		la_data_in[118] = 0 (disconnect other channel)
 Analog output:
 	sample out = gpio_noesd[6] (pin GPIO 13) when
-		la_oeb[117] = 0 (no ground shunt)
+		la_oenb[97] = 0 (no ground shunt)
 		la_data_in[117] = 1 (connect channel)
-		la_oeb[116] = 1 (ground shunt on other channel)
+		la_oenb[96] = 1 (ground shunt on other channel)
 		la_data_in[116] = 0 (disconnect other channel)
-Digital hold: la_oenb[91] 
+Digital hold: la_oenb[71] 
 
 ---
 
 500MHz R-C oscillator
 (Tim Edwards)
 
-Enable:	la_oenb[90]
+Enable:	la_oenb[70]
 Upstream analog power supply: vdda1/vssa1
 Upstream digital power supply: vccd1/vssd1
 Power supply monitor:  io_analog[4] (pin GPIO 18)
@@ -540,14 +571,14 @@ ground isolation is enabled or disabled.
 Analog I/O:
 	loopback 1 = gpio_noesd[14] (pin GPIO 25) when
 		la_data_in[5] = 0 (no ground shunt)
-		la_oeb[5] = 1 (connect channel)
+		la_oenb[26] = 1 (connect channel)
 		la_data_in[4] = 1 (ground shunt on other channel)
-		la_oeb[4] = 0 (disconnect other channel)
+		la_oenb[25] = 0 (disconnect other channel)
 	loopback 2 = gpio_noesd[16] (pin GPIO 27) when
 		la_data_in[0] = 0 (no ground shunt)
-		la_oeb[0] = 1 (connect channel)
+		la_oenb[21] = 1 (connect channel)
 		la_data_in[1] = 1 (ground shunt on other channel)
-		la_oeb[1] = 0 (disconnect other channel)
+		la_oenb[22] = 0 (disconnect other channel)
 
 ---
 
