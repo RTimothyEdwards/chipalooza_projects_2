@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1732313942
+timestamp 1750264142
 << nwell >>
 rect 708 44 996 398
 << psubdiff >>
@@ -200,119 +200,119 @@ rect 5149 -5557 5485 -4784
 rect 5149 -5757 5486 -5557
 rect 660 -6074 862 -5874
 use iso_switch_via  iso_switch_via_0 ../dependencies/sky130_ef_ip__analog_switches/mag
-timestamp 1719085816
+timestamp 1747666339
 transform 1 0 2545 0 -1 -1827
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_1
-timestamp 1719085816
+timestamp 1747666339
 transform 1 0 2428 0 -1 -2080
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_2
-timestamp 1719085816
+timestamp 1747666339
 transform 1 0 2428 0 -1 -1828
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_3
-timestamp 1719085816
+timestamp 1747666339
 transform 1 0 2545 0 -1 -2080
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_4
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 6032 1 0 -1338
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_5
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 5325 1 0 390
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_6
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 7706 1 0 -648
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_7
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 6290 1 0 -674
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_8
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 8002 1 0 -1257
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_9
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 6269 1 0 -1338
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_10
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 4931 1 0 -1338
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_11
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 7701 1 0 -1129
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_12
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 6509 1 0 -1337
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_13
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 4955 1 0 83
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_14
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 5882 1 0 -684
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_15
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 5872 1 0 -824
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_16
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 6292 1 0 -814
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_17
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 7228 1 0 254
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_18
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 7228 1 0 42
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_43
-timestamp 1719085816
+timestamp 1747666339
 transform 0 1 4047 1 0 -1257
 box 652 -2914 724 -2722
 use iso_switch_via  iso_switch_via_45
-timestamp 1719085816
+timestamp 1747666339
 transform 0 -1 -1345 -1 0 -213
 box 652 -2914 724 -2722
 use isolated_switch_4  isolated_switch_4_0 ../dependencies/sky130_ef_ip__analog_switches/mag
-timestamp 1719257891
+timestamp 1750264142
 transform 1 0 87 0 1 -2348
 box 573 -3962 5397 1570
 use sky130_fd_sc_hvl__diode_2  sky130_fd_sc_hvl__diode_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hvl/mag
-timestamp 1730993592
+timestamp 1750210935
 transform 1 0 5286 0 1 -333
 box -66 -43 258 897
 use sky130_fd_sc_hvl__diode_2  sky130_fd_sc_hvl__diode_2_1
-timestamp 1730993592
+timestamp 1750210935
 transform 1 0 870 0 1 -333
 box -66 -43 258 897
 use sky130_fd_sc_hvl__fill_1  sky130_fd_sc_hvl__fill_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hvl/mag
-timestamp 1730993592
+timestamp 1750210935
 transform 1 0 5478 0 1 -333
 box -66 -43 162 897
 use sky130_fd_sc_hvl__inv_1  sky130_fd_sc_hvl__inv_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hvl/mag
-timestamp 1730993592
+timestamp 1750210935
 transform 1 0 774 0 -1 1295
 box -66 -43 354 897
 use sky130_fd_sc_hvl__inv_1  sky130_fd_sc_hvl__inv_1_1
-timestamp 1730993592
+timestamp 1750210935
 transform 1 0 5286 0 -1 1295
 box -66 -43 354 897
 use sky130_fd_sc_hvl__lsbuflv2hv_1  x2 $PDKPATH/libs.ref/sky130_fd_sc_hvl/mag
-timestamp 1730993592
+timestamp 1750210935
 transform -1 0 5286 0 1 -333
 box -66 -43 2178 1671
 use sky130_fd_sc_hvl__lsbuflv2hv_1  x3
-timestamp 1730993592
+timestamp 1750210935
 transform 1 0 1062 0 1 -333
 box -66 -43 2178 1671
 << labels >>
@@ -332,4 +332,6 @@ flabel metal1 666 -493 866 -384 0 FreeSans 256 0 0 0 on
 port 1 nsew
 flabel metal1 666 -195 836 -97 0 FreeSans 256 0 0 0 off
 port 7 nsew
+<< properties >>
+string MASKHINTS_HVI 5186 -490 5640 1338 675 -490 1129 1338
 << end >>
