@@ -117,7 +117,7 @@ void config_io() {
 
 void main()
 {
-    unit16_t value;
+    uint16_t value;
 
     reg_gpio_mode1 = 1;
     reg_gpio_mode0 = 0;

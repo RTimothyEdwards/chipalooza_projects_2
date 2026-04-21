@@ -120,7 +120,7 @@ void config_io() {
 
 void main()
 {
-    unit8_t value;
+    uint8_t value;
 
     reg_gpio_mode1 = 1;
     reg_gpio_mode0 = 0;

@@ -29,6 +29,7 @@ void cdac_enable();
 void cdac_disable();
 void cdac_reset(uint8_t value);
 void cdac_hold(uint8_t value);
+void cdac_set_value(uint16_t value);
 
 /*----------------------------------------------------------------------*/
 /* CCOMP:  Comparator for ADC						*/
@@ -80,7 +81,7 @@ void por_disable();
 
 void sample_and_hold_enable();
 void sample_and_hold_disable();
-void sample_and_hold_cycle(unit16_t delay);
+void sample_and_hold_cycle(uint16_t delay);
 void sample_and_hold_set(uint8_t value);
 
 /*----------------------------------------------------------------------*/

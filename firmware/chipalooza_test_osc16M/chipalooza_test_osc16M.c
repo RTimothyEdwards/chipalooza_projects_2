@@ -3,7 +3,7 @@
 
 /*
  *-----------------------------------------------------------
- * chipalooza_test_osc16m.c:
+ * chipalooza_test_osc16M.c:
  *-----------------------------------------------------------
  * Written by Tim Edwards, Open Circuit Design
  * April 20, 2026
@@ -36,7 +36,7 @@
  * power supply and temperature.  Measure the startup
  * and shutdown times.
  *
- * Use osc16m_set_enable(1|0) to turn local enable on
+ * Use osc16M_set_enable(1|0) to turn local enable on
  * and off.
  */
 
@@ -127,7 +127,7 @@ void main()
     init_logic_analyzer();
 
     // Enable the power switch to the oscillator
-    osc15m_enable();
+    osc16M_enable();
 
     // That's all!  Now if the LED on the board is blinking,
     // GPIO 13 should be the output.

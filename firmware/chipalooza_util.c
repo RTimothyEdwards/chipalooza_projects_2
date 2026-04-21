@@ -125,20 +125,20 @@ void idac_set_value(uint8_t value)
 
     ovalue1 = reg_la0_data;
     ovalue1 &= ~IDAC_VALUE_7;
-    if ((uint32_t)value & 0x80) != 0) ovalue1 |= IDAC_VALUE_7;
+    if (((uint32_t)value & 0x80) != 0) ovalue1 |= IDAC_VALUE_7;
 
     ovalue2 = reg_la1_data;
     ovalue2 &= ~(IDAC_VALUE_5 | IDAC_VALUE_3 | IDAC_VALUE_1);
-    if ((uint32_t)value & 0x20) != 0) ovalue2 |= IDAC_VALUE_5;
-    if ((uint32_t)value & 0x08) != 0) ovalue2 |= IDAC_VALUE_3;
-    if ((uint32_t)value & 0x02) != 0) ovalue2 |= IDAC_VALUE_1;
+    if (((uint32_t)value & 0x20) != 0) ovalue2 |= IDAC_VALUE_5;
+    if (((uint32_t)value & 0x08) != 0) ovalue2 |= IDAC_VALUE_3;
+    if (((uint32_t)value & 0x02) != 0) ovalue2 |= IDAC_VALUE_1;
 
     ovalue3 = reg_la2_oenb;
     ovalue3 &= ~(IDAC_VALUE_6 | IDAC_VALUE_4 | IDAC_VALUE_2 | IDAC_VALUE_0);
-    if ((uint32_t)value & 0x40) != 0) ovalue3 |= IDAC_VALUE_6;
-    if ((uint32_t)value & 0x10) != 0) ovalue3 |= IDAC_VALUE_4;
-    if ((uint32_t)value & 0x04) != 0) ovalue3 |= IDAC_VALUE_2;
-    if ((uint32_t)value & 0x01) != 0) ovalue3 |= IDAC_VALUE_0;
+    if (((uint32_t)value & 0x40) != 0) ovalue3 |= IDAC_VALUE_6;
+    if (((uint32_t)value & 0x10) != 0) ovalue3 |= IDAC_VALUE_4;
+    if (((uint32_t)value & 0x04) != 0) ovalue3 |= IDAC_VALUE_2;
+    if (((uint32_t)value & 0x01) != 0) ovalue3 |= IDAC_VALUE_0;
 
     reg_la0_data = ovalue1;
     reg_la1_data = ovalue2;
@@ -150,8 +150,8 @@ void idac_ref_select(uint8_t value)
     uint32_t ovalue;
 
     ovalue = reg_la1_data;
-    ovalue1 &= ~IDAC_REF_SELECT;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= IDAC_REF_SELECT;
+    ovalue &= ~IDAC_REF_SELECT;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= IDAC_REF_SELECT;
 
     reg_la1_data = ovalue;
 }
@@ -214,12 +214,12 @@ void cdac_enable()
     /* Set value to zero */
     value = reg_la0_data;
     value &= ~(CDAC_VALUE_10 | CDAC_VALUE_8 | CDAC_VALUE_6 |
-		CDAC_VALUE_4 | CDAC_VALUE 2 | CDAC_VALUE 0);
+		CDAC_VALUE_4 | CDAC_VALUE_2 | CDAC_VALUE_0);
     reg_la0_data = value;
 
     value = reg_la1_oenb;
     value &= ~(CDAC_VALUE_11 | CDAC_VALUE_9 | CDAC_VALUE_7 |
-		CDAC_VALUE_5 | CDAC_VALUE 3 | CDAC_VALUE 1);
+		CDAC_VALUE_5 | CDAC_VALUE_3 | CDAC_VALUE_1);
     reg_la1_oenb = value;
 
     /* Set "hold" to zero */
@@ -278,12 +278,12 @@ void cdac_disable()
     /* Set value to zero */
     value = reg_la0_data;
     value &= ~(CDAC_VALUE_10 | CDAC_VALUE_8 | CDAC_VALUE_6 |
-		CDAC_VALUE_4 | CDAC_VALUE 2 | CDAC_VALUE 0);
+		CDAC_VALUE_4 | CDAC_VALUE_2 | CDAC_VALUE_0);
     reg_la0_data = value;
 
     value = reg_la1_oenb;
     value &= ~(CDAC_VALUE_11 | CDAC_VALUE_9 | CDAC_VALUE_7 |
-		CDAC_VALUE_5 | CDAC_VALUE 3 | CDAC_VALUE 1);
+		CDAC_VALUE_5 | CDAC_VALUE_3 | CDAC_VALUE_1);
     reg_la1_oenb = value;
 
     /* Power disable */
@@ -297,8 +297,8 @@ void cdac_reset(uint8_t value)
     uint32_t ovalue;
 
     ovalue = reg_la1_oenb;
-    ovalue1 &= ~CDAC_RESET;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= CDAC_RESET;
+    ovalue &= ~CDAC_RESET;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= CDAC_RESET;
     reg_la1_oenb = ovalue;
 }
 
@@ -307,9 +307,42 @@ void cdac_hold(uint8_t value)
     uint32_t ovalue;
 
     ovalue = reg_la2_data;
-    ovalue1 &= ~CDAC_HOLD;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= CDAC_HOLD;
+    ovalue &= ~CDAC_HOLD;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= CDAC_HOLD;
     reg_la2_data = ovalue;
+}
+
+void cdac_set_value(uint16_t value)
+{
+    uint32_t ovalue1, ovalue2;
+
+    /* The CDAC value is scrambled between reg_la1_oenb
+     * and reg_la0_data.  Because of this, the CDAC can only be changed
+     * in two instruction cycles, forcing a glitch in between.
+     */
+
+    ovalue1 = reg_la1_oenb;
+    ovalue1 &= ~(CDAC_VALUE_1 | CDAC_VALUE_3 | CDAC_VALUE_5 | CDAC_VALUE_7 |
+		CDAC_VALUE_9 | CDAC_VALUE_11);
+    if (((uint32_t)value & 0x0002) != 0) ovalue2 |= CDAC_VALUE_1;
+    if (((uint32_t)value & 0x0008) != 0) ovalue2 |= CDAC_VALUE_3;
+    if (((uint32_t)value & 0x0020) != 0) ovalue2 |= CDAC_VALUE_5;
+    if (((uint32_t)value & 0x0080) != 0) ovalue2 |= CDAC_VALUE_7;
+    if (((uint32_t)value & 0x0200) != 0) ovalue2 |= CDAC_VALUE_9;
+    if (((uint32_t)value & 0x0800) != 0) ovalue2 |= CDAC_VALUE_11;
+
+    ovalue2 = reg_la0_data;
+    ovalue2 &= ~(CDAC_VALUE_0 | CDAC_VALUE_2 | CDAC_VALUE_4 | CDAC_VALUE_6 |
+		CDAC_VALUE_8 | CDAC_VALUE_10);
+    if (((uint32_t)value & 0x0001) != 0) ovalue1 |= CDAC_VALUE_0;
+    if (((uint32_t)value & 0x0004) != 0) ovalue1 |= CDAC_VALUE_2;
+    if (((uint32_t)value & 0x0010) != 0) ovalue1 |= CDAC_VALUE_4;
+    if (((uint32_t)value & 0x0040) != 0) ovalue1 |= CDAC_VALUE_6;
+    if (((uint32_t)value & 0x0100) != 0) ovalue1 |= CDAC_VALUE_8;
+    if (((uint32_t)value & 0x0400) != 0) ovalue1 |= CDAC_VALUE_10;
+
+    reg_la1_oenb = ovalue1;
+    reg_la0_data = ovalue2;
 }
 
 /*----------------------------------------------------------------------*/
@@ -432,8 +465,8 @@ void ldo_ref_select(uint8_t value)
     uint32_t ovalue;
 
     ovalue = reg_la0_data;
-    ovalue1 &= ~LDO_REF_SELECT;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= LDO_REF_SELECT;
+    ovalue &= ~LDO_REF_SELECT;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= LDO_REF_SELECT;
 
     reg_la0_data = ovalue;
 }
@@ -478,7 +511,7 @@ void osc16M_set_enable(uint8_t value)
 
     ovalue = reg_la0_data;
     ovalue &= ~OSC16M_ENABLE;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= OSC16M_ENABLE;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= OSC16M_ENABLE;
     reg_la0_data = ovalue;
 }
 
@@ -573,13 +606,13 @@ void cmos_vref_set_trim(uint8_t value)
 
     ovalue1 = reg_la1_oenb;
     ovalue1 &= ~(VREF_TRIM_0 | VREF_TRIM_2);
-    if ((uint32_t)value & 0x01) != 0) ovalue1 |= VREF_TRIM_0;
-    if ((uint32_t)value & 0x03) != 0) ovalue1 |= VREF_TRIM_2;
+    if (((uint32_t)value & 0x01) != 0) ovalue1 |= VREF_TRIM_0;
+    if (((uint32_t)value & 0x03) != 0) ovalue1 |= VREF_TRIM_2;
 
     ovalue2 = reg_la0_data;
     ovalue2 &= ~(VREF_TRIM_1 | VREF_TRIM_3);
-    if ((uint32_t)value & 0x02) != 0) ovalue2 |= VREF_TRIM_1;
-    if ((uint32_t)value & 0x04) != 0) ovalue2 |= VREF_TRIM_3;
+    if (((uint32_t)value & 0x02) != 0) ovalue2 |= VREF_TRIM_1;
+    if (((uint32_t)value & 0x04) != 0) ovalue2 |= VREF_TRIM_3;
 
     reg_la1_oenb = ovalue1;
     reg_la0_data = ovalue2;
@@ -625,7 +658,7 @@ void osc500k_set_enable(uint8_t value)
 
     ovalue = reg_la2_oenb;
     ovalue &= ~OSC500K_ENABLE;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= OSC500K_ENABLE;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= OSC500K_ENABLE;
     reg_la2_oenb = ovalue;
 }
 
@@ -734,8 +767,9 @@ void sample_and_hold_disable()
     reg_la1_data = value;
 }
 	
-void sample_and_hold_cycle(unit16_t delay)
+void sample_and_hold_cycle(uint16_t delay)
 {
+    uint32_t value;
     uint16_t d;
 
     /* Toggle the hold (clear, then hold) */
@@ -756,7 +790,7 @@ void sample_and_hold_set(uint8_t value)
 
     ovalue = reg_la2_oenb;
     ovalue &= ~SAMPLE_HOLD;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= SAMPLE_HOLD;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= SAMPLE_HOLD;
     reg_la2_oenb = ovalue;
 }
 
@@ -825,6 +859,7 @@ void ulpcomp_disable()
 	
 void ulpcomp_clock_toggle(uint16_t delay)
 {
+    uint32_t value;
     uint16_t d;
 
     /* Toggle the comparator clock */
@@ -844,8 +879,8 @@ void ulpcomp_clock_set(uint8_t value)
     /* Set the comparator clock */
 
     ovalue = reg_la2_oenb;
-    ovalue1 &= ~ULPCOMP_CLOCK;
-    if ((uint32_t)value & 0x01) != 0) ovalue |= ULPCOMP_CLOCK;
+    ovalue &= ~ULPCOMP_CLOCK;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= ULPCOMP_CLOCK;
     reg_la2_oenb = ovalue;
 }
 
@@ -930,14 +965,14 @@ void instramp_set_gain_stage1(uint8_t value)
 
     ovalue1 = reg_la2_data;
     ovalue1 &= ~(INSTRAMP_VALUE_0 | INSTRAMP_VALUE_1);
-    if ((uint32_t)value & 0x01) != 0) ovalue1 |= INSTRAMP_VALUE_0;
-    if ((uint32_t)value & 0x02) != 0) ovalue1 |= INSTRAMP_VALUE_1;
+    if (((uint32_t)value & 0x01) != 0) ovalue1 |= INSTRAMP_VALUE_0;
+    if (((uint32_t)value & 0x02) != 0) ovalue1 |= INSTRAMP_VALUE_1;
 
     ovalue2 = reg_la3_data;
     ovalue2 &= ~(INSTRAMP_VALUE_2 | INSTRAMP_VALUE_3 | INSTRAMP_VALUE_4);
-    if ((uint32_t)value & 0x04) != 0) ovalue2 |= INSTRAMP_VALUE_2;
-    if ((uint32_t)value & 0x08) != 0) ovalue2 |= INSTRAMP_VALUE_3;
-    if ((uint32_t)value & 0x10) != 0) ovalue2 |= INSTRAMP_VALUE_4;
+    if (((uint32_t)value & 0x04) != 0) ovalue2 |= INSTRAMP_VALUE_2;
+    if (((uint32_t)value & 0x08) != 0) ovalue2 |= INSTRAMP_VALUE_3;
+    if (((uint32_t)value & 0x10) != 0) ovalue2 |= INSTRAMP_VALUE_4;
 
     reg_la2_data = ovalue1;
     reg_la3_data = ovalue2;
@@ -951,11 +986,11 @@ void instramp_set_gain_stage2(uint8_t value)
     ovalue &= ~(INSTRAMP_VALUE_5 | INSTRAMP_VALUE_6 | INSTRAMP_VALUE_7 |
 		INSTRAMP_VALUE_8 | INSTRAMP_VALUE_9);
 
-    if ((uint32_t)value & 0x01) != 0) ovalue |= INSTRAMP_VALUE_5;
-    if ((uint32_t)value & 0x02) != 0) ovalue |= INSTRAMP_VALUE_6;
-    if ((uint32_t)value & 0x04) != 0) ovalue |= INSTRAMP_VALUE_7;
-    if ((uint32_t)value & 0x08) != 0) ovalue |= INSTRAMP_VALUE_8;
-    if ((uint32_t)value & 0x10) != 0) ovalue |= INSTRAMP_VALUE_9;
+    if (((uint32_t)value & 0x01) != 0) ovalue |= INSTRAMP_VALUE_5;
+    if (((uint32_t)value & 0x02) != 0) ovalue |= INSTRAMP_VALUE_6;
+    if (((uint32_t)value & 0x04) != 0) ovalue |= INSTRAMP_VALUE_7;
+    if (((uint32_t)value & 0x08) != 0) ovalue |= INSTRAMP_VALUE_8;
+    if (((uint32_t)value & 0x10) != 0) ovalue |= INSTRAMP_VALUE_9;
 
     reg_la3_data = ovalue;
 }
@@ -968,9 +1003,12 @@ void rheostat_enable()
 {
     uint32_t value;
 
+    /* Power supply enable */
     value = reg_la1_data;
     value |= RHEO_PWR_ENABLE;
     reg_la1_data = value;
+
+    /* NOTE:  There is no local "enable" signal for the rheostat */
 
     /* Set data value to zero when RHEO is enabled */
     value = reg_la3_data;
@@ -989,19 +1027,11 @@ void rheostat_enable()
     value = reg_la3_data;
     value |= RHEO_REFH_ENABLE | RHEO_REFL_ENABLE | RHEO_OUT_ENABLE;
     reg_la3_data = value;
-
-    value = reg_la2_oenb;
-    value |= RHEO_ENABLE;
-    reg_la2_oenb = value;
 }
 
 void rheostat_disable()
 {
     uint32_t value;
-
-    value = reg_la2_oenb;
-    value &= ~RHEO_ENABLE;
-    reg_la2_oenb = value;
 
     /* Break before make */
     value = reg_la3_data;
@@ -1012,6 +1042,9 @@ void rheostat_disable()
     value |= RHEO_REFL_GROUND | RHEO_REFH_GROUND | RHEO_OUT_GROUND;
     reg_la3_oenb = value;
 
+    /* NOTE:  There is no local "enable" signal for the rheostat */
+
+    /* Power supply disable */
     value = reg_la1_data;
     value &= ~(RHEO_PWR_ENABLE);
     reg_la1_data = value;
@@ -1028,17 +1061,17 @@ void rheostat_set_value(uint8_t value)
 
     ovalue1 = reg_la2_oenb;
     ovalue1 &= ~(RHEO_VALUE_0 | RHEO_VALUE_2 | RHEO_VALUE_4 | RHEO_VALUE_6);
-    if ((uint32_t)value & 0x01) != 0) ovalue1 |= RHEO_VALUE_0;
-    if ((uint32_t)value & 0x04) != 0) ovalue1 |= RHEO_VALUE_2;
-    if ((uint32_t)value & 0x10) != 0) ovalue1 |= RHEO_VALUE_4;
-    if ((uint32_t)value & 0x40) != 0) ovalue1 |= RHEO_VALUE_6;
+    if (((uint32_t)value & 0x01) != 0) ovalue1 |= RHEO_VALUE_0;
+    if (((uint32_t)value & 0x04) != 0) ovalue1 |= RHEO_VALUE_2;
+    if (((uint32_t)value & 0x10) != 0) ovalue1 |= RHEO_VALUE_4;
+    if (((uint32_t)value & 0x40) != 0) ovalue1 |= RHEO_VALUE_6;
 
     ovalue2 = reg_la3_data;
     ovalue2 &= ~(RHEO_VALUE_1 | RHEO_VALUE_3 | RHEO_VALUE_5 | RHEO_VALUE_7);
-    if ((uint32_t)value & 0x02) != 0) ovalue2 |= RHEO_VALUE_1;
-    if ((uint32_t)value & 0x08) != 0) ovalue2 |= RHEO_VALUE_3;
-    if ((uint32_t)value & 0x20) != 0) ovalue2 |= RHEO_VALUE_5;
-    if ((uint32_t)value & 0x80) != 0) ovalue2 |= RHEO_VALUE_7;
+    if (((uint32_t)value & 0x02) != 0) ovalue2 |= RHEO_VALUE_1;
+    if (((uint32_t)value & 0x08) != 0) ovalue2 |= RHEO_VALUE_3;
+    if (((uint32_t)value & 0x20) != 0) ovalue2 |= RHEO_VALUE_5;
+    if (((uint32_t)value & 0x80) != 0) ovalue2 |= RHEO_VALUE_7;
 
     reg_la2_oenb = ovalue1;
     reg_la3_data = ovalue2;
@@ -1112,17 +1145,17 @@ void rdac_set_value(uint8_t value)
 
     ovalue1 = reg_la2_oenb;
     ovalue1 &= ~(RDAC_VALUE_0 | RDAC_VALUE_2 | RDAC_VALUE_4 | RDAC_VALUE_6);
-    if ((uint32_t)value & 0x01) != 0) ovalue1 |= RDAC_VALUE_0;
-    if ((uint32_t)value & 0x04) != 0) ovalue1 |= RDAC_VALUE_2;
-    if ((uint32_t)value & 0x10) != 0) ovalue1 |= RDAC_VALUE_4;
-    if ((uint32_t)value & 0x40) != 0) ovalue1 |= RDAC_VALUE_6;
+    if (((uint32_t)value & 0x01) != 0) ovalue1 |= RDAC_VALUE_0;
+    if (((uint32_t)value & 0x04) != 0) ovalue1 |= RDAC_VALUE_2;
+    if (((uint32_t)value & 0x10) != 0) ovalue1 |= RDAC_VALUE_4;
+    if (((uint32_t)value & 0x40) != 0) ovalue1 |= RDAC_VALUE_6;
 
     ovalue2 = reg_la3_data;
     ovalue2 &= ~(RDAC_VALUE_1 | RDAC_VALUE_3 | RDAC_VALUE_5 | RDAC_VALUE_7);
-    if ((uint32_t)value & 0x02) != 0) ovalue2 |= RDAC_VALUE_1;
-    if ((uint32_t)value & 0x08) != 0) ovalue2 |= RDAC_VALUE_3;
-    if ((uint32_t)value & 0x20) != 0) ovalue2 |= RDAC_VALUE_5;
-    if ((uint32_t)value & 0x80) != 0) ovalue2 |= RDAC_VALUE_7;
+    if (((uint32_t)value & 0x02) != 0) ovalue2 |= RDAC_VALUE_1;
+    if (((uint32_t)value & 0x08) != 0) ovalue2 |= RDAC_VALUE_3;
+    if (((uint32_t)value & 0x20) != 0) ovalue2 |= RDAC_VALUE_5;
+    if (((uint32_t)value & 0x80) != 0) ovalue2 |= RDAC_VALUE_7;
 
     reg_la2_oenb = ovalue1;
     reg_la3_data = ovalue2;

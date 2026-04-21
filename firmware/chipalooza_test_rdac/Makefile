@@ -1,29 +1,33 @@
-
-#TOOLCHAIN_PATH=/usr/bin/
+#-----------------------------------------------
+# Makefile for Caravel projects
+#-----------------------------------------------
 #TOOLCHAIN_PATH=/usr/local/bin/
-TOOLCHAIN_PATH=/opt/riscv32imc/bin/
-# TOOLCHAIN_PATH=/ef/apps/bin/
+TOOLCHAIN_PATH=/opt/riscv32i/bin/
 
 # Set the prefix for `riscvXX-unknown-elf-*`
 # On installations using `multilib`, this will be `riscv64` even for compiling to 32-bit targets
 #TOOLCHAIN_PREFIX=riscv64-unknown-elf
 TOOLCHAIN_PREFIX=riscv32-unknown-elf
-#TOOLCHAIN_PREFIX=riscv32
-INCLUDES=-I$(shell pwd) -I../ -I../generated/
+ARCH=rv32i_zicsr
 
-VOLTAGE=$(shell python3 -c "from gpio_config_def import voltage; print(voltage)")
+INCLUDES=-I$(shell pwd) -I../ -I../vex -I../vex/generated/
 
 # ---- Test patterns for chipalooza test chip 2 ----
 
 .SUFFIXES:
 
-PATTERN = chipalooza_test_rdac
+# Note:  If the testbench .c file name does not match the directory name, set
+#	 PATTERN to the base name of the .c file.
+PATTERN := $(shell basename $(CURDIR))
+
+SRCS = ../vex/crt0_vex.S ../vex/isr.c ../vex/stub.c ../chipalooza_util.c
+CFLAGS = -ffreestanding -nostdlib -mabi=ilp32 -march=$(ARCH) -DRISCV
 
 hex:  ${PATTERN:=.hex}
 
-%.elf: %.c ../sections.lds ../crt0_vex.S ../chipalooza_util.c ../stub.c
-	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../generated/ -O0 -mabi=ilp32 -march=rv32i -D__vexriscv__ -Wl,-Bstatic,-T,../sections.lds,--strip-debug -ffreestanding -nostdlib -o $@ ../crt0_vex.S ../isr.c ../stub.c ../chipalooza_util.c $<
-	${TOOLCHAIN_PATH}$(TOOLCHAIN_PREFIX)-objdump -D ${PATTERN}.elf > ${PATTERN}.lst
+%.elf: %.c $(SRCS) ../vex/sections.lds
+	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-gcc -I../ -I../vex/ -I../vex/generated/ $(CFLAGS) -O0 -Wl,-Bstatic,-T,../vex/sections.lds,--strip-debug -o $@ $(SRCS) $<
+	${TOOLCHAIN_PATH}$(TOOLCHAIN_PREFIX)-objdump -D $(PATTERN).elf > $(PATTERN).lst
 
 %.hex: %.elf
 	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-objcopy -O verilog $< $@
@@ -32,17 +36,13 @@ hex:  ${PATTERN:=.hex}
 %.bin: %.elf
 	$(TOOLCHAIN_PATH)$(TOOLCHAIN_PREFIX)-objcopy -O binary $< $@
 
-client: client.c
-	gcc client.c -o client
-
-flash: ${PATTERN}.hex
-	python3 ../util/caravel_hkflash.py $<
-	python3 ../util/caravel_hkstop.py
+flash: $(PATTERN).hex
+	python3 ../util/caravel_hkflash.py $(PATTERN).hex
 
 # ---- Clean ----
 
 clean:
-	rm -f *.elf *.hex *.bin *.vvp *.vcd
+	rm -f *.elf *.hex *.bin *.vvp *.vcd *.hexe *.lst
 
 .PHONY: clean hex all flash
 
