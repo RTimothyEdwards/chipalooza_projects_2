@@ -1220,7 +1220,7 @@ void powerdown_all()
 {
     uint32_t value;
 
-    value = reg_la1_data
+    value = reg_la1_data;
     value |= (AUDDAC_PWR_NENABLE | OSC16M_PWR_NENABLE |
 		CDAC_PWR_NENABLE | CCOMP_PWR_NENABLE | VREF_PWR_NENABLE |
 		LDO_PWR_NENABLE | IDAC_PWR_NENABLE | OSC500K_PWR_NENABLE |
