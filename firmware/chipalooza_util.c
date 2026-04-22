@@ -28,7 +28,7 @@ void idac_enable()
 
     /* Power supply enable */
     value = reg_la1_data;
-    value |= IDAC_PWR_ENABLE;
+    value &= ~IDAC_PWR_NENABLE;
     reg_la1_data = value;
 
     /* Local enable */
@@ -110,7 +110,7 @@ void idac_disable()
 
     /* Power supply disable */
     value = reg_la1_data;
-    value &= ~IDAC_PWR_ENABLE;
+    value |= IDAC_PWR_NENABLE;
     reg_la1_data = value;
 }
 
@@ -166,7 +166,7 @@ void audiodac_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= AUDDAC_PWR_ENABLE; 
+    value &= ~AUDDAC_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Break before make */
@@ -194,7 +194,7 @@ void audiodac_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~AUDDAC_PWR_ENABLE; 
+    value |= AUDDAC_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -208,7 +208,7 @@ void cdac_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= CDAC_PWR_ENABLE; 
+    value &= ~CDAC_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Set value to zero */
@@ -288,7 +288,7 @@ void cdac_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~CDAC_PWR_ENABLE; 
+    value |= CDAC_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -355,7 +355,7 @@ void ccomp_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= CCOMP_PWR_ENABLE; 
+    value &= ~CCOMP_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Local enable */
@@ -393,7 +393,7 @@ void ccomp_disable()
     
     /* Power disable */
     value = reg_la1_data;
-    value &= ~CCOMP_PWR_ENABLE; 
+    value |= CCOMP_PWR_NENABLE; 
     reg_la1_data = value;
 
 }
@@ -408,7 +408,7 @@ void ldo_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= LDO_PWR_ENABLE; 
+    value &= ~LDO_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Local enable */
@@ -456,7 +456,7 @@ void ldo_disable()
     
     /* Power disable */
     value = reg_la1_data;
-    value &= ~LDO_PWR_ENABLE; 
+    value |= LDO_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -481,7 +481,7 @@ void osc16M_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= OSC16M_PWR_ENABLE; 
+    value &= ~OSC16M_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Local enable */
@@ -501,7 +501,7 @@ void osc16M_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~OSC16M_PWR_ENABLE; 
+    value |= OSC16M_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -525,7 +525,7 @@ void cmos_vref_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= VREF_PWR_ENABLE; 
+    value &= ~VREF_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Local enable */
@@ -591,7 +591,7 @@ void cmos_vref_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~VREF_PWR_ENABLE; 
+    value |= VREF_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -628,7 +628,7 @@ void osc500k_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= OSC500K_PWR_ENABLE; 
+    value &= ~OSC500K_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Local enable */
@@ -648,7 +648,7 @@ void osc500k_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~OSC500K_PWR_ENABLE; 
+    value |= OSC500K_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -673,7 +673,7 @@ void por_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= POR_PWR_ENABLE; 
+    value &= ~POR_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Break before make */
@@ -701,7 +701,7 @@ void por_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~POR_PWR_ENABLE; 
+    value |= POR_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -715,7 +715,7 @@ void sample_and_hold_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= SAMPLE_PWR_ENABLE; 
+    value &= ~SAMPLE_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Local enable */
@@ -763,7 +763,7 @@ void sample_and_hold_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~SAMPLE_PWR_ENABLE; 
+    value |= SAMPLE_PWR_NENABLE; 
     reg_la1_data = value;
 }
 	
@@ -805,7 +805,7 @@ void ulpcomp_enable()
 
     /* Power enable */
     value = reg_la1_data;
-    value |= ULPCOMP_PWR_ENABLE; 
+    value &= ~ULPCOMP_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Local enable */
@@ -853,7 +853,7 @@ void ulpcomp_disable()
 
     /* Power disable */
     value = reg_la1_data;
-    value &= ~ULPCOMP_PWR_ENABLE; 
+    value |= ULPCOMP_PWR_NENABLE; 
     reg_la1_data = value;
 }
 	
@@ -896,7 +896,7 @@ void instramp_enable()
     uint32_t value;
 
     value = reg_la1_data;
-    value |= INSTRAMP_PWR_ENABLE; 
+    value &= ~INSTRAMP_PWR_NENABLE; 
     reg_la1_data = value;
 
     /* Set data value to zero when INSTRAMP is enabled */
@@ -950,7 +950,7 @@ void instramp_disable()
     reg_la3_oenb = value;
 
     value = reg_la1_data;
-    value &= ~INSTRAMP_PWR_ENABLE; 
+    value |= INSTRAMP_PWR_NENABLE; 
     reg_la1_data = value;
 }
 
@@ -1005,7 +1005,7 @@ void rheostat_enable()
 
     /* Power supply enable */
     value = reg_la1_data;
-    value |= RHEO_PWR_ENABLE;
+    value &= ~RHEO_PWR_NENABLE;
     reg_la1_data = value;
 
     /* NOTE:  There is no local "enable" signal for the rheostat */
@@ -1046,7 +1046,7 @@ void rheostat_disable()
 
     /* Power supply disable */
     value = reg_la1_data;
-    value &= ~(RHEO_PWR_ENABLE);
+    value |= RHEO_PWR_NENABLE;
     reg_la1_data = value;
 }
 
@@ -1086,7 +1086,7 @@ void rdac_enable()
     uint32_t value;
 
     value = reg_la1_data;
-    value |= RDAC_PWR_ENABLE;
+    value &= ~RDAC_PWR_NENABLE;
     reg_la1_data = value;
 
     /* Set data value to zero when RDAC is enabled */
@@ -1130,7 +1130,7 @@ void rdac_disable()
     reg_la3_oenb = value;
 
     value = reg_la1_data;
-    value &= ~(RDAC_PWR_ENABLE);
+    value |= RDAC_PWR_NENABLE;
     reg_la1_data = value;
 }
 
@@ -1220,11 +1220,12 @@ void powerdown_all()
 {
     uint32_t value;
 
-    value = reg_la1_data & ~(AUDDAC_PWR_ENABLE | OSC16M_PWR_ENABLE |
-		CDAC_PWR_ENABLE | CCOMP_PWR_ENABLE | VREF_PWR_ENABLE |
-		LDO_PWR_ENABLE | IDAC_PWR_ENABLE | OSC500K_PWR_ENABLE |
-		SAMPLE_PWR_ENABLE | ULPCOMP_PWR_ENABLE | INSTRAMP_PWR_ENABLE |
-		POR_PWR_ENABLE | RHEO_PWR_ENABLE | RDAC_PWR_ENABLE);
+    value = reg_la1_data
+    value |= (AUDDAC_PWR_NENABLE | OSC16M_PWR_NENABLE |
+		CDAC_PWR_NENABLE | CCOMP_PWR_NENABLE | VREF_PWR_NENABLE |
+		LDO_PWR_NENABLE | IDAC_PWR_NENABLE | OSC500K_PWR_NENABLE |
+		SAMPLE_PWR_NENABLE | ULPCOMP_PWR_NENABLE | INSTRAMP_PWR_NENABLE |
+		POR_PWR_NENABLE | RHEO_PWR_NENABLE | RDAC_PWR_NENABLE);
     reg_la1_data = value;
 }
 
@@ -1234,14 +1235,19 @@ void powerdown_all()
 
 void init_logic_analyzer()
 {
-    // Start with all data bits zero.  The power supply enables have been
-    // changed to sense-positive since Chipalooza projects 1 so that they
-    // do not need to be set differently.
+    // Start with all data bits zero except for the sense-negative
+    // power supply enables.
     //
     // This is equivalent to calling powerdown_all() above.
 
     reg_la0_data = 0x00000000;
-    reg_la1_data = 0x00000000;
+
+    reg_la1_data = AUDDAC_PWR_NENABLE | OSC16M_PWR_NENABLE | CDAC_PWR_NENABLE |
+		CCOMP_PWR_NENABLE | VREF_PWR_NENABLE | LDO_PWR_NENABLE |
+		IDAC_PWR_NENABLE | OSC500K_PWR_NENABLE | SAMPLE_PWR_NENABLE |
+		ULPCOMP_PWR_NENABLE | INSTRAMP_PWR_NENABLE | POR_PWR_NENABLE |
+		RHEO_PWR_NENABLE | RDAC_PWR_NENABLE;
+
     reg_la2_data = 0x00000000;
     reg_la3_data = 0x00000000;
 			
